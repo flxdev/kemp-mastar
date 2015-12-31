@@ -1,0 +1,56 @@
+@charset "UTF-8";
+html, body {
+	height: 100%;
+}
+* {
+	margin: 0;
+}
+body {
+	min-width: 320px;
+}
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+a[data-href], a[data-scroll] {
+	cursor: pointer;
+}
+ul, ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+button {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	outline: none;
+}
+input {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+@mixin transition($name) {
+	transition: $name 0.3s ease 0s;
+}
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+@function transition-property-names($props) {
+  $new-props: ();
+
+  @each $prop in $props {
+	$new-props: append($new-props, transition-property-name($prop), comma);
+  }
+
+  @return $new-props;
+}
