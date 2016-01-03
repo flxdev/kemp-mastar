@@ -92,6 +92,41 @@ body {
 		font-weight: normal;
 	}
 }
+.out {
+	.search {
+		.tab__content {
+			.tab__item {
+				.form {
+					.input {
+						font-family: $FuturaNewBook;
+						font-size: 18px;
+					}
+					.sbm {
+						span {
+							font-family: $FuturaNewBook;
+							font-size: 18px;
+						}
+					}
+				}
+				p {
+					font-family: $FuturaNewBook;
+						font-size: 18px;
+				}
+			}
+		}
+	}
+}
+.tab__container {
+	.tab__nav {
+		font-size: 0;
+		li {
+			a {
+				font-family: $FuturaNewDemi;
+				font-size: 18px;
+			}
+		}
+	}
+}
 .goods {
 	h2 {
 		font-family: $FuturaNewMedium;
