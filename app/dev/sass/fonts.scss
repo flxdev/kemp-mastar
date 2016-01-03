@@ -1,55 +1,4 @@
 @font-face {
-	font-family: 'pt_serifbold';
-		src: url('../fonts/ptserif-bold-webfont.eot');
-		src: url('../fonts/ptserif-bold-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/ptserif-bold-webfont.woff2') format('woff2'),
-			 url('../fonts/ptserif-bold-webfont.woff') format('woff'),
-			 url('../fonts/ptserif-bold-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'pt_serifbold_italic';
-		src: url('../fonts/ptserif-bold-italic-webfont.eot');
-		src: url('../fonts/ptserif-bold-italic-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/ptserif-bold-italic-webfont.woff2') format('woff2'),
-			 url('../fonts/ptserif-bold-italic-webfont.woff') format('woff'),
-			 url('../fonts/ptserif-bold-italic-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'pt_serifitalic';
-		src: url('../fonts/ptserif-italic-webfont.eot');
-		src: url('../fonts/ptserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/ptserif-italic-webfont.woff2') format('woff2'),
-			 url('../fonts/ptserif-italic-webfont.woff') format('woff'),
-			 url('../fonts/ptserif-italic-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'pt_serifregular';
-	src: url('../fonts/ptserif-webfont.eot');
-	src: url('../fonts/ptserif-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/ptserif-webfont.woff2') format('woff2'),
-		 url('../fonts/ptserif-webfont.woff') format('woff'),
-		 url('../fonts/ptserif-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'pf_agora_slab_problack';
-	src: url('../fonts/pfagoraslabpro-black_1-webfont.eot');
-	src: url('../fonts/pfagoraslabpro-black_1-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/pfagoraslabpro-black_1-webfont.woff2') format('woff2'),
-		 url('../fonts/pfagoraslabpro-black_1-webfont.woff') format('woff'),
-		 url('../fonts/pfagoraslabpro-black_1-webfont.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-
-}
-@font-face {
 	font-family: 'FuturaNewBold';
 	src: url('../fonts/FuturaNewBold.eot');
 	src: url('../fonts/FuturaNewBold.woff') format('woff'), 
@@ -93,10 +42,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-$PTserifregular: 'pt_serifregular', Arial, sans-serif;
-$PTserifItalic: 'pt_serifitalic', Arial, sans-serif;
-$PTserifItalicBold: 'pt_serifbold_italic', Arial, sans-serif;
-$PTserifBold: 'pt_serifbold', Arial, sans-serif;
 $FuturaNewBold: 'FuturaNewBold', Arial, sans-serif;
 $FuturaNewBook: 'FuturaNewBook', Arial, sans-serif;
 $FuturaNewDemi: 'FuturaNewDemi', Arial, sans-serif;
@@ -112,4 +57,125 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	font-kerning: normal;
+}
+.header {
+	.auth-bar {
+		a {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+		span {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+	.phone {
+		.phones {
+			font-family: $FuturaNewMedium;
+			font-size: 18px;
+		}
+	}
+	.nav {
+		ul {
+			font-size: 0;
+		}
+		li {
+			a {
+				font-family: $FuturaNewBook;
+				font-size: 14px;
+			}
+		}
+	}
+	h1 {
+		font-family: $FuturaNewBook;
+		font-size: 36px;
+		font-weight: normal;
+	}
+}
+.goods {
+	h2 {
+		font-family: $FuturaNewMedium;
+		font-size: 28px;
+		font-weight: normal;
+	}
+	.row {
+		&.slide__box {
+			font-size: 0;
+			ul {
+				li {
+					font-family: $FuturaNewDemi;
+					font-size: 18px;
+					a {
+						font-family: $FuturaNewBook;
+					}
+				}
+			}
+		}
+	}
+	.btn-case {
+		font-size: 0;
+		.btn {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+	.nav {
+		ul {
+			font-size: 0;
+		}
+		li {
+			a {
+				font-family: $FuturaNewDemi;
+				font-size: 18px;
+				font-weight: normal;
+			}
+		}
+	}
+}
+.map {
+	.form-row {
+		.input {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+	.nav {
+		ul {
+			font-size: 0;
+		}
+		li {
+			a {
+				font-family: $FuturaNewDemi;
+				font-size: 18px;
+			}
+		}
+	}
+	.col50 {
+		ul {
+			font-size: 0;
+			li {
+				font-family: $FuturaNewDemi;
+				font-size: 18px;
+				a {
+					font-family: $FuturaNewBook;
+				}
+			}
+		}
+		.quote {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+}
+.footer {
+	.copyright, .developers {
+		font-family: $FuturaNewBook;
+		font-size: 14px;
+	}
+	.center {
+		.phones {
+			font-family: $FuturaNewMedium;
+			font-size: 18px;
+		}
+	}
 }
