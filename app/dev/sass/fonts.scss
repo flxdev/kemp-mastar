@@ -58,6 +58,11 @@ body {
 	text-rendering: optimizeLegibility;
 	font-kerning: normal;
 }
+h2 {
+	font-family: $FuturaNewMedium;
+	font-weight: normal;
+	font-size: 28px;
+}
 .header {
 	.auth-bar {
 		a {
@@ -92,30 +97,42 @@ body {
 		font-weight: normal;
 	}
 }
-.out {
-	.search {
-		.tab__content {
-			.tab__item {
-				.form {
-					.input {
-						font-family: $FuturaNewBook;
-						font-size: 18px;
-					}
-					.sbm {
-						span {
-							font-family: $FuturaNewBook;
-							font-size: 18px;
-						}
-					}
-				}
-				p {
-					font-family: $FuturaNewBook;
-						font-size: 18px;
-				}
+// .out {
+// 	.search {
+// 		.tab__content {
+// 			.tab__item {
+// 				.form {
+// 					.input {
+// 						font-family: $FuturaNewBook;
+// 						font-size: 18px;
+// 					}
+// 					.sbm {
+// 						span {
+// 							font-family: $FuturaNewBook;
+// 							font-size: 18px;
+// 						}
+// 					}
+// 				}
+// 				p {
+// 					font-family: $FuturaNewBook;
+// 					font-size: 18px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+.form {
+		.input {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
+		.sbm {
+			span {
+				font-family: $FuturaNewBook;
+				font-size: 18px;
 			}
 		}
 	}
-}
 .tab__container {
 	.tab__nav {
 		font-size: 0;
@@ -124,6 +141,53 @@ body {
 				font-family: $FuturaNewDemi;
 				font-size: 18px;
 			}
+		}
+	}
+}
+.lead {
+	.lead__item {
+		.title {
+			font-family: $FuturaNewDemi;
+			font-size: 18px;
+		}
+		span {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
+	}
+	.lead__row {
+		font-size: 0;
+	}
+}
+.tab__sliders {
+	.tab__nav {
+		font-size: 0;
+		li {
+			a {
+				font-family: $FuturaNewBook;
+				font-size: 14px;
+			}
+		}
+	}
+	.sliders {
+		.item {
+			.title {
+				font-family: $FuturaNewBook;
+				font-size: 18px;
+			}
+			.data {
+				font-family: $FuturaNewBook;
+				font-size: 14px;
+			}
+		}
+	}
+}
+.all__search {
+	.search__container {
+		.title {
+			font-family: $FuturaNewHeavy;
+			font-size: 18px;
+			font-weight: normal;
 		}
 	}
 }

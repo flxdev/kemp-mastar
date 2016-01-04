@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="format-detection" content="telephone=no">
 	<title>Index</title>
+	<link rel="stylesheet" href="prod/css/slick.css">
 	<link rel="stylesheet" href="prod/css/fonts.min.css">
 	<link rel="stylesheet" href="prod/css/screen.min.css">
 
@@ -47,23 +48,295 @@
 			<div class="row">
 				<div class="tab__container search">
 					<ul class="tab__nav">
-						<li class="active"><a data-href="point-1">Поиск по номеру</a></li>
+						<li><a data-href="point-1">Поиск по номеру</a></li>
 						<li><a data-href="point-2">Поиск по авто</a></li>
 						<li><a data-href="point-3">Запрос по VIN</a></li>
 						<li><a data-href="point-4">Шины и диски</a></li>
 						<li><a data-href="point-5">Авто товары</a></li>
 					</ul>
 					<div class="tab__content">
-						<div class="tab__item">
-							<div class="form">
+						<div class="tab__item point-1">
+							<div class="form big-search">
 								<form action="">
-									<input type="text" placeholder="Введите код запчасти, например VAG96028 " class="input">
+									<input type="text" placeholder="Введите код запчасти, например VAG96028" class="input">
 									<button class="sbm" type="submit">
 										<span>Найти запчасть</span>
 									</button>
 								</form>
 							</div>
-							<p>Если вы не знаете код, воспользуйтесь <a data-href="point-2">поиском запчастей по марке авто</a></p>
+							<p>Если вы не знаете код, воспользуйтесь <a class="link__cont" data-href="point-2">поиском запчастей по марке авто</a></p>
+						</div>
+						<div class="tab__item point-2">
+							<div class="form big-search">
+								<form action="">
+									<input type="text" placeholder="Введите марку автомобиля, например BMW" class="input">
+									<button class="sbm" type="submit">
+										<span>Найти</span>
+									</button>
+								</form>
+							</div>
+							<p>Популярные марки: <a class='mark'>audi</a>, <a class='mark'>bmw</a>, <a class='mark'>dodge</a>, <a class='mark'>ford</a>, <a class='mark'>opel</a>, <a class='mark'>citroen</a></p>
+						</div>
+						<div class="tab__item point-3">
+							<div class="form big-search">
+								<form action="">
+									<!-- <input type="text" placeholder="Введите марку автомобиля, например BMW" class="input">
+									<button class="sbm" type="submit">
+										<span>Найти</span>
+									</button> -->
+								</form>
+							</div>
+						</div>
+						<div class="tab__item point-4">
+							<div class="form big-search">
+								<form action="">
+									<input type="text" placeholder="Введите название шин или дисков, например Pirelli" class="input">
+									<button class="sbm" type="submit">
+										<span>Найти</span>
+									</button>
+								</form>
+							</div>
+						</div>
+						<div class="tab__item point-5">
+							<div class="form big-search">
+								<form action="">
+									<input type="text" placeholder="Введите название авто-товара, например Масло Castrol" class="input">
+									<button class="sbm" type="submit">
+										<span>Найти</span>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="lead">
+					<div class="lead__row">
+						<a href="#" class="lead__item icon__basket">
+							<div class="title">Онлайн-магазин</div>
+							<span>Более 15 млн позиций запчастей и автотоваров доступны для заказа</span>
+						</a>
+						<a href="#" class="lead__item icon__locate">
+							<div class="title">Магазины КЭМП</div>
+							<span>4 магазина общей площадью 100 000м<sup>2</sup> и ассортиментом более 15 млн позиций</span>
+						</a>
+						<a href="#" class="lead__item icon__service">
+							<div class="title">Автосервисы КЭМП</div>
+							<span>Профессиональное обслуживание всех марок автомобилей</span>
+						</a>
+					</div>
+					<div class="lead__row">
+						<a href="#" class="lead__item icon__tire">
+							<div class="title">Шиномонтаж КЭМП</div>
+							<span>4 магазина общей площадью 100 000м<sup>2</sup> и ассортиментом более 15 млн позиций</span>
+						</a>
+						<a href="#" class="lead__item icon__storage">
+							<div class="title">Хранение шин</div>
+							<span>Более 15 млн позиций запчастей и автотоваров доступны для заказа</span>
+						</a>
+						<a href="#" class="lead__item icon__reliability">
+							<div class="title">Надёжный партнёр</div>
+							<span>Узнать больше о группе компаний КЭМП</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row tab__sliders slider">
+				<div class="white__section">
+					<div class="tab__container news">
+						<div class="navi__row">
+							<h2>Новости и акции</h2>
+							<div class="navi__slider">
+								<button class="slide__prev arrow-slider" type ='button'>
+									<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></span>
+								</button>
+								<button class="slide__next arrow-slider" type ='button'>
+									<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span>
+								</button>
+							</div>
+							<ul class="tab__nav">
+								<li><a data-href="news-1">Все</a></li>
+								<li><a data-href="news-2">Магазины</a></li>
+								<li><a data-href="news-3">Автосервисы</a></li>
+								<li><a data-href="news-4">Шиномонтаж</a></li>
+							</ul>
+						</div>
+						<div class="tab__content">
+							<div class="tab__item news-1">
+								<div class="sliders">
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news1.jpg" alt="">
+										</div>
+										<div class="title">Продолжается выдача бонусных карт 5%</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news2.jpg" alt="">
+										</div>
+										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news3.jpg" alt="">
+										</div>
+										<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news4.jpg" alt="">
+										</div>
+										<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news2.jpg" alt="">
+										</div>
+										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+								</div>
+							</div>
+							<div class="tab__item news-2">
+								<div class="sliders">
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news1.jpg" alt="">
+										</div>
+										<div class="title">Продолжается выдача бонусных карт 5%</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news2.jpg" alt="">
+										</div>
+										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news3.jpg" alt="">
+										</div>
+										<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news4.jpg" alt="">
+										</div>
+										<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news2.jpg" alt="">
+										</div>
+										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+								</div>
+							</div>
+							<div class="tab__item news-3">
+								<div class="sliders">
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news1.jpg" alt="">
+										</div>
+										<div class="title">Продолжается выдача бонусных карт 5%</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news2.jpg" alt="">
+										</div>
+										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news3.jpg" alt="">
+										</div>
+										<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news4.jpg" alt="">
+										</div>
+										<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news2.jpg" alt="">
+										</div>
+										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+								</div>
+							</div>
+							<div class="tab__item news-4">
+								<div class="sliders">
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news1.jpg" alt="">
+										</div>
+										<div class="title">Продолжается выдача бонусных карт 5%</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news2.jpg" alt="">
+										</div>
+										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news3.jpg" alt="">
+										</div>
+										<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news4.jpg" alt="">
+										</div>
+										<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+									<a href="#" class="item">
+										<div class="img-box">
+											<img src="prod/img/news2.jpg" alt="">
+										</div>
+										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+										<span class="data">20 декабря 2015</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row global__search">
+				<div class="white__section">
+					<div class="all__search">
+						<div class="logo__box"></div>
+						<div class="search__container">
+							<div class="title">Все автомобильные аксессуары в одном месте</div>
+							<div class="form big-search">
+								<form action="">
+									<input type="text" placeholder="Введите название авто-товара, например Масло Castrol" class="input">
+									<button class="sbm" type="submit">
+										<span>Найти</span>
+									</button>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -270,6 +543,7 @@
 		</div>
 	</footer>
 <script src="prod/js/lib/jquery-2.1.4.min.js"></script>
+<script src="prod/js/lib/slick.min.js"></script>
 <script src="prod/js/common.js"></script>
 </body>
 </html>
