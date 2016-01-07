@@ -200,21 +200,30 @@ $(document).ready(function () {
 	})();
 
 	//fixed tab tab
-		function fakePrice() {
-			var out = $('.out'),
-				fakeBox = $('.fixed__case'),
-				scrollWindow = $(window).scrollTop();
+	function fakePrice() {
+		var out = $('.out'),
+			fakeBox = $('.fixed__case'),
+			scrollWindow = $(window).scrollTop();
 
-			var outTop = out.offset().top;
-			if(scrollWindow >= outTop) {
-				fakeBox.addClass('fixed');
-			}else {
-				fakeBox.removeClass('fixed');
-			}
-		};
+		var outTop = out.offset().top;
+		if(scrollWindow >= outTop) {
+			fakeBox.addClass('fixed');
+		}else {
+			fakeBox.removeClass('fixed');
+		}
+	};
+	fakePrice();
+	$(window).scroll(function(){
 		fakePrice();
-		$(window).scroll(function(){
-			fakePrice();
+	});
+
+	//read more
+	(function() {
+		$('.show__more').readmore({
+			speed: 375,
+			moreLink: '<a href="#">Развернуть всё описание</a>',
+			lessLink: '<a href="#">Свернуть описание</a>'
 		});
+	})();
 
 });

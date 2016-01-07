@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=1024">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="format-detection" content="telephone=no">
-	<title>2-0catalog</title>
+	<title>2-1catalog-razdel</title>
 	<link rel="stylesheet" href="prod/css/slick.css">
 	<link rel="stylesheet" href="prod/css/multiple-select.css">
 	<link rel="stylesheet" href="prod/css/fonts.min.css">
@@ -261,76 +261,118 @@
 		</div>
 		<div class="head">
 			<div class="l">
-				<h1>Шины и аксессуары</h1>
+				<h1>Каталог зимних шин</h1>
 				<ul class="breadcrumbs">
 					<li><a href="">Главная</a></li>
 					<li><a href="">Шины</a></li>
+					<li><a href="">Зимние шины</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="container">
 			<div class="l">
-				<div class="row">
-					<div class="catalog">
-						<a href="#" class="item">
-							<div class="img-box">
-								<img src="prod/img/carditem.jpg" alt="">
+				<div class="left__sidebar">
+					<div class="row">
+						<div class="search__bar">
+							<div class="form">
+							<div class="title">Подбор по параметрам</div>
+								<form action="">
+									<div class="cont">
+										<div class="field">
+											<div class="label__field">Производитель</div>
+											<select class="multi">
+												<option value="Все">Все</option>
+												<option value="Goodyear">Goodyear</option>
+												<option value="Pirelli">Pirelli</option>
+											</select>
+										</div>
+										<div class="field double">
+											<div class="label__field">Стоимость, руб</div>
+											<input type="text" class="input" placeholder="от">
+											<input type="text" class="input" placeholder="до">
+										</div>
+										<div class="field">
+											<div class="label__field">Диаметр, мм</div>
+											<select class="multi">
+												<option value="Все">Все</option>
+												<option value="R13">R13</option>
+												<option value="R14">R14</option>
+												<option value="R15">R15</option>
+											</select>
+										</div>
+										<div class="field">
+											<div class="label__field">Ширина диска, мм</div>
+											<select class="multi">
+												<option value="Все">Все</option>
+												<option value="195">195</option>
+												<option value="205">205</option>
+											</select>
+										</div>
+										<div class="field">
+											<div class="label__field">Высота, мм</div>
+											<select class="multi">
+												<option value="Все">Все</option>
+												<option value="65">65</option>
+												<option value="75">75</option>
+												<option value="85">85</option>
+											</select>
+										</div>
+										<div class="field">
+											<div class="label__field">Сезонность</div>
+											<select class="multi">
+												<option value="Все">Все</option>
+												<option value="Зимние">Зимние</option>
+												<option value="Летние">Летние</option>
+											</select>
+										</div>
+										<div class="field">
+											<button class="sbm__filter" type="submit">
+												<span>Применить</span>
+											</button>
+										</div>
+									</div>
+								</form>
 							</div>
-							<div class="title">Домкраты</div>
-						</a>
-						<a href="#" class="item">
-							<div class="img-box">
-								<img src="prod/img/carditem.jpg" alt="">
-							</div>
-							<div class="title">Камеры</div>
-						</a>
-						<a href="#" class="item">
-							<div class="img-box">
-								<img src="prod/img/carditem.jpg" alt="">
-							</div>
-							<div class="title">Летние шины</div>
-						</a>
-						<a href="#" class="item">
-							<div class="img-box">
-								<img src="prod/img/carditem.jpg" alt="">
-							</div>
-							<div class="title">Насосы</div>
-						</a>
-						<a href="#" class="item">
-							<div class="img-box">
-								<img src="prod/img/carditem.jpg" alt="">
-							</div>
-							<div class="title">Цепи колесные</div>
-						</a>
-						<a href="#" class="item">
-							<div class="img-box">
-								<img src="prod/img/carditem.jpg" alt="">
-							</div>
-							<div class="title">Шиномонтаж</div>
-						</a>
-						<a href="#" class="item">
-							<div class="img-box">
-								<img src="prod/img/carditem.jpg" alt="">
-							</div>
-							<div class="title">Зимние шины</div>
-						</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="tab__container">
-						<div class="navi__row">
-							<h2>Спецпредложения</h2>
-							<div class="navi__slider">
-								<button class="slide__prev arrow-slider" type ='button'>
-									<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></span>
-								</button>
-								<button class="slide__next arrow-slider" type ='button'>
-									<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span>
-								</button>
+							<div class="reset">
+								<a href="" class="reset__filter">Сбросить фильтр</a>
 							</div>
 						</div>
-						<div class="tab__content">
-							<div class="sliders card">
+					</div>
+				</div>
+				<div class="content">
+					<div class="row">
+						<div class="pagin__row">
+							<div class="cont">
+								<select name="" id="" class="multi">
+									<option value="По популярности">По популярности</option>
+									<option value="По дате">По дате</option>
+									<option value="По сумме">По сумме</option>
+									<option value="По году">По году</option>
+								</select>
+							</div>
+							<div class="right">
+								<ul class="pagin">
+									<li class="pagin__item">
+										<a href=""><i><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></i></a></li>
+									<li class="pagin__item"><a href="" class="is-active">1</a></li>
+									<li class="pagin__item"><a href="">2</a></li>
+									<li class="pagin__item"><a href="">3</a></li>
+									<li class="pagin__item"><span>...</span></li>
+									<li class="pagin__item"><a href="">24</a></li>
+									<li class="pagin__item"><a href=""><i><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></i></a></li>
+								</ul>
+								<div class="cont">
+									<select name="" id="" class="multi">
+										<option value="20">20</option>
+										<option value="40">40</option>
+										<option value="60">60</option>
+										<option value="80">80</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="tab__content lists">
+							<div class="card lists__item">
 								<div class="item">
 									<a href="">
 										<div class="img-box">
@@ -416,6 +458,111 @@
 										<button class="btn btn_basket"><span>В корзину</span></button>
 									</div>
 								</div>
+								<div class="item">
+									<a href="">
+										<div class="img-box">
+											<img src="prod/img/carditem.jpg" alt="">
+										</div>
+										<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+									</a>
+									<span class="card__info">арт. 516885, Зимние</span>
+									<span class="price">3140 ₽</span>
+									<span class="presence is-green"><i class="icon"></i>В наличии</span>
+									<div class="spinner" data-max-number="10">
+										<button class="spinner__minus">-</button>
+										<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+										<button class="spinner__plus">+</button>
+										<button class="btn btn_basket"><span>В корзину</span></button>
+									</div>
+								</div>
+								<div class="item">
+									<a href="">
+										<div class="img-box">
+											<img src="prod/img/carditem.jpg" alt="">
+										</div>
+										<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
+									</a>
+									<span class="card__info">арт. 516885, Зимние</span>
+									<span class="price">12870 ₽</span>
+									<span class="presence is-green"><i class="icon"></i>В наличии</span>
+									<div class="spinner" data-max-number="10">
+										<button class="spinner__minus">-</button>
+										<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+										<button class="spinner__plus">+</button>
+										<button class="btn btn_basket"><span>В корзину</span></button>
+									</div>
+								</div>
+								<div class="item">
+									<a href="">
+										<div class="img-box">
+											<img src="prod/img/carditem.jpg" alt="">
+										</div>
+										<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
+									</a>
+									<span class="card__info">арт. 516885, Зимние</span>
+									<span class="price">7025 ₽</span>
+									<span class="presence is-green"><i class="icon"></i>В наличии</span>
+									<div class="spinner" data-max-number="10">
+										<button class="spinner__minus">-</button>
+										<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+										<button class="spinner__plus">+</button>
+										<button class="btn btn_basket"><span>В корзину</span></button>
+									</div>
+								</div>
+								<div class="item">
+									<a href="">
+										<div class="img-box">
+											<img src="prod/img/carditem.jpg" alt="">
+										</div>
+										<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
+									</a>
+									<span class="card__info">арт. 516885, Зимние</span>
+									<span class="price">15900 ₽</span>
+									<span class="presence is-green"><i class="icon"></i>В наличии</span>
+									<div class="spinner" data-max-number="10">
+										<button class="spinner__minus">-</button>
+										<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+										<button class="spinner__plus">+</button>
+										<button class="btn btn_basket"><span>В корзину</span></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pagin__row">
+							<div class="cont">
+								<select name="" id="" class="multi">
+									<option value="По популярности">По популярности</option>
+									<option value="По дате">По дате</option>
+									<option value="По сумме">По сумме</option>
+									<option value="По году">По году</option>
+								</select>
+							</div>
+							<div class="right">
+								<ul class="pagin">
+									<li class="pagin__item">
+										<a href=""><i><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></i></a></li>
+									<li class="pagin__item"><a href="" class="is-active">1</a></li>
+									<li class="pagin__item"><a href="">2</a></li>
+									<li class="pagin__item"><a href="">3</a></li>
+									<li class="pagin__item"><span>...</span></li>
+									<li class="pagin__item"><a href="">24</a></li>
+									<li class="pagin__item"><a href=""><i><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></i></a></li>
+								</ul>
+								<div class="cont">
+									<select name="" id="" class="multi">
+										<option value="20">20</option>
+										<option value="40">40</option>
+										<option value="60">60</option>
+										<option value="80">80</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="article__block">
+							<h3>Купить шины и аксессуары в Москве</h3>
+							<div class="show__more">
+								<p>Преимущества нашего Интернет-магазина - огромный выбор высококачественных товаров для Вашего автомобиля. Наш главный принцип - индивидуальный подход к каждому покупателю, мы всегда готовы дать Вам квалифицированную консультацию. У Вас есть прекрасная возможность приобрести запасные части и комплектующие как для новых моделей автомобилей, так и для автомобилей, которые давно находятся в серийном производстве. Вы можете воспользоваться услугами доставки по Москве и Московской области.</p>
+								<p>Преимущества нашего Интернет-магазина - огромный выбор высококачественных товаров для Вашего автомобиля. Наш главный принцип - индивидуальный подход к каждому покупателю, мы всегда готовы дать Вам квалифицированную консультацию. У Вас есть прекрасная возможность приобрести запасные части и комплектующие как для новых моделей автомобилей, так и для автомобилей, которые давно находятся в серийном производстве. Вы можете воспользоваться услугами доставки по Москве и Московской области.</p>
 							</div>
 						</div>
 					</div>
@@ -625,6 +772,7 @@
 <script src="prod/js/lib/jquery-2.1.4.min.js"></script>
 <script src="prod/js/lib/slick.min.js"></script>
 <script src="prod/js/lib/multiple-select.js"></script>
+<script src="prod/js/lib/readmore.min.js"></script>
 <script src="prod/js/common.js"></script>
 </body>
 </html>

@@ -171,7 +171,7 @@ h2 {
 		}
 	}
 }
-.sliders {
+.sliders, .tab__content.lists {
 	.item {
 		.title {
 			font-family: $FuturaNewBook;
@@ -214,6 +214,26 @@ h2 {
 		}
 	}
 }
+.reset {
+	.reset__filter {
+		font-family: $FuturaNewBook;
+		font-size: 14px;
+	}
+}
+.pagin__row {
+	.ms-choice {
+		span {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+	.pagin {
+		a, span {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+}
 .btn {
 	span {
 		font-family: $FuturaNewBook;
@@ -250,6 +270,29 @@ h2 {
 			font-family: $FuturaNewBook;
 			font-size: 18px;
 		}
+	}
+}
+.search__bar {
+	.title {
+		font-family: $FuturaNewDemi;
+		font-size: 18px;
+	}
+}
+.article__block {
+	h3 {
+		font-family: $FuturaNewMedium;
+		font-size: 28px;
+		font-weight: normal;
+	}
+}
+p {
+	font-family: $FuturaNewBook;
+	font-size: 18px;
+}
+.show__more {
+	& + a {
+		font-family: $FuturaNewBook;
+		font-size: 18px;
 	}
 }
 .goods {
