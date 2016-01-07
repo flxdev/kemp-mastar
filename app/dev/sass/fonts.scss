@@ -58,6 +58,11 @@ body {
 	text-rendering: optimizeLegibility;
 	font-kerning: normal;
 }
+h1 {
+	font-family: $FuturaNewBook;
+	font-size: 36px;
+	font-weight: normal;
+}
 h2 {
 	font-family: $FuturaNewMedium;
 	font-weight: normal;
@@ -97,7 +102,15 @@ h2 {
 		font-weight: normal;
 	}
 }
-
+.breadcrumbs {
+	font-size: 0;
+	li {
+		a {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+}
 .tab__item {
 
 	p {
@@ -228,6 +241,15 @@ h2 {
 	.spinner__minus, .spinner__plus, .spinner__input {
 		font-family: $FuturaNewBook;
 		font-size: 18px;
+	}
+}
+.catalog {
+	font-size: 0;
+	.item {
+		.title {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
 	}
 }
 .goods {

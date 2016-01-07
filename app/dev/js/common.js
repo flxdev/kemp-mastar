@@ -37,7 +37,7 @@ $(document).ready(function () {
 
 				this_.parent().addClass('active').siblings().removeClass('active');
 				tab_item.fadeOut(0).removeClass('visible');				
-				if(parent.hasClass('news')){
+				if(parent.hasClass('tab__slider')){
 					parent.find("."+index).fadeIn(0).find('.sliders').slick('setPosition');
 				} else {
 					parent.find("."+index).fadeIn(0);
@@ -51,7 +51,10 @@ $(document).ready(function () {
 			if(parent.hasClass('active')){
 				linkItem.first().addClass('active');
 				parent.find("."+index).show().addClass('visible');
-			};				
+			} else if(parent.hasClass('tab__slider')){
+				linkItem.first().addClass('active');
+				parent.find("."+index).show().addClass('visible');
+			};	
 
 			link_cont.on('click', function(){
 				var this_ = $(this),
@@ -60,6 +63,20 @@ $(document).ready(function () {
 				this_.parents('.tab__content').find('.' + index).fadeIn(0).siblings().fadeOut(0);
 				this_.parents('.tab__container').find('a[data-href=' + index + ']').parent().addClass('active').siblings().removeClass('active');
 			});
+
+			parent.on('click', function(event){
+				event.stopPropagation();
+			});
+
+			$(document).on('click', function(event){
+				if(parent.hasClass('active')) {
+					event.stopPropagation();
+				} else {
+					linkItem.removeClass('active');
+					tab_item.fadeOut(0).removeClass('visible');
+				}
+			});
+
 		});
 	})();
 
@@ -101,7 +118,13 @@ $(document).ready(function () {
 						nextArrow: '<button type="button" class="slick-next"><span><svg viewBox="0 0 15 24.5" xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span></button>'
 					});
 				} else {
-					slider.slick();
+					slider.slick({
+						arrows: false,
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						speed: 500,
+						infinite: true,
+					});
 
 					$('.' + nameClass + ' .slide__prev').on('click', function(){
 						slider.slick('slickPrev');
@@ -175,5 +198,23 @@ $(document).ready(function () {
 			});
 		});
 	})();
+
+	//fixed tab tab
+		function fakePrice() {
+			var out = $('.out'),
+				fakeBox = $('.fixed__case'),
+				scrollWindow = $(window).scrollTop();
+
+			var outTop = out.offset().top;
+			if(scrollWindow >= outTop) {
+				fakeBox.addClass('fixed');
+			}else {
+				fakeBox.removeClass('fixed');
+			}
+		};
+		fakePrice();
+		$(window).scroll(function(){
+			fakePrice();
+		});
 
 });

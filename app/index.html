@@ -45,191 +45,440 @@
 		</div>
 	</header>
 	<section class="out">
-		<div class="l">
-			<div class="row">
-				<div class="tab__container search active">
-					<ul class="tab__nav">
-						<li><a data-href="point-1">Поиск по номеру</a></li>
-						<li><a data-href="point-2">Поиск по авто</a></li>
-						<li><a data-href="point-3">Запрос по VIN</a></li>
-						<li><a data-href="point-4">Шины и диски</a></li>
-						<li><a data-href="point-5">Авто товары</a></li>
-					</ul>
-					<div class="tab__content">
-						<div class="tab__item point-1">
-							<div class="fade">
-								<div class="form big-search">
-									<form action="">
-										<input type="text" placeholder="Введите код запчасти, например VAG96028" class="input">
-										<button class="sbm" type="submit">
-											<span>Найти запчасть</span>
-										</button>
-									</form>
-								</div>
-								<p>Если вы не знаете код, воспользуйтесь <a class="link__cont" data-href="point-2">поиском запчастей по марке авто</a></p>
-							</div>
-						</div>
-						<div class="tab__item point-2">
-							<div class="fade">
-								<div class="form big-search">
-									<form action="">
-										<input type="text" placeholder="Введите марку автомобиля, например BMW" class="input">
-										<button class="sbm" type="submit">
-											<span>Найти</span>
-										</button>
-									</form>
-								</div>
-								<p>Популярные марки: <a class='mark'>audi</a>, <a class='mark'>bmw</a>, <a class='mark'>dodge</a>, <a class='mark'>ford</a>, <a class='mark'>opel</a>, <a class='mark'>citroen</a></p>
-							</div>
-						</div>
-						<div class="tab__item point-3">
-							<div class="fade">
-								<div class="form big-search">
-									<img src="prod/img/fake1.jpg" height="291" width="878" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="tab__item point-4">
-							<div class="fade">
-								<div class="form">
-									<div class="col50">
-										<h2 class="title">Шины</h2>
+		<div class="content">
+			<div class="l">
+				<div class="row">
+					<div class="tab__container search active">
+						<ul class="tab__nav">
+							<li><a data-href="point-1">Поиск по номеру</a></li>
+							<li><a data-href="point-2">Поиск по авто</a></li>
+							<li><a data-href="point-3">Запрос по VIN</a></li>
+							<li><a data-href="point-4">Шины и диски</a></li>
+							<li><a data-href="point-5">Авто товары</a></li>
+						</ul>
+						<div class="tab__content">
+							<div class="tab__item point-1">
+								<div class="fade">
+									<div class="form big-search">
 										<form action="">
-											<div class="cont">
-												<div class="col50">
-													<div class="field double">
-														<div class="label__field">Стоимость, руб</div>
-														<input type="text" class="input" placeholder="от">
-														<input type="text" class="input" placeholder="до">
-													</div>
-													<div class="field">
-														<div class="label__field">Диаметр, мм</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="R13">R13</option>
-															<option value="R14">R14</option>
-															<option value="R15">R15</option>
-														</select>
-													</div>
-													<div class="field">
-														<div class="label__field">Высота, мм</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="65">65</option>
-															<option value="75">75</option>
-															<option value="85">85</option>
-														</select>
-													</div>
-													<div class="field">
-														<a href='#' class="reset__filter">Сбросить фильтр</a>
-													</div>
-												</div>
-												<div class="col50">
-													<div class="field">
-														<div class="label__field">Производитель</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="Goodyear">Goodyear</option>
-															<option value="Pirelli">Pirelli</option>
-														</select>
-													</div>
-													<div class="field">
-														<div class="label__field">Ширина, мм</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="195">195</option>
-															<option value="205">205</option>
-														</select>
-													</div>
-													<div class="field">
-														<div class="label__field">Сезонность</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="Зимние">Зимние</option>
-															<option value="Летние">Летние</option>
-														</select>
-													</div>
-													<div class="field">
-														<button class="sbm__filter">
-															<span>Показать шины</span>
-														</button>
-													</div>
-												</div>
-											</div>
+											<input type="text" placeholder="Введите код запчасти, например VAG96028" class="input">
+											<button class="sbm" type="submit">
+												<span>Найти запчасть</span>
+											</button>
 										</form>
 									</div>
-									<div class="col50 circle__shadow">
-										<h2 class="title">Диски</h2>
+									<p>Если вы не знаете код, воспользуйтесь <a class="link__cont" data-href="point-2">поиском запчастей по марке авто</a></p>
+								</div>
+							</div>
+							<div class="tab__item point-2">
+								<div class="fade">
+									<div class="form big-search">
 										<form action="">
-											<div class="cont">
-												<div class="col50">
-													<div class="field double">
-														<div class="label__field">Стоимость, руб</div>
-														<input type="text" class="input" placeholder="от">
-														<input type="text" class="input" placeholder="до">
-													</div>
-													<div class="field">
-														<div class="label__field">Ширина диска, мм</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="195">195</option>
-															<option value="205">205</option>
-														</select>
-													</div>
-													<div class="field">
-														<div class="label__field">Крепёжные отверстия, шт</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="3">3</option>
-															<option value="4">4</option>
-															<option value="5">5</option>
-														</select>
-													</div>
-													<div class="field">
-														<a href="" class="reset__filter">Сбросить фильтр</a>
-													</div>
-												</div>
-												<div class="col50">
-													<div class="field">
-														<div class="label__field">Диаметр, мм</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="R13">R13</option>
-															<option value="R14">R14</option>
-															<option value="R15">R15</option>
-														</select>
-													</div>
-													<div class="field">
-														<div class="label__field">Центральное отверстие, мм</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="10">10</option>
-															<option value="20">20</option>
-															<option value="30">30</option>
-														</select>
-													</div>
-													<div class="field">
-														<div class="label__field">Крепёжные отверстия, мм</div>
-														<select class="multi">
-															<option value="Все">Все</option>
-															<option value="25">25</option>
-															<option value="45">45</option>
-														</select>
-													</div>
-													<div class="field">
-														<button class="sbm__filter">
-															<span>Показать диски</span>
-														</button>
-													</div>
-												</div>
-											</div>
+											<input type="text" placeholder="Введите марку автомобиля, например BMW" class="input">
+											<button class="sbm" type="submit">
+												<span>Найти</span>
+											</button>
 										</form>
+									</div>
+									<p>Популярные марки: <a class='mark'>audi</a>, <a class='mark'>bmw</a>, <a class='mark'>dodge</a>, <a class='mark'>ford</a>, <a class='mark'>opel</a>, <a class='mark'>citroen</a></p>
+								</div>
+							</div>
+							<div class="tab__item point-3">
+								<div class="fade">
+									<div class="form big-search">
+										<img src="prod/img/fake1.jpg" height="291" width="878" alt="">
 									</div>
 								</div>
 							</div>
+							<div class="tab__item point-4">
+								<div class="fade">
+									<div class="form">
+										<div class="col50">
+											<h2 class="title">Шины</h2>
+											<form action="">
+												<div class="cont">
+													<div class="col50">
+														<div class="field double">
+															<div class="label__field">Стоимость, руб</div>
+															<input type="text" class="input" placeholder="от">
+															<input type="text" class="input" placeholder="до">
+														</div>
+														<div class="field">
+															<div class="label__field">Диаметр, мм</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="R13">R13</option>
+																<option value="R14">R14</option>
+																<option value="R15">R15</option>
+															</select>
+														</div>
+														<div class="field">
+															<div class="label__field">Высота, мм</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="65">65</option>
+																<option value="75">75</option>
+																<option value="85">85</option>
+															</select>
+														</div>
+														<div class="field">
+															<a href='#' class="reset__filter">Сбросить фильтр</a>
+														</div>
+													</div>
+													<div class="col50">
+														<div class="field">
+															<div class="label__field">Производитель</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="Goodyear">Goodyear</option>
+																<option value="Pirelli">Pirelli</option>
+															</select>
+														</div>
+														<div class="field">
+															<div class="label__field">Ширина, мм</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="195">195</option>
+																<option value="205">205</option>
+															</select>
+														</div>
+														<div class="field">
+															<div class="label__field">Сезонность</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="Зимние">Зимние</option>
+																<option value="Летние">Летние</option>
+															</select>
+														</div>
+														<div class="field">
+															<button class="sbm__filter">
+																<span>Показать шины</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="col50 circle__shadow">
+											<h2 class="title">Диски</h2>
+											<form action="">
+												<div class="cont">
+													<div class="col50">
+														<div class="field double">
+															<div class="label__field">Стоимость, руб</div>
+															<input type="text" class="input" placeholder="от">
+															<input type="text" class="input" placeholder="до">
+														</div>
+														<div class="field">
+															<div class="label__field">Ширина диска, мм</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="195">195</option>
+																<option value="205">205</option>
+															</select>
+														</div>
+														<div class="field">
+															<div class="label__field">Крепёжные отверстия, шт</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="3">3</option>
+																<option value="4">4</option>
+																<option value="5">5</option>
+															</select>
+														</div>
+														<div class="field">
+															<a href="" class="reset__filter">Сбросить фильтр</a>
+														</div>
+													</div>
+													<div class="col50">
+														<div class="field">
+															<div class="label__field">Диаметр, мм</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="R13">R13</option>
+																<option value="R14">R14</option>
+																<option value="R15">R15</option>
+															</select>
+														</div>
+														<div class="field">
+															<div class="label__field">Центральное отверстие, мм</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="10">10</option>
+																<option value="20">20</option>
+																<option value="30">30</option>
+															</select>
+														</div>
+														<div class="field">
+															<div class="label__field">Крепёжные отверстия, мм</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="25">25</option>
+																<option value="45">45</option>
+															</select>
+														</div>
+														<div class="field">
+															<button class="sbm__filter">
+																<span>Показать диски</span>
+															</button>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab__item point-5">
+								<div class="fade">
+									<div class="form big-search">
+										<form action="">
+											<input type="text" placeholder="Введите название авто-товара, например Масло Castrol" class="input">
+											<button class="sbm" type="submit">
+												<span>Найти</span>
+											</button>
+										</form>
+									</div>
+									<ul class="list strong">
+										<li><a href="">Шины</a></li>
+										<li><a href="">Диски</a></li>
+										<li><a href="">Масла</a></li>
+										<li><a href="">АКБ</a></li>
+										<li><a href="">Авто-звук</a></li>
+										<li><a href="">Авто-краски</a></li>
+									</ul>
+									<ul class="list">
+										<li><a href="">Авто-Аксессуары</a></li>
+										<li><a href="">Авто-Химия</a></li>
+										<li><a href="">Грузоперевозка</a></li>
+										<li><a href="">Коврики</a></li>
+										<li><a href="">Навигация</a></li>
+										<li><a href="">Чехлы</a></li>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<div class="tab__item point-5">
-							<div class="fade">
+					</div>
+				</div>
+				<div class="row">
+					<div class="lead">
+						<div class="lead__row">
+							<a href="#" class="lead__item icon__basket">
+								<div class="title">Онлайн-магазин</div>
+								<span>Более 15 млн позиций запчастей и автотоваров доступны для заказа</span>
+							</a>
+							<a href="#" class="lead__item icon__locate">
+								<div class="title">Магазины КЭМП</div>
+								<span>4 магазина общей площадью 100 000м<sup>2</sup> и ассортиментом более 15 млн позиций</span>
+							</a>
+							<a href="#" class="lead__item icon__service">
+								<div class="title">Автосервисы КЭМП</div>
+								<span>Профессиональное обслуживание всех марок автомобилей</span>
+							</a>
+						</div>
+						<div class="lead__row">
+							<a href="#" class="lead__item icon__tire">
+								<div class="title">Шиномонтаж КЭМП</div>
+								<span>4 магазина общей площадью 100 000м<sup>2</sup> и ассортиментом более 15 млн позиций</span>
+							</a>
+							<a href="#" class="lead__item icon__storage">
+								<div class="title">Хранение шин</div>
+								<span>Более 15 млн позиций запчастей и автотоваров доступны для заказа</span>
+							</a>
+							<a href="#" class="lead__item icon__reliability">
+								<div class="title">Надёжный партнёр</div>
+								<span>Узнать больше о группе компаний КЭМП</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row tab__sliders slider">
+					<div class="white__section">
+						<div class="tab__container tab__slider">
+							<div class="navi__row">
+								<h2>Новости и акции</h2>
+								<!-- <div class="navi__slider">
+									<button class="slide__prev arrow-slider" type ='button'>
+										<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></span>
+									</button>
+									<button class="slide__next arrow-slider" type ='button'>
+										<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span>
+									</button>
+								</div> -->
+								<ul class="tab__nav">
+									<li><a data-href="news-1">Все</a></li>
+									<li><a data-href="news-2">Магазины</a></li>
+									<li><a data-href="news-3">Автосервисы</a></li>
+									<li><a data-href="news-4">Шиномонтаж</a></li>
+								</ul>
+							</div>
+							<div class="tab__content">
+								<div class="tab__item news-1">
+									<div class="sliders">
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news1.jpg" alt="">
+											</div>
+											<div class="title">Продолжается выдача бонусных карт 5%</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news2.jpg" alt="">
+											</div>
+											<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item stock">
+											<div class="img-box">
+												<img src="prod/img/news3.jpg" alt="">
+											</div>
+											<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news4.jpg" alt="">
+											</div>
+											<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news2.jpg" alt="">
+											</div>
+											<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+									</div>
+								</div>
+								<div class="tab__item news-2">
+									<div class="sliders">
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news1.jpg" alt="">
+											</div>
+											<div class="title">Продолжается выдача бонусных карт 5%</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news2.jpg" alt="">
+											</div>
+											<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news3.jpg" alt="">
+											</div>
+											<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news4.jpg" alt="">
+											</div>
+											<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news2.jpg" alt="">
+											</div>
+											<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+									</div>
+								</div>
+								<div class="tab__item news-3">
+									<div class="sliders">
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news1.jpg" alt="">
+											</div>
+											<div class="title">Продолжается выдача бонусных карт 5%</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news2.jpg" alt="">
+											</div>
+											<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news3.jpg" alt="">
+											</div>
+											<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news4.jpg" alt="">
+											</div>
+											<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news2.jpg" alt="">
+											</div>
+											<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+									</div>
+								</div>
+								<div class="tab__item news-4">
+									<div class="sliders">
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news1.jpg" alt="">
+											</div>
+											<div class="title">Продолжается выдача бонусных карт 5%</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news2.jpg" alt="">
+											</div>
+											<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news3.jpg" alt="">
+											</div>
+											<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news4.jpg" alt="">
+											</div>
+											<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+										<a href="#" class="item">
+											<div class="img-box">
+												<img src="prod/img/news2.jpg" alt="">
+											</div>
+											<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
+											<span class="data">20 декабря 2015</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row global__search">
+					<div class="white__section">
+						<div class="all__search">
+							<div class="logo__box"></div>
+							<div class="search__container">
+								<div class="title">Все автомобильные аксессуары в одном месте</div>
 								<div class="form big-search">
 									<form action="">
 										<input type="text" placeholder="Введите название авто-товара, например Масло Castrol" class="input">
@@ -238,631 +487,384 @@
 										</button>
 									</form>
 								</div>
-								<ul class="list strong">
-									<li><a href="">Шины</a></li>
-									<li><a href="">Диски</a></li>
-									<li><a href="">Масла</a></li>
-									<li><a href="">АКБ</a></li>
-									<li><a href="">Авто-звук</a></li>
-									<li><a href="">Авто-краски</a></li>
-								</ul>
-								<ul class="list">
-									<li><a href="">Авто-Аксессуары</a></li>
-									<li><a href="">Авто-Химия</a></li>
-									<li><a href="">Грузоперевозка</a></li>
-									<li><a href="">Коврики</a></li>
-									<li><a href="">Навигация</a></li>
-									<li><a href="">Чехлы</a></li>
-								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="lead">
-					<div class="lead__row">
-						<a href="#" class="lead__item icon__basket">
-							<div class="title">Онлайн-магазин</div>
-							<span>Более 15 млн позиций запчастей и автотоваров доступны для заказа</span>
-						</a>
-						<a href="#" class="lead__item icon__locate">
-							<div class="title">Магазины КЭМП</div>
-							<span>4 магазина общей площадью 100 000м<sup>2</sup> и ассортиментом более 15 млн позиций</span>
-						</a>
-						<a href="#" class="lead__item icon__service">
-							<div class="title">Автосервисы КЭМП</div>
-							<span>Профессиональное обслуживание всех марок автомобилей</span>
-						</a>
-					</div>
-					<div class="lead__row">
-						<a href="#" class="lead__item icon__tire">
-							<div class="title">Шиномонтаж КЭМП</div>
-							<span>4 магазина общей площадью 100 000м<sup>2</sup> и ассортиментом более 15 млн позиций</span>
-						</a>
-						<a href="#" class="lead__item icon__storage">
-							<div class="title">Хранение шин</div>
-							<span>Более 15 млн позиций запчастей и автотоваров доступны для заказа</span>
-						</a>
-						<a href="#" class="lead__item icon__reliability">
-							<div class="title">Надёжный партнёр</div>
-							<span>Узнать больше о группе компаний КЭМП</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="row tab__sliders slider">
-				<div class="white__section">
-					<div class="tab__container news">
-						<div class="navi__row">
-							<h2>Новости и акции</h2>
-							<!-- <div class="navi__slider">
-								<button class="slide__prev arrow-slider" type ='button'>
-									<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></span>
-								</button>
-								<button class="slide__next arrow-slider" type ='button'>
-									<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span>
-								</button>
-							</div> -->
-							<ul class="tab__nav">
-								<li><a data-href="news-1">Все</a></li>
-								<li><a data-href="news-2">Магазины</a></li>
-								<li><a data-href="news-3">Автосервисы</a></li>
-								<li><a data-href="news-4">Шиномонтаж</a></li>
-							</ul>
-						</div>
-						<div class="tab__content">
-							<div class="tab__item news-1">
-								<div class="sliders">
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news1.jpg" alt="">
-										</div>
-										<div class="title">Продолжается выдача бонусных карт 5%</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news2.jpg" alt="">
-										</div>
-										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item stock">
-										<div class="img-box">
-											<img src="prod/img/news3.jpg" alt="">
-										</div>
-										<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news4.jpg" alt="">
-										</div>
-										<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news2.jpg" alt="">
-										</div>
-										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-								</div>
-							</div>
-							<div class="tab__item news-2">
-								<div class="sliders">
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news1.jpg" alt="">
-										</div>
-										<div class="title">Продолжается выдача бонусных карт 5%</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news2.jpg" alt="">
-										</div>
-										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news3.jpg" alt="">
-										</div>
-										<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news4.jpg" alt="">
-										</div>
-										<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news2.jpg" alt="">
-										</div>
-										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-								</div>
-							</div>
-							<div class="tab__item news-3">
-								<div class="sliders">
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news1.jpg" alt="">
-										</div>
-										<div class="title">Продолжается выдача бонусных карт 5%</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news2.jpg" alt="">
-										</div>
-										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news3.jpg" alt="">
-										</div>
-										<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news4.jpg" alt="">
-										</div>
-										<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news2.jpg" alt="">
-										</div>
-										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-								</div>
-							</div>
-							<div class="tab__item news-4">
-								<div class="sliders">
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news1.jpg" alt="">
-										</div>
-										<div class="title">Продолжается выдача бонусных карт 5%</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news2.jpg" alt="">
-										</div>
-										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news3.jpg" alt="">
-										</div>
-										<div class="title">Акция «Приятные цены»: -15% одежда и обувь для детей и взрослых!</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news4.jpg" alt="">
-										</div>
-										<div class="title">«ФИШКА - МАНИЯ» накопительная акция</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-									<a href="#" class="item">
-										<div class="img-box">
-											<img src="prod/img/news2.jpg" alt="">
-										</div>
-										<div class="title">Новый отдел радиоуправляемые модели в ТЦ КЭМП Домодедово</div>
-										<span class="data">20 декабря 2015</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row global__search">
-				<div class="white__section">
-					<div class="all__search">
-						<div class="logo__box"></div>
-						<div class="search__container">
-							<div class="title">Все автомобильные аксессуары в одном месте</div>
-							<div class="form big-search">
-								<form action="">
-									<input type="text" placeholder="Введите название авто-товара, например Масло Castrol" class="input">
-									<button class="sbm" type="submit">
-										<span>Найти</span>
+				<div class="row tab__sliders slider">
+					<div class="white__section">
+						<div class="tab__container tab__slider">
+							<div class="navi__row">
+								<h2>Спецпредложения</h2>
+								<!-- <div class="navi__slider">
+									<button class="slide__prev arrow-slider" type ='button'>
+										<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></span>
 									</button>
-								</form>
+									<button class="slide__next arrow-slider" type ='button'>
+										<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span>
+									</button>
+								</div> -->
+								<ul class="tab__nav">
+									<li><a data-href="news-1">Шины</a></li>
+									<li><a data-href="news-2">Масла</a></li>
+									<li><a data-href="news-3">АКБ</a></li>
+									<li><a data-href="news-4">Автокресла детские</a></li>
+								</ul>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row tab__sliders slider">
-				<div class="white__section">
-					<div class="tab__container news">
-						<div class="navi__row">
-							<h2>Спецпредложения</h2>
-							<!-- <div class="navi__slider">
-								<button class="slide__prev arrow-slider" type ='button'>
-									<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></span>
-								</button>
-								<button class="slide__next arrow-slider" type ='button'>
-									<span><svg viewBox='0 0 15 24.5' xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span>
-								</button>
-							</div> -->
-							<ul class="tab__nav">
-								<li><a data-href="news-1">Шины</a></li>
-								<li><a data-href="news-2">Масла</a></li>
-								<li><a data-href="news-3">АКБ</a></li>
-								<li><a data-href="news-4">Автокресла детские</a></li>
-							</ul>
-						</div>
-						<div class="tab__content">
-							<div class="tab__item news-1">
-								<div class="sliders card">
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+							<div class="tab__content">
+								<div class="tab__item news-1">
+									<div class="sliders card">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">7954 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">7954 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">3140 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">3140 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">12870 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">12870 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">7025 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">7025 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">15900 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">15900 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="tab__item news-2">
-								<div class="sliders card">
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+								<div class="tab__item news-2">
+									<div class="sliders card">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">7954 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">7954 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">3140 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">3140 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">12870 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">12870 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">7025 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">7025 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">15900 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">15900 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="tab__item news-3">
-								<div class="sliders card">
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
-											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">7954 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
-										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
-											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">3140 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
-										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
-											</div>
-											<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">12870 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
-										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
-											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">7025 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
-										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
-											</div>
-											<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">15900 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="tab__item news-4">
-								<div class="sliders card">
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+								<div class="tab__item news-3">
+									<div class="sliders card">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">7954 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">7954 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
+										</div>
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">3140 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
+											</div>
+										</div>
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">12870 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
+											</div>
+										</div>
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">7025 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
+											</div>
+										</div>
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">15900 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
+											</div>
 										</div>
 									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+								</div>
+								<div class="tab__item news-4">
+									<div class="sliders card">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">7954 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">3140 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat </div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">3140 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">12870 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Continental <br>ContiWinterContact TS 850<br>165/65R15 81T</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">12870 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">7025 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
 										</div>
-									</div>
-									<div class="item">
-										<a href="">
-											<div class="img-box">
-												<img src="prod/img/carditem.jpg" alt="">
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Goodyear <br> Eagle UltraGrip GW-3 <br> 225/50R16 92H Run on Flat</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">7025 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
 											</div>
-											<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
-										</a>
-										<span class="card__info">арт. 516885, Зимние</span>
-										<span class="price">15900 ₽</span>
-										<span class="presence is-green"><i class="icon"></i>В наличии</span>
-										<div class="spinner" data-max-number="10">
-											<button class="spinner__minus">-</button>
-											<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
-											<button class="spinner__plus">+</button>
-											<button class="btn btn_basket"><span>В корзину</span></button>
+										</div>
+										<div class="item">
+											<a href="">
+												<div class="img-box">
+													<img src="prod/img/carditem.jpg" alt="">
+												</div>
+												<div class="title">Continental<br>Conti4x4IceContact<br>235/75R15 109T XL</div>
+											</a>
+											<span class="card__info">арт. 516885, Зимние</span>
+											<span class="price">15900 ₽</span>
+											<span class="presence is-green"><i class="icon"></i>В наличии</span>
+											<div class="spinner" data-max-number="10">
+												<button class="spinner__minus">-</button>
+												<input class="spinner__input" value='1' name="spinner-input" readonly="" type="text">
+												<button class="spinner__plus">+</button>
+												<button class="btn btn_basket"><span>В корзину</span></button>
+											</div>
 										</div>
 									</div>
 								</div>
