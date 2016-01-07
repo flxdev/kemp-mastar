@@ -97,30 +97,14 @@ h2 {
 		font-weight: normal;
 	}
 }
-// .out {
-// 	.search {
-// 		.tab__content {
-// 			.tab__item {
-// 				.form {
-// 					.input {
-// 						font-family: $FuturaNewBook;
-// 						font-size: 18px;
-// 					}
-// 					.sbm {
-// 						span {
-// 							font-family: $FuturaNewBook;
-// 							font-size: 18px;
-// 						}
-// 					}
-// 				}
-// 				p {
-// 					font-family: $FuturaNewBook;
-// 					font-size: 18px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+
+.tab__item {
+
+	p {
+		font-family: $FuturaNewBook;
+		font-size: 18px;
+	}
+}
 .form {
 		.input {
 			font-family: $FuturaNewBook;
@@ -131,6 +115,10 @@ h2 {
 				font-family: $FuturaNewBook;
 				font-size: 18px;
 			}
+		}
+		p {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
 		}
 	}
 .tab__container {
@@ -169,16 +157,21 @@ h2 {
 			}
 		}
 	}
-	.sliders {
-		.item {
-			.title {
-				font-family: $FuturaNewBook;
-				font-size: 18px;
-			}
-			.data {
-				font-family: $FuturaNewBook;
-				font-size: 14px;
-			}
+}
+.sliders {
+	.item {
+		.title {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
+		.data, .card__info, .presence {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+		.price {
+			font-family: $FuturaNewDemi;
+			font-size: 18px;
+			font-weight: normal;
 		}
 	}
 }
@@ -189,6 +182,52 @@ h2 {
 			font-size: 18px;
 			font-weight: normal;
 		}
+	}
+}
+.form {
+	.field {
+		font-size: 0;
+		.label__field {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+		.input, .ms-choice {
+			font-family: $FuturaNewBook;
+			font-size: 18px;			
+		}
+		.reset__filter, .sbm__filter {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+}
+.btn {
+	span {
+		font-family: $FuturaNewBook;
+		font-size: 14px;
+	}
+}
+.list {
+	font-size: 0;
+	li {
+		a {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
+	}
+	&.strong {
+		li {
+			a {
+				font-family: $FuturaNewDemi
+			}
+		}
+	}
+}
+.spinner {
+	font-size: 0;
+	.spinner__minus, .spinner__plus, .spinner__input {
+		font-family: $FuturaNewBook;
+		font-size: 18px;
 	}
 }
 .goods {
