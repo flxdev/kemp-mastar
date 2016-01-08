@@ -1235,6 +1235,10 @@ p {
 .content {
 	overflow: hidden;
 	padding-left: 18px;
+	h2 {
+		margin-bottom: 24px;
+		letter-spacing: 0.12px;
+	}
 }
 .pagin__row {
 	margin-bottom: 15px;
@@ -1635,6 +1639,119 @@ p {
 		height: 13px;
 		width: 7px;
 		margin-right: 5px;
+	}
+}
+.left__sidebar {
+	.nav {
+		padding-right: 35px;
+		.nav__item {
+			&:first-child {
+				border-top: 1px solid #d8dee4;
+			}
+			border-bottom: 1px solid #d8dee4;
+			display: block;
+			user-select: none;
+			position: relative;
+			.nav__wrap {
+				display: inline-block;
+				padding: 11px 0 14px;
+			}
+			&.is-active {
+				.nav__wrap {
+					padding: 16px 0 7px;
+				}
+				.list-links {
+					display: block;
+				}
+			}
+		}
+		.list-links {
+			display: none;
+			padding-bottom: 20px;
+			li {
+				a {
+					display: inline-block;
+					padding: 5px 0 6px;
+				}
+			}
+		}
+		a {
+			width: 100%;
+			color: #0e2031;
+			@include transition(color);
+			&:hover {
+					color: $red;
+				}
+			&.active {
+				color: $red!important;
+				position: relative;
+				&::after {
+					content: '';
+					width: 7px;
+					height: 13px;
+					background-image: url(../img/svg/nav-active.svg);
+					background-repeat: no-repeat;
+					position: absolute;
+					right: 0;
+					top: 50%;
+
+				}
+			}
+		}
+	}
+}
+.relation {
+	letter-spacing: 0.06px;
+	margin-bottom: 34px;
+	color: $black;
+}
+figure {
+	margin-bottom: 39px;
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		margin-bottom: 16px;
+	}
+	figcaption {
+		color: #949494;
+		letter-spacing: 0.65px;
+	}
+}
+blockquote {
+	background-color: #fff4ac;
+	line-height: 24px;
+	padding: 26px 15px 35px;
+	text-align: center;
+	margin-bottom: 12px;
+}
+.advantages {
+	margin-bottom: 16px;
+	.advantages__item {
+		width: 33.33%;
+		padding-right: 10px;
+		display: inline-block;
+		margin-bottom: 16px;
+		.title {
+			color: #000000;
+			letter-spacing: -0.2px;
+			border-bottom: 1px solid #eef3f8;
+			padding-bottom: 15px;
+			margin-bottom: 9px;
+			margin-right: 10px;
+		}
+	}
+}
+.content {
+	.nav {
+		margin: 29px 0 34px -19px;
+		li {
+			display: inline-block;
+			margin-left: 14px;
+			a {
+				color: $blue;
+				padding: 3px 5px;
+			}
+		}
 	}
 }
 .goods {
