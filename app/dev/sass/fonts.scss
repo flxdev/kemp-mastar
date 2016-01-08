@@ -68,6 +68,11 @@ h2 {
 	font-weight: normal;
 	font-size: 28px;
 }
+h3 {
+	font-family: $FuturaNewDemi;
+	font-weight: normal;
+	font-size: 18px;
+}
 .header {
 	.auth-bar {
 		a {
@@ -177,7 +182,7 @@ h2 {
 			font-family: $FuturaNewBook;
 			font-size: 18px;
 		}
-		.data, .card__info, .presence {
+		.data {
 			font-family: $FuturaNewBook;
 			font-size: 14px;
 		}
@@ -187,6 +192,10 @@ h2 {
 			font-weight: normal;
 		}
 	}
+}
+.card__info, .presence {
+	font-family: $FuturaNewBook;
+	font-size: 14px;
 }
 .all__search {
 	.search__container {
@@ -294,6 +303,36 @@ p {
 		font-family: $FuturaNewBook;
 		font-size: 18px;
 	}
+}
+.one__click {
+	font-family: $FuturaNewBook;
+	font-size: 14px;
+}
+.spinner__price {
+	font-family: $FuturaNewBook;
+	font-size: 18px;
+}
+.spinner__result {
+	font-family: $FuturaNewDemi;
+	font-size: 18px;
+}
+.btn__link {
+	font-family: $FuturaNewBook;
+	font-size: 14px;
+}
+.link__more {
+	font-family: $FuturaNewBook;
+	font-size: 18px;
+}
+.product-spec {
+	font-family: $FuturaNewBook;
+	.product-spec__name, .product-spec__value {
+		font-size: 18px;
+	}
+}
+.btn__back {
+	font-family: $FuturaNewBook;
+	font-size: 14px;
 }
 .goods {
 	h2 {
