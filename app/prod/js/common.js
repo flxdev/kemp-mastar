@@ -288,4 +288,13 @@ $(document).ready(function () {
 		});
 	})();
 
+	//equalheight
+	(function(){
+		if($('.equalheight').length){
+			$('.equalheight').find('.item').matchHeight({
+				property: 'min-height'
+			});			
+		};
+	})();
+
 });

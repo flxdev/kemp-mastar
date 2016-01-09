@@ -751,10 +751,15 @@ p {
 }
 .tab__content.lists {
 	.lists__item {
+		font-size: 0;
+		margin: 0 0 21px -19px;
+		.item {
+			margin: 0 0 19px 19px;
+		}
 		&.card {
-			margin: 0 0 21px -15px;
+			margin: 0 0 21px -19px;
 			.item {
-				margin: 0 0 19px 15px;
+				margin: 0 0 19px 19px;
 			}
 		}		
 	}
@@ -763,6 +768,7 @@ p {
 		width: 231px;
 		padding: 8px;
 		display: inline-block;
+		vertical-align: top;
 		&.stock {
 			background-color: $yellow;
 		}
