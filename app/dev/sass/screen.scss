@@ -8,9 +8,6 @@ html, body {
 *, *::after, *::before {
 	box-sizing: border-box;
 }
-a {
-	text-decoration: none;
-}
 a[data-href], a[data-scroll] {
 	cursor: pointer;
 }
@@ -66,6 +63,10 @@ body {
 }
 h2 {
 	color: $black;
+}
+a {
+	text-decoration: none;
+	color: $blue;
 }
 p {
 	color: $black;
@@ -1760,9 +1761,114 @@ blockquote {
 		}
 	}
 }
+.accord {
+	position: relative;
+	.accord__but {
+		cursor: pointer;
+		color: $blue;
+		padding: 18px 20px 21px 0;
+		user-select: none;
+		border-bottom: 1px solid #d8dee4;
+		transition: background-color, 0.3s ease, color 0.3s ease;
+		position: relative;
+		.icon {
+			width: 16px;
+			height: 9px;
+			display: inline-block;
+			position: absolute;
+			top: 32px;
+			right: 5px;
+			transform: translate3d(0, 0, 0);
+			&::after {
+				content: '';
+				height: 2px;
+				width: 10px;
+				transition: transform 0.3s ease, background-color 0.3s ease;
+				top: 0;
+				left: 0;
+				transform: rotate(45deg);
+				background-color: #192a3b;
+				position: absolute;
+			}
+			&::before {
+				content: '';
+				height: 2px;
+				width: 10px;
+				transition: transform 0.3s ease, background-color 0.3s ease;
+				top: 0;
+				right: 0;
+				transform: rotate(-45deg);
+				background-color: #192a3b;
+				position: absolute;
+			}
+		}
+		&:hover {
+			background-color: #f9f9f9;
+			color: $red;
+			.icon {
+				&::after {
+					background-color: $red;
+				}
+				&::before {
+					background-color: $red;
+				}
+			}
+		}
+	}
+	.accord__block {
+		display: none;
+		.row {
+			padding-top: 28px;
+		}
+		.col_item {
+		padding-right: 35px;			
+			h3 {
+				margin-bottom: 25px;
+				color: $black;
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&.is-active {
+		.accord__but {
+			color: $red;
+			background-color: #fff;
+			.icon {
+				&::after {
+					transform: rotate(-45deg);
+					background-color: $red;
+				}
+				&::before {
+					transform: rotate(45deg);
+					background-color: $red;
+				}
+			}
+		}
+	}
+}
+.marked {
+	margin-bottom: 25px;
+	li {
+		margin-bottom: 2px;
+		padding-left: 23px;
+		position: relative;
+		&::after {
+			content: '';
+			width: 6px;
+			height: 6px;
+			background-color: $yellow;
+			border-radius: 100%;
+			position: absolute;
+			top: 9px;
+			left: 1px;
+		}
+	}
+}
 .goods {
 	background-color: $darkblue;
-	padding: 28px 0 0;
+	margin: 28px 0 0;
 	h2 {
 		color: $white;
 		letter-spacing: 0.1px;

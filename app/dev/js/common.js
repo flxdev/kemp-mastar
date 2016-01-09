@@ -1,4 +1,10 @@
 $(document).ready(function () {
+	//document click
+	$(document).click(function() {
+		$('.js-accordions-mod .js-accord').removeClass('is-active');
+		$('.js-accordions-mod .js-accord-block').slideUp(500);
+	});
+
 	//toggle goods
 	(function(){
 		$('.goods .btn').each(function(){
@@ -295,6 +301,34 @@ $(document).ready(function () {
 				property: 'min-height'
 			});			
 		};
+	})();
+
+	//accordion
+	(function(){
+		$('.accordions').each(function(){
+			$('.js-accord-but').on('click', function() {
+				var this_ 		= $(this),
+					parent 		= this_.parents('.js-accord'),
+					blockThis 	= parent.find('.js-accord-block'),
+					accord 		= $('.js-accord'),
+					block 		= accord.find('.js-accord-block');
+				
+				if (!parent.hasClass('is-active')) {
+					accord.stop(true, true).removeClass('is-active');
+					block.stop(true, true).slideUp(500);
+					parent.stop(true, true).addClass('is-active');
+					blockThis.stop(true, true).slideDown(500);
+				}
+				else {
+					parent.stop(true, true).removeClass('is-active');
+					blockThis.stop(true, true).slideUp(500);
+				}
+				return false;
+			 });
+			$('.js-accord').on('click', function(event){
+				event.stopPropagation();
+			});
+		});
 	})();
 
 });
