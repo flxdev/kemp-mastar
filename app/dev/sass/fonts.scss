@@ -390,6 +390,47 @@ blockquote {
 		font-size: 18px;
 	}
 }
+.balloon__address {
+	font-family: $FuturaNewBook;
+}
+.popover {
+	.baloon {
+		font-family: $FuturaNewBook;
+		font-size: 12px;
+		.balloon__title {
+			font-size: 14px;
+		}
+		.balloon__address {
+			font-family: $FuturaNewBook;
+		}
+		.balloon__row {
+			.balloon__col {
+				p {
+					font-size: 12px;
+					sup {
+						font-size: 7px;
+					}
+				}
+			}
+		}
+	}
+}
+.geolocation {
+	table {
+		th {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+			font-weight: normal;
+		}
+		td {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+			&:first-child {
+				font-family: $FuturaNewDemi;
+			}
+		}
+	}
+}
 .goods {
 	h2 {
 		font-family: $FuturaNewMedium;

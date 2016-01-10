@@ -331,4 +331,236 @@ $(document).ready(function () {
 		});
 	})();
 
+
+	if ($('#map').length) {
+		ymaps.ready(init);
+	};
+
+	function init () {
+		var myMap = new ymaps.Map('map', {
+				center: [55.3172, 37.523285],
+				zoom: 9,
+				controls: []
+			}, {
+				searchControlProvider: 'yandex#search'
+			}),
+			objectManager = new ymaps.ObjectManager({
+				clusterize: false
+			}),
+			MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+				'<div class="popover top">' +
+					'<a class="close" href="#">&times;</a>' +
+					'<div class="arrow"></div>' +
+					'<div class="balloon">' +
+						'$[[options.contentLayout observeSize minWidth=246 maxWidth=246]]' +
+					'</div>' +
+				'</div>', {
+				build: function () {
+					this.constructor.superclass.build.call(this);
+					this._$element = $('.popover', this.getParentElement());
+					this.applyElementOffset();
+					this._$element.find('.close')
+					    .on('click', $.proxy(this.onCloseClick, this));
+				},
+				clear: function () {
+				    this._$element.find('.close')
+				        .off('click');
+				    this.constructor.superclass.clear.call(this);
+				},
+				onSublayoutSizeChange: function () {
+					MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+					if(!this._isElement(this._$element)) {
+					    return;
+					}
+					this.applyElementOffset();
+					this.events.fire('shapechange');
+				},
+				applyElementOffset: function () {
+					this._$element.css({
+						left: -((this._$element[0].offsetWidth + 18) / 2),
+						top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight + 10)
+					});
+				},
+				onCloseClick: function (e) {
+					e.preventDefault();
+					this.events.fire('userclose');
+					objectManager.objects.options.set({
+					    iconLayout: 'default#image',
+						iconImageHref: 'prod/img/marker.png'
+					});
+				},
+				getShape: function () {
+					if(!this._isElement(this._$element)) {
+					    return MyBalloonLayout.superclass.getShape.call(this);
+					}
+					var position = this._$element.position();
+					return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+						[position.left, position.top], [
+							position.left + this._$element[0].offsetWidth,
+							position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
+						]
+					]));
+				},
+				_isElement: function (element) {
+					return element && element[0] && element.find('.arrow')[0];
+				}
+			}),
+
+			MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+				'<h3 class="balloon__title">$[properties.balloonHeader]</h3>' +
+				'<div class="balloon__content">$[properties.balloonContent]</div>'
+			);
+
+			objectManager.objects.options.set({
+			    iconLayout: 'default#image',
+				iconImageHref: 'prod/img/marker.png',
+				iconImageSize: [20, 27],
+				balloonShadow: false,
+				balloonLayout: MyBalloonLayout,
+				balloonContentLayout: MyBalloonContentLayout,
+				balloonPanelMaxMapArea: 0
+			});
+			function onObjectEvent (e) {
+				var objectId = e.get('objectId');
+				if (e.get('type') == 'mouseenter') {
+				    objectManager.objects.setObjectOptions(objectId, {
+				        iconLayout: 'default#image',
+						iconImageHref: 'prod/img/pin.png'
+				    });
+				}
+				if (e.get('type') == 'mouseleave') {
+				    objectManager.objects.setObjectOptions(objectId, {
+				    	iconLayout: 'default#image',
+				    	iconImageHref: 'prod/img/marker.png'
+				    });
+				}
+				if (e.get('type') == 'click') {
+					    objectManager.objects.setObjectOptions(objectId, {
+				    	iconLayout: 'default#image',
+				    	iconImageHref: 'prod/img/marker.png'
+				    });
+				}
+			}
+			objectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
+
+		zoomControl = new ymaps.control.ZoomControl({ 
+			options: { 
+				//layout: ZoomLayout,
+				position: {
+					top: 28,
+					left: 17
+				}
+			} 
+		});
+
+		myMap.controls.add(zoomControl);
+
+		myMap.geoObjects.add(objectManager);
+		var data = {
+			"type": "FeatureCollection",
+			"features": [
+				{
+					"type": "Feature", 
+					"id": 0, 
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.606878, 37.524767]
+					}, 
+					"properties": {
+						"balloonHeader": "Сервис КЭМП Ясенево",
+						"balloonContent": 
+							"<div class='balloon__address'>Москва, ул. Вильнюсская 1" +
+							"<div class='balloon__row'>" +
+								"<div class='balloon__col'>" +
+									"<p>(495)422-29-92<p>" +
+								"</div>" +
+								"<div class='balloon__col'>" +
+									"<p>с 9:00 до 22:00,<p>" +
+									"<p>Ежедневно<p>" +
+								"</div>" +
+							"</div>" 
+						, 
+						"clusterCaption": "Еще одна метка"
+					}
+				},
+				{
+					"type": "Feature", 
+					"id": 1, 
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [54.920635, 37.404222]
+					}, 
+					"properties": {
+						"balloonHeader": "Сервис КЭМП Серпухов",
+						"balloonContent": 
+							"<div class='balloon__address'>142211, Московская область, г. Серпухов, ул. Урицкого, д. 1.</div>" +
+							"<div class='balloon__row'>" +
+								"<div class='balloon__col'>" +
+									"<p>(495)556-65-76,<p>" +
+									"<p>(495)556-63-34,<p>" +
+									"<p>(495)926-32-08</p>" +
+								"</div>" +
+								"<div class='balloon__col'>" +
+									"<p>с 9:00 до 21:00,<p>" +
+									"<p>Ежедневно<p>" +
+								"</div>" +
+							"</div>" 
+						, 
+						"clusterCaption": "Еще одна метка"
+					}
+				},
+				{
+					"type": "Feature", 
+					"id": 2, 
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.372774, 37.783078]
+					}, 
+					"properties": {
+						"balloonHeader": "Сервис КЭМП Домодедово",
+						"balloonContent": 
+							"<div class='balloon__address'>Московская область, <br>г. Домодедово, <br>мкр-н Востряково, <br>ул. Заборье, д.1Д <br>(46-й км Каширского шоссе)</div>" +
+							"<div class='balloon__row'>" +
+								"<div class='balloon__col'>" +
+									"<p>(49679)66-700,<p>" +
+									"<p>(49679)66-491,<p>" +
+									"<p>(495)926-3208</p>" +
+								"</div>" +
+								"<div class='balloon__col'>" +
+									"<p>с 8:00 до 21:00,<p>" +
+									"<p>Ежедневно<p>" +
+								"</div>" +
+							"</div>" 
+						, 
+						"clusterCaption": "Еще одна метка"
+					}
+				},
+				{
+					"type": "Feature", 
+					"id": 3, 
+					"geometry": {
+						"type": "Point", 
+						"coordinates": [55.599591, 38.098045]
+					}, 
+					"properties": {
+						"balloonHeader": "Сервис КЭМП Жуковский",
+						"balloonContent": 
+							"<div class='balloon__address'>Московская область, город Жуковский, ул. Мясищева, д. 16а</div>" +
+							"<div class='balloon__row'>" +
+								"<div class='balloon__col'>" +
+									"<p>(495)422-29-92<p>" +
+								"</div>" +
+								"<div class='balloon__col'>" +
+									"<p>с 9:00 до 21:00<p>" +
+									"<p>Ежедневно<p>" +
+								"</div>" +
+							"</div>" 
+						, 
+						"clusterCaption": "Еще одна метка"
+					}
+				}
+			]
+		}
+		objectManager.add(data);
+	};
 });
