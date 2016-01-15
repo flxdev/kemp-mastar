@@ -526,7 +526,7 @@ blockquote {
 		}			
 	}
 	.sheet__in {
-		.sheet_result {
+		.sheet_result, .basket__result {
 			td {
 				&:nth-child(6) {
 					font-family: $FuturaNewDemi;
@@ -537,6 +537,15 @@ blockquote {
 	.spinner {
 		.spinner__input {
 			font-size: 14px;
+		}
+	}
+}
+.order {
+	.title {
+		font-family: $FuturaNewBook;
+		font-size: 18px;
+		& + div {
+			font-family: $FuturaNewDemi;
 		}
 	}
 }

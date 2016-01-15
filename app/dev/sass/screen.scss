@@ -21,7 +21,6 @@ button {
 	border: none;
 	padding: 0;
 	outline: none;
-	cursor: pointer;
 }
 input {
 	border: none;
@@ -2231,15 +2230,18 @@ blockquote {
 }
 .sheet {
 	margin-top: 15px;
-	margin-bottom: -5px;
 	.sheet__top {
 		background-color: $lightgrey;
+		color: #949494;
+	}
+	.sorting__item {
 		color: #949494;
 	}
 	.sorting__item.arrow {
 		color: #949494;
 		@include transition(color);
 		position: relative;
+		cursor: pointer;
 		&.is-active {
 			color: #000000;
 			&:after {
@@ -2303,6 +2305,68 @@ blockquote {
 				}
 			}
 		}
+		&.basket {
+			tr {
+				td {
+					&:first-child {
+						padding-left: 15px;
+						width: 112px;
+					}
+					&:nth-child(2) {
+						width: 117px;
+					}
+					&:nth-child(3) {
+						width: 279px;
+					}
+					&:nth-child(4) {
+						width: 122px;
+					}
+					&:nth-child(5) {
+						width: 187px;
+					}
+					&:nth-child(6) {
+						width: auto;
+					}
+
+					&:nth-last-child(1):not(:nth-child(7)) {
+						width: auto;
+					}
+				}
+			}
+		}
+		&.basket__result {
+			tr {
+				td {
+					padding: 16px 0;
+					&:first-child {
+						padding-left: 18px;
+						width: 114px;
+						letter-spacing: 0.65px;
+					}
+					&:nth-child(2) {
+						width: 117px;
+						letter-spacing: 0.1px;
+					}
+					&:nth-child(3) {
+						width: 279px;
+						letter-spacing: -0.1px;
+					}
+					&:nth-child(4) {
+						width: 122px;
+					}
+					&:nth-child(5) {
+						width: 171px;
+					}
+					&:nth-child(6) {
+						width: auto;
+					}
+
+					&:nth-last-child(1):not(:nth-child(7)) {
+						width: auto;
+					}
+				}
+			}
+		}
 	}
 	&.border {
 		.sheet__in {
@@ -2323,6 +2387,18 @@ blockquote {
 				&:last-child {
 					text-align: right;
 					padding-right: 16px;
+				}
+			}
+		}
+		.basket__result {
+			tr {
+				td {
+					border-bottom: 1px solid #d8dee4;
+				}
+				&:last-child {
+					td {
+						border-width: 2px;
+					}
 				}
 			}
 		}
@@ -2352,7 +2428,40 @@ blockquote {
 			right: 0px;
 			letter-spacing: -0.1px;
 		}
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.remove {
+			width: 18px;
+			height: 26px;
+			background-image: url(../img/icons/remove.png);
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			display: inline-block;
+			vertical-align: middle;
+			position: absolute;
+			right: 29px;
+		}
 	}
+	.price {
+		position: relative;
+		.old {
+			position: absolute;
+			bottom: -21px;
+			color: #b2b2b2;
+			left: 0;
+			&::after {
+				content: '';
+				height: 1px;
+				position: absolute;
+				top: 50%;
+				left: -2px;
+				right: -2px;
+				background-color: #b2b2b2;
+			}
+		}
+	}		
 }
 .analog {
 	h2 {
@@ -2371,5 +2480,48 @@ blockquote {
 .row {
 	& > .form {
 		margin-bottom: 0;
+	}
+}
+.order {
+	width: 491px;
+	border: 2px solid $yellow;
+	display: table;
+	float: right;
+	margin-bottom: 70px;
+	.order__col {
+		padding: 33px 0;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+		width: 50%;
+		.btn {
+			width: 164px;
+			height: 30px;
+			line-height: 28px;
+			display: inline-block;
+			border-radius: 3px;
+		}
+		.title {
+			margin: -10px 0 6px;
+			& + div {
+				letter-spacing: 0.71px;
+				margin-left: -3px;
+			}
+		}
+		&:last-child {
+			background-color: $white;
+			position: relative;
+			z-index: 3;
+			&::after {
+				content: '';
+				width: 25px;
+				top: 0;
+				bottom: 0;
+				background-image: url(../img/shadow-order.png);
+				background-size: cover;
+				position: absolute;
+				left: -25px;
+			}
+		}
 	}
 }
