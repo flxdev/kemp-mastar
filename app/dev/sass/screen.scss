@@ -21,6 +21,7 @@ button {
 	border: none;
 	padding: 0;
 	outline: none;
+	cursor: pointer;
 }
 input {
 	border: none;
@@ -28,6 +29,11 @@ input {
 	padding: 0;
 	margin: 0;
 	outline: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
 }
 @mixin transition($name) {
 	transition: $name 0.3s ease 0s;
@@ -51,6 +57,7 @@ input {
 $white: #ffffff;
 $yellow: #ffdc00;
 $darkblue: #0b1a28;
+$lightgrey: #f8f8f8;
 $grey: #767d83;
 $darkgrey: #223242;
 $red: #e50005;
@@ -2213,6 +2220,145 @@ blockquote {
 			display: inline-block;
 			margin-top: 5px;
 			margin-right: 87px;
+		}
+	}
+}
+.sheet {
+	margin-top: 15px;
+	margin-bottom: -5px;
+	.sheet__top {
+		background-color: $lightgrey;
+		color: #949494;
+	}
+	.sorting__item.arrow {
+		color: #949494;
+		@include transition(color);
+		position: relative;
+		&.is-active {
+			color: #000000;
+			&:after {
+				transform: rotate(0deg);
+				opacity: 1;
+			}
+		}
+		&.is-active-top {
+			color: #000000;
+			&:after {
+				transform: rotate(180deg);
+				opacity: 1;
+			}
+		}
+		&:after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 2px 0 2px;
+			border-color: #000000 transparent transparent transparent;
+			transition: transform 0.3s ease, opacity 0.3s ease;
+			position: absolute;
+			bottom: 7px;
+			right: -7px;
+			opacity: 0.4;
+			will-change: transform;
+		}
+	}
+	table {
+		@include clearfix;
+		tr {
+			td {
+				padding: 10px 0 15px;
+				letter-spacing: 0.4px;
+				&:first-child {
+					padding-left: 15px;
+					width: 112px;
+				}
+				&:nth-child(2) {
+					width: 117px;
+					a {
+						border-bottom: 1px solid $blue;
+					}
+				}
+				&:nth-child(3) {
+					width: 228px;
+				}
+				&:nth-child(4) {
+					width: 87px;
+				}
+				&:nth-child(5) {
+					width: 102px;
+				}
+				&:nth-child(6) {
+					width: 85px;
+				}
+
+				&:nth-last-child(1):not(:nth-child(7)) {
+					width: 105px;
+				}
+			}
+		}
+	}
+	&.border {
+		.sheet__in {
+			border: 2px solid $yellow;
+		}
+	}
+	.sheet__in {
+		background-color: $white;
+		.sheet_result {
+			td {
+				padding: 16px 0 37px;
+				&:first-child {
+					padding-left: 15px;
+				}
+				&:nth-child(7) {
+					//width: 92px;
+				}
+				&:last-child {
+					text-align: right;
+					padding-right: 16px;
+				}
+			}
+		}
+	}
+	.spinner {
+		.spinner__minus {
+			width: 26px;
+		}
+		.spinner__input {
+			width: 37px;
+		}
+		.spinner__plus {
+			width: 26px;
+		}
+	}
+	.btn {
+		width: 105px;
+		height: 30px;
+		border-radius: 3px;
+		line-height: 27px;
+	}
+	.addition {
+		position: relative;
+		.one__click {
+			position: absolute;
+			bottom: -21px;
+			right: 0px;
+			letter-spacing: -0.1px;
+		}
+	}
+}
+.analog {
+	h2 {
+		letter-spacing: 1.05px;
+		margin-bottom: 22px;
+	}
+	.sheet {
+		margin-bottom: 85px;
+		.sheet__in {
+			td {
+				border-bottom: 1px solid #d8dee4;
+			}
 		}
 	}
 }

@@ -333,6 +333,24 @@ $(document).ready(function () {
 		});
 	})();
 
+	//sorting
+	(function(){
+		$('.js-sortin-item').on('click', function() {
+			var this_ = $(this),
+				parent = this_.parents('.js-sorting'),
+				item = parent.find('.js-sortin-item'),
+				active = ('is-active'),
+				activeTop = ('is-active-top');
+			if (!this_.hasClass(active)) {
+				item.removeClass(active).removeClass(activeTop);
+				this_.addClass(active);
+			}
+			else if (!this_.hasClass(activeTop)) {
+				this_.removeClass(active).toggleClass(activeTop);
+			}
+		});
+	})();
+
 
 	if ($('#map').length) {
 		ymaps.ready(init);

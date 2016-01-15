@@ -518,3 +518,25 @@ blockquote {
 		}
 	}
 }
+.sheet {
+	.sheet__wrap {
+		.sorting__item, td {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}			
+	}
+	.sheet__in {
+		.sheet_result {
+			td {
+				&:nth-child(6) {
+					font-family: $FuturaNewDemi;
+				}
+			}
+		}
+	}
+	.spinner {
+		.spinner__input {
+			font-size: 14px;
+		}
+	}
+}
