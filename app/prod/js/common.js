@@ -74,8 +74,8 @@ $(document).ready(function () {
 				event.stopPropagation();
 			});
 
-			$(document).on('click', function(event){
-				if(parent.hasClass('active')) {
+			$(document).on('click scroll', function(event){
+				if(!parent.parents('.fixed__case').length) {
 					event.stopPropagation();
 				} else {
 					linkItem.removeClass('active');
@@ -110,10 +110,12 @@ $(document).ready(function () {
 
 		if(slider.length) {
 			slider.each(function(){
-				var slider = $(this);
-				var nameClass = slider.parents('.row').attr('class').split(' ')[0];
+				var slider = $(this),
+					btnPrev = slider.parents('.row').find('.slide__prev'),
+					btnNext = slider.parents('.row').find('.slide__next');
+				// var nameClass = slider.parents('.row').attr('class').split(' ')[0];
 
-				if($('.' + nameClass).hasClass('slider')) {
+				if(slider.hasClass('slider')) {
 					slider.slick({
 						arrows: true,
 						slidesToShow: 4,
@@ -132,11 +134,11 @@ $(document).ready(function () {
 						infinite: true,
 					});
 
-					$('.' + nameClass + ' .slide__prev').on('click', function(){
+					btnPrev.on('click', function(){
 						slider.slick('slickPrev');
 					});
 			
-					$('.' + nameClass + ' .slide__next').on('click', function(){
+					btnNext.on('click', function(){
 						slider.slick('slickNext');
 					});
 				}				
