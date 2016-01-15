@@ -2368,3 +2368,8 @@ blockquote {
 		}
 	}
 }
+.row {
+	& > .form {
+		margin-bottom: 0;
+	}
+}
