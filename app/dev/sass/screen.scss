@@ -265,9 +265,9 @@ p {
 }
 .head {
 	background-color: #eef3f8;
-	padding: 33px 0 28px;
+	padding: 33px 0 24px;
 	h1 {
-		margin-bottom: 13px;
+		margin-bottom: 11px;
 		letter-spacing: -0.3px;
 	}
 }
@@ -298,9 +298,9 @@ p {
 	@include clearfix;
 }
 .breadcrumbs {
-	margin-left: -31px;
+	//margin-left: -31px;
 	li {
-		display: inline-block;
+		display: inline;
 		margin-left: 26px;
 		position: relative;
 		&::after {
@@ -311,20 +311,22 @@ p {
 			border-width: 3.5px 0 3.5px 6px;
 			border-color: transparent transparent transparent #007bff;
 			position: absolute;
-			top: 9px;
-			right: -18px;
+			top: -7px;
+			left: -10px;
 			margin-left: -3px;
 		}
-		&:last-of-type {
+		&:first-of-type {
+			margin-left: -4px;
 			&::after {
 				display: none;
 			}
 		}
 		a {
 			color: $black;
-			padding: 2px 5px;
-			display: inline-block;
+			padding: 2px 3px 2px 5px;
+			display: inline;
 			letter-spacing: 0.55px;
+			line-height: 27px;
 		}
 	}
 }
@@ -1395,6 +1397,7 @@ p {
 	width: 388px;
 	height: 372px;
 	margin-bottom: 6px;
+	overflow: hidden;
 	.slider-for__slide {
 		position: relative;
 		width: 100%;
@@ -1404,7 +1407,7 @@ p {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate3d(-50%, -50%, 0);
+			transform: translate(-50%, -50%);
 			max-width: 100%;
 			max-height: 100%;
 		}
@@ -1414,11 +1417,14 @@ p {
 	margin: 0 -4px 32px;
 	.slider-nav__slide {
 		margin: 0 4px;
-		width: 92px;
+		width: 91px;
+		//max-width: 92px;
+		//min-width: 92px;
 		height: 88px;
 		border: 1px solid #e2e2e2;
 		position: relative;
 		cursor: pointer;
+		overflow: hidden;
 		&.slick-current {
 			border-color: $blue;
 		}
@@ -1426,7 +1432,7 @@ p {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate3d(-50%, -50%, 0);
+			transform: translate(-50%, -50%);
 			max-width: 100%;
 			max-height: 100%;			
 		}
