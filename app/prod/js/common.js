@@ -352,6 +352,33 @@ $(document).ready(function () {
 	})();
 
 
+	//mask input
+	(function(){
+		if($('.mask').length){
+			$('.mask').mask('+000 (00) 000 00 00');
+		}
+	})();
+
+	//validation
+	(function(){
+		var form_validate = $('.js-validate');
+		if (form_validate.length) {
+			form_validate.each(function () {
+				var form_this = $(this);
+				$.validate({
+					form : form_this,
+					//modules : 'security',
+					//validateOnBlur : true,
+					borderColorOnError : false,
+					scrollToTopOnError : false,
+					onSuccess : function() {
+						return false;
+					}
+				});
+			});
+		}
+	})();
+
 	if ($('#map').length) {
 		ymaps.ready(init);
 	};
