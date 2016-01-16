@@ -549,3 +549,10 @@ blockquote {
 		}
 	}
 }
+.order__success {
+	text-align: center;
+	.title {
+		font-family: $FuturaNewMedium;
+		font-size: 28px;
+	}
+}

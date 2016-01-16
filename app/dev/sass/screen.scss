@@ -64,6 +64,8 @@ $darkred: #e10005;
 $blue: #0051a2;
 $black: #000000;
 $green: #48a200;
+$darkgreen: #56a913;
+
 body {
 	min-width: 1000px;
 }
@@ -2523,5 +2525,44 @@ blockquote {
 				left: -25px;
 			}
 		}
+	}
+}
+.order__success {
+	padding: 21px 0 102px;
+	text-align: center;
+	.title {
+		display: inline-block;
+		margin-bottom: 24px;
+		&.is-green {
+			color: $darkgreen;
+			position: relative;
+			&::after {
+				content: '';
+				width: 18px;
+				height: 14px;
+				position: absolute;
+				top: 14px;
+				left: -43px;
+				background-image: url(../img/icons/success.png);
+				background-size: cover;
+			}
+		}
+	}
+	p {
+		width: 40%;
+		margin: 0 auto 54px;
+		letter-spacing: -0.1px;
+		a {
+			border-bottom: 1px solid $blue;
+		}
+	}
+	.btn {
+		width: 190px;
+		height: 30px;
+		line-height: 28px;
+		margin: 0 auto;
+		position: relative;
+		left: 4px;
+		border-radius: 5px;
 	}
 }
