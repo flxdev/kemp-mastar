@@ -1218,6 +1218,7 @@ p {
 }
 .container {
 	padding-top: 27px;
+	min-height: 452px;
 }
 .left__sidebar {
 	width: 231px;
@@ -1623,7 +1624,7 @@ p {
 		}
 	}
 	.product-spec__value {
-		width: 33.2%;
+		width: 37.2%;
 		background: inherit;
 		display: inline-block;
 		vertical-align: middle;
@@ -2507,7 +2508,7 @@ blockquote {
 				margin-left: -3px;
 			}
 		}
-		&:last-child {
+		&:last-child:not(:first-child) {
 			background-color: $white;
 			position: relative;
 			z-index: 3;
@@ -2618,5 +2619,48 @@ blockquote {
 .row > .form {
 	&.personal {
 		margin-bottom: 37px;
+	}
+}
+.right__sidebar {
+	float: right;
+	width: 272px;
+	.order {
+		width: 100%;
+		margin-top: 12px;
+		margin-bottom: 0;
+		.order__col {
+			padding: 39px 0 35px;
+		}
+	}
+}
+.more__info {
+	color: #949494;
+	padding-left: 30px;
+	position: relative;
+	&::after {
+		content: '';
+		width: 17px;
+		height: 17px;
+		background-image: url(../img/icons/info.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+.data__person {
+	.person {
+		margin-bottom: 11px;
+		.person__name {
+			color: #949494;
+			display: inline-block;
+			vertical-align: bottom;
+			min-width: 119px;
+			letter-spacing: 1.1px;
+		}
+		.person__val {
+			color: $black;
+			display: inline-block;
+			vertical-align: bottom;
+		}
 	}
 }

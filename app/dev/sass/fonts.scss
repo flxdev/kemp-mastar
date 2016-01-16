@@ -42,11 +42,21 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'FuturaNewBookOblique';
+	src: url('../fonts/fonts/Futura-Book Oblique.eot');
+	src: url('../fonts/fonts/Futura-Book Oblique.woff') format('woff'), 
+		 url('../fonts/fonts/Futura-Book Oblique.ttf') format('truetype'), 
+		 url('../fonts/fonts/Futura-Book Oblique.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 $FuturaNewBold: 'FuturaNewBold', Arial, sans-serif;
 $FuturaNewBook: 'FuturaNewBook', Arial, sans-serif;
 $FuturaNewDemi: 'FuturaNewDemi', Arial, sans-serif;
 $FuturaNewHeavy: 'FuturaNewHeavy', Arial, sans-serif;
 $FuturaNewMedium: 'FuturaNewMedium', Arial, sans-serif;
+$FuturaNewBookOblique: 'FuturaNewBookOblique', Arial, sans-serif;
 
 html {
 	text-size-adjust: 100%;
@@ -560,5 +570,20 @@ blockquote {
 	.title {
 		font-family: $FuturaNewDemi;
 		font-size: 18px;
+	}
+}
+.more__info {
+	font-family: $FuturaNewBookOblique;
+	font-size: 14px;
+}
+.data__person {
+	.person {
+		font-family: $FuturaNewBook;
+		.person__name {
+			font-size: 14px;
+		}
+		.person__val {
+			font-size: 18px;
+		}
 	}
 }
