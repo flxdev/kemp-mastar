@@ -327,7 +327,7 @@ $(document).ready(function () {
 				}
 				return false;
 			 });
-			$('.js-accord').on('click', function(event){
+			$('.js-accord, .addition').on('click', function(event){
 				event.stopPropagation();
 			});
 		});

@@ -2367,6 +2367,30 @@ blockquote {
 				}
 			}
 		}
+		&.history {
+			tr {
+				td {
+					padding: 10px 0 16px;
+					&:first-child {
+						padding-left: 38px;
+						width: 157px;
+						letter-spacing: 0.65px;
+					}
+					&:nth-child(2) {
+						width: 136px;
+						letter-spacing: 0.6px;
+					}
+					&:nth-child(3) {
+						width: 111px;
+						letter-spacing: 0.1px;
+					}
+					&:nth-last-child(1):not(:nth-child(7)) {
+						width: auto;
+						letter-spacing: 0.9px;
+					}
+				}
+			}
+		}
 	}
 	&.border {
 		.sheet__in {
@@ -2398,6 +2422,160 @@ blockquote {
 				&:last-child {
 					td {
 						border-width: 2px;
+					}
+				}
+			}
+		}
+		.accord {
+			border-bottom: 1px solid #d8dee4;
+			.accord__but {
+				color: $black;
+				padding: 0;
+				border-color: transparent;
+				position: relative;
+				&:hover {
+					color: $black;
+					background-color: transparent;
+				}
+				&::after {
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 4px 2.5px 0 2.5px;
+					border-color: #949494 transparent transparent transparent;
+					position: absolute;
+					transition: transform 0.3s ease;
+					position: absolute;
+					top: 27px;
+					left: 20px;
+					transform-origin: 50% 50%;
+					will-change: transform;
+				}
+			}
+			&.is-active {
+				.accord__but {
+					&::after {
+						transform: rotate(180deg);
+					}
+				}
+			}
+			.row {
+				padding: 0 58px 0 42px;
+				margin-bottom: 17px;
+			}
+		}
+		.history__result {
+			tr {
+				td {
+					padding: 16px 0;
+					&:first-child {
+						padding-left: 42px;
+						width: 158px;
+						letter-spacing: -0.1px;
+					}
+					&:nth-child(2) {
+						width: 139px;
+						letter-spacing: 0px;
+					}
+					&:nth-child(3) {
+						width: 94px;
+						letter-spacing: 0.1px;
+					}
+					&:nth-child(4) {
+						width: 195px;
+						letter-spacing: 0.1px;
+					}
+					&:nth-last-child(1):not(:nth-child(7)) {
+						width: auto;
+						letter-spacing: 0.9px;
+					}
+				}
+			}
+			.btn {
+				height: 26px;
+				line-height: 23px;
+				width: 86px;
+				letter-spacing: 0;
+			}
+			.remove {
+				right: 21px;
+				z-index: 2;
+			}
+			.status {
+				padding-left: 17px;
+				letter-spacing: 0;
+				position: relative;
+				&.is-green {
+					color: #56a914;
+					&::after {
+						width: 9px;
+						height: 7px;
+						content: '';
+						background-image: url(../img/icons/success.png);
+						background-size: cover;
+						position: absolute;
+						left: 0;
+						top: 5px;
+					}
+				}
+				&.is-null {
+					color: #b1b1b1;
+					&::after {
+						width: 13px;
+						height: 13px;
+						content: '';
+						background-image: url(../img/icons/null.png);
+						background-size: cover;
+						position: absolute;
+						left: -2px;
+						top: 2px;
+					}
+				}
+				&.is-time {
+					color: #ffd11a;
+					&::after {
+						width: 13px;
+						height: 13px;
+						content: '';
+						background-image: url(../img/icons/time.png);
+						background-size: cover;
+						position: absolute;
+						left: -2px;
+						top: 2px;
+					}
+				}
+			}
+			&.history__result-inner {
+				tr {
+					&:first-child {
+						td {
+							border-top: 1px solid #eef3f8;
+						}
+					}
+					td {
+						padding: 16px 0;
+						vertical-align: top;
+						border-bottom: 1px solid #eef3f8;
+						&:first-child {
+							width: 253px;
+							letter-spacing: -0.1px;
+							.name {
+								letter-spacing: 0.7px;
+							}
+						}
+						&:nth-child(2) {
+							width: 113px;
+							letter-spacing: 0px;
+						}
+						&:nth-child(3) {
+							width: 177px;
+							letter-spacing: 0.1px;
+						}
+						&:nth-child(4) {
+							width: auto;
+							letter-spacing: 0.1px;
+						}
 					}
 				}
 			}
@@ -2461,7 +2639,27 @@ blockquote {
 				background-color: #b2b2b2;
 			}
 		}
-	}		
+	}
+	.info__order {
+		@include clearfix;
+		margin-bottom: 8px;
+		.col50 {
+			width: 50%;
+			float: left;
+			&:last-child:not(:first-child) {
+				padding-left: 51px;
+			}
+		}
+		.info-item {
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 13px;
+			p {
+				line-height: 21px;
+				margin-bottom: 5px;
+			}
+		}
+	}	
 }
 .analog {
 	h2 {
@@ -2661,6 +2859,21 @@ blockquote {
 			color: $black;
 			display: inline-block;
 			vertical-align: bottom;
+		}
+	}
+}
+.history__pagin {
+	float: right;
+	margin-top: 12px;
+	margin-right: -3px;
+	a {
+		float: left;
+		color: $blue;
+		padding: 3px;
+		margin-left: 16px;
+		letter-spacing: 0.9px;
+		&.active {
+			color: $red;
 		}
 	}
 }

@@ -543,6 +543,11 @@ blockquote {
 				}
 			}
 		}
+		.accord {
+			.accord__but {
+				font-size: 14px;
+			}
+		}
 	}
 	.spinner {
 		.spinner__input {
@@ -584,6 +589,26 @@ blockquote {
 		}
 		.person__val {
 			font-size: 18px;
+		}
+	}
+}
+.history__pagin {
+	a {
+		font-family: $FuturaNewBook;
+		font-size: 14px;
+	}
+}
+.sheet {
+	.info__order {
+		.info-item {
+			.title {
+				font-family: $FuturaNewDemi;
+				font-size: 15px;
+			}
+			p {
+				font-family: $FuturaNewBook;
+				font-size: 15px;
+			}
 		}
 	}
 }

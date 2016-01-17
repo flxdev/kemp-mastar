@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=1024">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="format-detection" content="telephone=no">
-	<title>3-1inners</title>
+	<title>7-2personal account</title>
 	<link rel="stylesheet" href="prod/css/slick.css">
 	<link rel="stylesheet" href="prod/css/multiple-select.css">
 	<link rel="stylesheet" href="prod/css/jquery.fancybox.css">
@@ -262,11 +262,10 @@
 		</div>
 		<div class="head">
 			<div class="l">
-				<h1>Вакансии компании КЭМП</h1>
+				<h1>Личный кабинет</h1>
 				<ul class="breadcrumbs">
 					<li><a href="">Главная</a></li>
-					<li><a href="">О компании</a></li>
-					<li><a href="">Вакансии</a></li>
+					<li><a href="">Личный кабинет </a></li>
 				</ul>
 			</div>
 		</div>
@@ -275,201 +274,278 @@
 				<div class="left__sidebar">
 					<div class="row">
 						<ul class="nav">
-							<li class="nav__item"><a href="#" class="nav__wrap">О заказе</a></li>
-							<li class="nav__item is-active">
-								<a href="#" class="nav__wrap">О компании</a>
-								<ul class="list-links">
-									<li><a class="active" href="">Вакансии</a></li>
-									<li><a href="">Содрудники</a></li>
-									<li><a href="">Новости</a></li>
-									<li><a href="">Политика компании</a></li>
-									<li><a href="">Торговый центр</a></li>
-									<li><a href="">Контакты</a></li>
-									<li><a href="">Поставщикам</a></li>
-									<li><a href="">Оптовым покупателям</a></li>
-									<li><a href="">Открой пункт выдачи КЭМП</a></li>
-								</ul>
-							</li>
-							<li class="nav__item"><a href="#" class="nav__wrap">КЭМП выгода</a></li>
-							<li class="nav__item"><a href="#" class="nav__wrap">Сервисы</a></li>
+							<li class="nav__item"><a href="#" class="nav__wrap">Мои данные</a></li>
+							<li class="nav__item"><a href="#" class="nav__wrap">Бонусная карта</a></li>
+							<li class="nav__item"><a href="#" class="nav__wrap active">История заказов</a></li>
+							<li class="nav__item"><a href="#" class="nav__wrap">Выход</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="content">
-					<h2>Актуальные вакансии</h2>
+					<div class="history__pagin">
+						<a class="active" href="">Все</a>
+						<a href="">2016</a>
+						<a href="">2015</a>
+						<a href="">2014</a>
+					</div>
+					<h2>История заказов</h2>
 					<div class="row">
-						<div class="relation">Если вы на сто процентов хотите отдаваться на работе, и твёрдо знаете, что КЭМП — это ваша компания, присылайте ваше резюме и контактные данные: <a href="">hr@kemp1.ru</a></div>
-						<div class="accordions js-accordions-mod">
-							<div class="accord js-accord">
-								<div class="accord__but js-accord-but">Инженер-тестировщик в г. Санкт-Петербург<i class="icon"></i></div>
-								<div class="accord__block js-accord-block">
-									<div class="row">
-										<div class="col50">
-											<div class="col_item">
-												<h3>Задачи</h3>
-												<ul class="marked">
-													<li>Разработка тестовых сценариев.</li>
-													<li>Подготовка тестовых данных.</li>
-													<li>Выполнение ручного функционального тестирования (в том числе интеграционного).</li>
-													<li>Регистрация ошибок в системе управления тестированием.</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col50">
-											<div class="col_item">
-												<h3>Требования</h3>
-												<p>Обязательно:</p>
-												<ul class="marked">
-													<li>Высшее техническое образование.</li>
-													<li>Начальные знания теории тестирования и желание работать в данной области.</li>
-													<li>Ответственность и самоорганизация.</li>
-												</ul>
-												<p>Желательно:</p>
-												<ul class="marked">
-													<li>Опыт тестирования (в идеале CRM систем).</li>
-													<li>Теоретические знания основ тестирования.</li>
-													<li>Знание систем багтрекинга (предпочтительно ALM).Знание SQL.</li>
-												</ul>
-											</div>
-										</div>
-									</div>
+						<div class="sheet">
+							<div class="sheet__top">
+								<div class="sheet__wrap">
+									<table class="history">
+										<tbody>
+											<tr>
+												<td><button class="sorting__item" type='button'>Номер заказа</button></td>
+												<td><button class="sorting__item" type='button'>Дата и время</button></td>
+												<td><button class="sorting__item" type='button'>Сумма</button></td>
+												<td><button class="sorting__item" type='button'>Статус  заказа </button></td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
-							<div class="accord js-accord">
-								<div class="accord__but js-accord-but">Старший инженер-тестировщик (тестирование банковских систем)<i class="icon"></i></div>
-								<div class="accord__block js-accord-block">
-									<div class="row">
-										<div class="col50">
-											<div class="col_item">
-												<h3>Задачи</h3>
-												<ul class="marked">
-													<li>Разработка тестовых сценариев.</li>
-													<li>Подготовка тестовых данных.</li>
-													<li>Выполнение ручного функционального тестирования (в том числе интеграционного).</li>
-													<li>Регистрация ошибок в системе управления тестированием.</li>
-												</ul>
+							<div class="sheet__in">
+								<div class="sheet__wrap">
+									<div class="accordions js-accordions-mod">
+										<div class="accord js-accord">
+											<div class="accord__but js-accord-but">
+												<table class="history__result">
+													<tbody>
+														<tr>
+															<td><a href="#">R56036500</a></td>
+															<td>26.12.2015, 13:25</td>
+															<td>954 ₽</td>
+															<td><div class="status is-green">Выполнен (15.01.2016)</div></td>
+															<td>
+																<div class="addition">
+																	<a href="#" class="btn"><span>Повторить</span></a>
+																	<a class="remove" href="#"></a>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="accord__block js-accord-block">
+												<div class="row">
+													<table class="history__result history__result-inner">
+														<tbody>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 10</td>
+																<td>12 950 ₽</td>
+															</tr>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 1</td>
+																<td>1 295 ₽</td>
+															</tr>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 10</td>
+																<td>12 950 ₽</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="row">
+													<div class="info__order">
+														<div class="col50">
+															<div class="info-item">
+																<div class="title">Способ доставки:</div>
+																<p>Доставка курьером</p>
+															</div>
+															<div class="info-item">
+																<div class="title">Способ оплаты:</div>
+																<p>Пластиковая карта (при получении заказа)</p>
+															</div>
+														</div>
+														<div class="col50">
+															<div class="info-item">
+																<div class="title">Адрес:</div>
+																<p>Московская область, г. Зеленоград,<br> д. 4, корп. 2, кв. 83</p>
+															</div>
+															<div class="info-item">
+																<div class="title">Комментарий:</div>
+																<p>Свяжитесь со мной пожалуйста в течении <br> дня для уточнений деталий доставки</p>
+															</div>
+														</div>
+															
+													</div>
+												</div>
 											</div>
 										</div>
-										<div class="col50">
-											<div class="col_item">
-												<h3>Требования</h3>
-												<p>Обязательно:</p>
-												<ul class="marked">
-													<li>Высшее техническое образование.</li>
-													<li>Начальные знания теории тестирования и желание работать в данной области.</li>
-													<li>Ответственность и самоорганизация.</li>
-												</ul>
-												<p>Желательно:</p>
-												<ul class="marked">
-													<li>Опыт тестирования (в идеале CRM систем).</li>
-													<li>Теоретические знания основ тестирования.</li>
-													<li>Знание систем багтрекинга (предпочтительно ALM).Знание SQL.</li>
-												</ul>
+										<div class="accord js-accord">
+											<div class="accord__but js-accord-but">
+												<table class="history__result">
+													<tbody>
+														<tr>
+															<td><a href="#">R56036500</a></td>
+															<td>26.12.2015, 13:25</td>
+															<td>40 000 ₽</td>
+															<td><div class="status is-null">Аннулирован (31.01.2016)</div></td>
+															<td>
+																<div class="addition">
+																	<a href="#" class="btn"><span>Повторить</span></a>
+																	<a class="remove" href="#"></a>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="accord__block js-accord-block">
+												<div class="row">
+													<table class="history__result history__result-inner">
+														<tbody>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 10</td>
+																<td>12 950 ₽</td>
+															</tr>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 1</td>
+																<td>1 295 ₽</td>
+															</tr>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 10</td>
+																<td>12 950 ₽</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="row">
+													<div class="info__order">
+														<div class="col50">
+															<div class="info-item">
+																<div class="title">Способ доставки:</div>
+																<p>Доставка курьером</p>
+															</div>
+															<div class="info-item">
+																<div class="title">Способ оплаты:</div>
+																<p>Пластиковая карта (при получении заказа)</p>
+															</div>
+														</div>
+														<div class="col50">
+															<div class="info-item">
+																<div class="title">Адрес:</div>
+																<p>Московская область, г. Зеленоград,<br> д. 4, корп. 2, кв. 83</p>
+															</div>
+															<div class="info-item">
+																<div class="title">Комментарий:</div>
+																<p>Свяжитесь со мной пожалуйста в течении <br> дня для уточнений деталий доставки</p>
+															</div>
+														</div>
+															
+													</div>
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-							<div class="accord js-accord">
-								<div class="accord__but js-accord-but">Старший системный аналитик (SOA)<i class="icon"></i></div>
-								<div class="accord__block js-accord-block">
-									<div class="row">
-										<div class="col50">
-											<div class="col_item">
-												<h3>Задачи</h3>
-												<ul class="marked">
-													<li>Разработка тестовых сценариев.</li>
-													<li>Подготовка тестовых данных.</li>
-													<li>Выполнение ручного функционального тестирования (в том числе интеграционного).</li>
-													<li>Регистрация ошибок в системе управления тестированием.</li>
-												</ul>
+										<div class="accord js-accord">
+											<div class="accord__but js-accord-but">
+												<table class="history__result">
+													<tbody>
+														<tr>
+															<td><a href="#">R56036500</a></td>
+															<td>26.12.2015, 13:25</td>
+															<td>40 000 ₽</td>
+															<td><div class="status is-time">Ожидает выдачи</div></td>
+															<td>
+																<div class="addition">
+																	<a href="#" class="btn"><span>Повторить</span></a>
+																	<a class="remove" href="#"></a>
+																</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
 											</div>
-										</div>
-										<div class="col50">
-											<div class="col_item">
-												<h3>Требования</h3>
-												<p>Обязательно:</p>
-												<ul class="marked">
-													<li>Высшее техническое образование.</li>
-													<li>Начальные знания теории тестирования и желание работать в данной области.</li>
-													<li>Ответственность и самоорганизация.</li>
-												</ul>
-												<p>Желательно:</p>
-												<ul class="marked">
-													<li>Опыт тестирования (в идеале CRM систем).</li>
-													<li>Теоретические знания основ тестирования.</li>
-													<li>Знание систем багтрекинга (предпочтительно ALM).Знание SQL.</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="accord js-accord">
-								<div class="accord__but js-accord-but">Старший системный аналитик (клиринг)<i class="icon"></i></div>
-								<div class="accord__block js-accord-block">
-									<div class="row">
-										<div class="col50">
-											<div class="col_item">
-												<h3>Задачи</h3>
-												<ul class="marked">
-													<li>Разработка тестовых сценариев.</li>
-													<li>Подготовка тестовых данных.</li>
-													<li>Выполнение ручного функционального тестирования (в том числе интеграционного).</li>
-													<li>Регистрация ошибок в системе управления тестированием.</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col50">
-											<div class="col_item">
-												<h3>Требования</h3>
-												<p>Обязательно:</p>
-												<ul class="marked">
-													<li>Высшее техническое образование.</li>
-													<li>Начальные знания теории тестирования и желание работать в данной области.</li>
-													<li>Ответственность и самоорганизация.</li>
-												</ul>
-												<p>Желательно:</p>
-												<ul class="marked">
-													<li>Опыт тестирования (в идеале CRM систем).</li>
-													<li>Теоретические знания основ тестирования.</li>
-													<li>Знание систем багтрекинга (предпочтительно ALM).Знание SQL.</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="accord js-accord">
-								<div class="accord__but js-accord-but">Тест-менеджер<i class="icon"></i></div>
-								<div class="accord__block js-accord-block">
-									<div class="row">
-										<div class="col50">
-											<div class="col_item">
-												<h3>Задачи</h3>
-												<ul class="marked">
-													<li>Разработка тестовых сценариев.</li>
-													<li>Подготовка тестовых данных.</li>
-													<li>Выполнение ручного функционального тестирования (в том числе интеграционного).</li>
-													<li>Регистрация ошибок в системе управления тестированием.</li>
-												</ul>
-											</div>
-										</div>
-										<div class="col50">
-											<div class="col_item">
-												<h3>Требования</h3>
-												<p>Обязательно:</p>
-												<ul class="marked">
-													<li>Высшее техническое образование.</li>
-													<li>Начальные знания теории тестирования и желание работать в данной области.</li>
-													<li>Ответственность и самоорганизация.</li>
-												</ul>
-												<p>Желательно:</p>
-												<ul class="marked">
-													<li>Опыт тестирования (в идеале CRM систем).</li>
-													<li>Теоретические знания основ тестирования.</li>
-													<li>Знание систем багтрекинга (предпочтительно ALM).Знание SQL.</li>
-												</ul>
+											<div class="accord__block js-accord-block">
+												<div class="row">
+													<table class="history__result history__result-inner">
+														<tbody>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 10</td>
+																<td>12 950 ₽</td>
+															</tr>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 1</td>
+																<td>1 295 ₽</td>
+															</tr>
+															<tr>
+																<td>
+																	<div class="name">Federal Mogul, 560365005267</div>
+																	<span>Прокладка клап.крышки ком/кт</span>
+																</td>
+																<td>1 295 ₽</td>
+																<td>Количество: 10</td>
+																<td>12 950 ₽</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="row">
+													<div class="info__order">
+														<div class="col50">
+															<div class="info-item">
+																<div class="title">Способ доставки:</div>
+																<p>Доставка курьером</p>
+															</div>
+															<div class="info-item">
+																<div class="title">Способ оплаты:</div>
+																<p>Пластиковая карта (при получении заказа)</p>
+															</div>
+														</div>
+														<div class="col50">
+															<div class="info-item">
+																<div class="title">Адрес:</div>
+																<p>Московская область, г. Зеленоград,<br> д. 4, корп. 2, кв. 83</p>
+															</div>
+															<div class="info-item">
+																<div class="title">Комментарий:</div>
+																<p>Свяжитесь со мной пожалуйста в течении <br> дня для уточнений деталий доставки</p>
+															</div>
+														</div>
+															
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -687,6 +763,8 @@
 <script src="prod/js/lib/readmore.min.js"></script>
 <script src="prod/js/lib/jquery.fancybox.js"></script>
 <script src="prod/js/lib/jquery.matchHeight.js"></script>
+<script src="prod/js/lib/jquery.mask.min.js"></script>
+<script src="prod/js/lib/jquery.validator.min.js"></script>
 <script src="prod/js/common.js"></script>
 </body>
 </html>
