@@ -612,3 +612,13 @@ blockquote {
 		}
 	}
 }
+.multi {
+	.ms-drop {
+		ul {
+			& > li {
+				font-family: $FuturaNewBook;
+				font-size: 18px;
+			}
+		}
+	}
+}

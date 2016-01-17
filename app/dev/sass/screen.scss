@@ -1082,6 +1082,7 @@ p {
 }
 .form {
 	@include clearfix;
+	position: relative;
 	.field {
 		margin-bottom: 16px;
 		&:last-of-type {
@@ -1136,6 +1137,14 @@ p {
 		}
 	}
 }
+.search__bar {
+	.reset {
+		position: absolute;
+		bottom: -50px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}
 .multi {
 	width: 100%!important;
 	.ms-parent {
@@ -1176,6 +1185,51 @@ p {
 			right: 11px;
 			top: 8px;
 			width: 5px;
+		}
+	}
+	.ms-drop {
+		position: absolute;
+		background-color: $white;
+		overflow: hidden;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.29);
+		margin-top: 8px;
+		border-radius: 5px;
+		width: 100%;
+		border: none;
+		color: #515151;
+		ul {
+			margin: 0;
+			overflow: hidden;
+			padding: 10px 0;
+			& > li {
+				display: list-item;
+				position: static;
+				label {
+					display: block;
+					font-weight: normal;
+					white-space: nowrap;
+					color: #515151;
+				}
+				&.selected {
+					label {
+						color: $blue;
+					}
+				}
+			}
+		}
+		label {
+			cursor: pointer;
+			line-height: 25px;
+			padding: 2px 9px;
+			position: relative;
+			transition: background 0.3s ease 0s;
+			input {
+				position: absolute;
+				right: 10px;
+				opacity: 0;
+				z-index: 2;
+				top: 50%;
+			}
 		}
 	}
 }
