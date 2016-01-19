@@ -8,7 +8,7 @@ html, body {
 *, *::after, *::before {
 	box-sizing: border-box;
 }
-a[data-href], a[data-scroll] {
+a[data-href], a[data-scroll], button[type='submit'] {
 	cursor: pointer;
 }
 ul, ol {
@@ -924,6 +924,10 @@ p {
 	line-height: 1;
 	text-align: center;
 	vertical-align: middle;
+	display: inline-block;
+	height: 30px;
+	line-height: 28px;
+	border-radius: 4px;
 	span {
 		color: $white;
 	}
@@ -3334,4 +3338,133 @@ blockquote {
 .note {
 	color: #949494;
 	line-height: 18px;
+}
+.popup__wrap {
+	position: fixed;
+	overflow: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 70px;
+	background-color: rgba(34,50,66,0.9);
+	z-index: 10;
+	text-align: center;
+	display: none;
+	&::after {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		width: 0;
+	}
+	&.is-visible {
+		.popup {
+			opacity: 1;
+			transform: translate3d(0px, 0px, 0px) scale(1);
+		}
+	}
+	.popup {
+		display: inline-block;
+		background-color: $white;
+		border-radius: 4px;
+		padding: 45px 77px 36px;
+		position: relative;
+		vertical-align: middle;
+		height: auto;
+		text-align: left;
+		width: 100%;
+		opacity: 0;
+		transform: translate3d(0px, 20%, 0px) scale(0.5);
+		transition: all 0.3s linear 0s;
+	}
+	.popup__title {
+		margin-bottom: 17px;
+		& + p {
+			line-height: 24px;
+			padding-top: 3px;
+			margin-bottom: 21px;
+			letter-spacing: 0.3px;
+		}
+	}
+	.popup__close {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		background-image: url(../img/icons/close-popup.png);
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+	&.enter {
+		.popup {
+			max-width: 404px;
+		}
+		.btn {
+			width: 150px;
+			margin-top: 4px;
+			margin-bottom: 6px;
+		}
+	}
+	&.reg {
+		.popup {
+			max-width: 684px;
+			.col50 {
+				padding-right: 15px;
+				&:last-child{
+					padding-right: 0;
+					padding-left: 15px;
+				}
+			}
+		}
+		.btn {
+			width: 230px;
+			margin-top: 12px;
+		}
+		p {
+			margin-top: 25px;
+		}
+	}
+	&.feedback {
+		.popup {
+			max-width: 404px;
+		}
+		.btn {
+			width: 150px;
+			margin-top: 4px;
+			margin-bottom: 6px;
+		}
+		.textarea {
+			width: 100%;
+			height: 60px;
+		}
+	}
+	&.callback {
+		.popup {
+			max-width: 404px;
+		}
+		.btn {
+			width: 150px;
+			margin-top: 4px;
+			margin-bottom: 6px;
+		}
+	}
+	&.success {
+		.popup {
+			max-width: 404px;
+			text-align: center;
+		}
+	}
+	p {
+		line-height: 18px;
+		a {
+			border-bottom: 1px solid $blue;
+		}
+	}
+	.link_close {
+		border-bottom: 1px solid $blue;
+		cursor: pointer;
+		display: inline-block;
+		margin-bottom: 26px;
+	}
 }
