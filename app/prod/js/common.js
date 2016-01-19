@@ -360,7 +360,19 @@ $(document).ready(function () {
 	//mask input
 	(function(){
 		if($('.mask').length){
-			$('.mask').mask('+000 (00) 000 00 00');
+			$('.mask').inputmask({
+				mask: '+9 (999) 999 99 99',
+				showMaskOnHover: false,
+				showMaskOnFocus: false,
+				placeholder: ''
+			});
+		}
+	})();
+
+	//scroll pane
+	(function(){
+		if($('.order__scroll').length){
+			$('.scroll__inner').jScrollPane();
 		}
 	})();
 
@@ -382,6 +394,71 @@ $(document).ready(function () {
 				});
 			});
 		}
+	})();
+
+	//custom selects
+	(function(){
+		var parent = $('.delivery__selects'),
+			menu = parent.find('.menu'),
+			list = menu.find('.menu__list'),
+			tab_delivery = parent.find('.tab_delivery'),
+			tab_item = tab_delivery.find('.tab_delivery-item'),
+			box = parent.find('.info__box'),
+			icon = box.find('.icon'),
+			content__box = box.find('.content__box');
+
+		$(document).on('click', function(){
+			menu.removeClass('active');
+			list.fadeOut(150);
+		});
+
+		icon.on('click', function(event){
+			content__box.fadeToggle(300);
+			event.stopPropagation();
+		});
+		icon.on('mouseleave', function(){
+			content__box.fadeOut(150);
+		});
+
+		menu.each(function(){
+			var this_ = $(this),
+				item = this_.find('.menu__item'),
+				list = this_.find('.menu__list'),
+				label = this_.find('label'),
+				check = label.prev();
+
+			if(list.find('input:checked').length){
+				var checkIs = list.find('input:checked');
+					text = checkIs.parent().find('span').text();
+				item.text(text);
+				this_.parents('.delivery__selects').find('.not_availability').removeClass('not_availability');
+			}		
+
+			item.on('click', function(event){
+				if(this_.is('.not_availability')){
+					event.preventDefault();
+				};
+				this_.toggleClass('active');
+				list.fadeToggle(300);
+				event.stopPropagation();
+			});
+
+			label.on('click', function(){
+				var this_= $(this),
+					text = this_.find('span').text(),
+					data = this_.data('tab'),
+					parent = this_.parents('.field');
+
+				console.log(data)
+
+				menu.removeClass('active');
+				list.fadeOut(150);
+				item.text(text);
+				menu.parents('.delivery__selects').find('.not_availability').removeClass('not_availability');
+				parent.find('.'+data).fadeIn(150).siblings().hide();
+			});
+
+		});
 	})();
 
 	if ($('#map').length) {
