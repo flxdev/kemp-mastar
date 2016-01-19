@@ -44,10 +44,10 @@
 }
 @font-face {
 	font-family: 'FuturaNewBookOblique';
-	src: url('../fonts/fonts/Futura-Book Oblique.eot');
-	src: url('../fonts/fonts/Futura-Book Oblique.woff') format('woff'), 
-		 url('../fonts/fonts/futura-book-oblique.ttf') format('truetype'), 
-		 url('../fonts/fonts/Futura-Book Oblique.svg') format('svg');
+	src: url('../fonts/FuturaNewBookOblique.eot');
+	src: url('../fonts/FuturaNewBookOblique.woff') format('woff'), 
+		 url('../fonts/FuturaNewBookOblique.ttf') format('truetype'), 
+		 url('../fonts/FuturaNewBookOblique.svg') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -570,9 +570,9 @@ blockquote {
 				font-size: 14px;
 			}
 			.delivery_sum {
-				font-family: $FuturaNewBook;
+				font-family: $FuturaNewBookOblique;
 				font-size: 14px;
-				font-style: italic;
+				font-style: normal;
 			}
 			.total {
 				font-family: $FuturaNewBook;
@@ -598,9 +598,9 @@ blockquote {
 	}
 }
 .more__info {
-	font-family: $FuturaNewBook;
+	font-family: $FuturaNewBookOblique;
 	font-size: 14px;
-	font-style: italic;
+	font-style: normal;
 }
 .data__person {
 	.person {
@@ -645,9 +645,9 @@ blockquote {
 }
 .log_in  {
 	& > div:first-child {
-		font-family: $FuturaNewBook;
+		font-family: $FuturaNewBookOblique;
 		font-size: 14px;
-		font-style: italic;
+		font-style: normal;
 	}
 }
 .order__box {
@@ -711,9 +711,9 @@ blockquote {
 			}
 		}
 		.descr {
-			font-family: $FuturaNewBook;
+			font-family: $FuturaNewBookOblique;
 			font-size: 14px;
-			font-style: italic;
+			font-style: normal;
 		}
 	}
 }
@@ -729,9 +729,9 @@ blockquote {
 				font-size: 14px;
 			}
 			.time {
-				font-family: $FuturaNewBook;
+				font-family: $FuturaNewBookOblique;
 				font-size: 14px;
-				font-style: italic;
+				font-style: normal;
 			}
 		}
 	}
@@ -750,7 +750,7 @@ blockquote {
 	}
 }
 .note {
-	font-family: $FuturaNewBook;
+	font-family: $FuturaNewBookOblique;
 	font-size: 14px;
-	font-style: italic;
+	font-style: normal;
 }
