@@ -802,3 +802,15 @@ blockquote {
 		font-size: 14px;
 	}
 }
+.data__shops {
+	.shops {
+		.shops__name {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+		.shops__val {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
+	}
+}

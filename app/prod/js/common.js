@@ -1,4 +1,40 @@
 $(document).ready(function () {
+
+	//video
+	html5Video = function() {
+		function stopall(){
+		// stop all videos
+			$('video').each(function(index, el) {
+				$(this)[0].pause();
+				$('.js-play').removeClass('is-paused');
+			});
+		};
+		$('.js-play').on('click', function(event) {
+			var video = $('.video-holder').find('video')[0];
+			if (video.paused) {
+				video.play();
+				$(this).toggleClass('is-paused').parent().toggleClass('played');
+			} else {
+				video.pause();
+				$(this).toggleClass('is-paused').parent().toggleClass('played');
+			}
+			return false;
+		});
+		$('video').each(function(index, el) {
+			$(this).on('ended', function(event) {
+				stopall();
+				$('.js-play').removeClass('is-paused').parent().removeClass('played');
+			});
+		});
+		if($('.slider-nav').find('video').length) {
+			$('.slider-nav').find('.slider-nav__slide').on('click', function(){
+				if(!$('.slider-nav__slide').find('.player')){
+					stopall();
+				}
+			});
+		}
+	};
+	
 	//document click
 	$(document).click(function() {
 		$('.js-accordions-mod .js-accord').removeClass('is-active');
@@ -302,25 +338,35 @@ $(document).ready(function () {
 
 	//product slider
 	(function(){
-		$('.slider-for').slick({
-			arrows: false,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			speed: 500,
-			infinite: true,
-			asNavFor: '.slider-nav',
-			fade: true
-		});
-		$('.slider-nav').slick({
-			arrows: false,
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			speed: 500,
-			infinite: true,
-			asNavFor: '.slider-for',
-			focusOnSelect: true
-		});
+		var slider = $('.slider-for');
+		slider.each(function(){
+			var this_ = $(this);
+				caption = this_.parent().find('.slider-nav');
 
+			this_.slick({
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				speed: 500,
+				infinite: true,
+				asNavFor: caption,
+				fade: true
+			});
+			caption.slick({
+				arrows: false,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				speed: 500,
+				infinite: true,
+				asNavFor: this_,
+				focusOnSelect: true
+			});
+			if(caption.find('video').length) {
+				caption.find('.slider-nav__slide').on('click', function(){
+					html5Video();
+				});
+			}
+		});
 	})();
 
 	//popup slider
@@ -660,7 +706,6 @@ $(document).ready(function () {
 
 		zoomControl = new ymaps.control.ZoomControl({ 
 			options: { 
-				//layout: ZoomLayout,
 				position: {
 					top: 28,
 					left: 17
@@ -779,33 +824,51 @@ $(document).ready(function () {
 		objectManager.add(data);
 	};
 
-	//video
-	html5Video = function() {
-		function stopall(){
-		// stop all videos
-			$('video').each(function(index, el) {
-				$(this)[0].pause();
-				$('.js-play').removeClass('is-paused');
-			});
-		};
-		$('.js-play').on('click', function(event) {
-			var video = $('.video-holder').find('video')[0];
-			if (video.paused) {
-				video.play();
-				$(this).toggleClass('is-paused').parent().toggleClass('played');
-			} else {
-				video.pause();
-				$(this).toggleClass('is-paused').parent().toggleClass('played');
-			}
-			return false;
-		});
-		$('video').each(function(index, el) {
-			$(this).on('ended', function(event) {
-				stopall();
-				$('.js-play').removeClass('is-paused').parent().removeClass('played');
-			});
-		});
+
+	if ($('#map-inner').length) {
+		ymaps.ready(initMap);
 	};
+
+	function initMap() {
+		var myMap = new ymaps.Map('map-inner', {
+				center: [55.606878, 37.524767],
+				zoom: 16,
+				controls: []
+			}, {
+				searchControlProvider: 'yandex#search'
+			}),
+	        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+	            hintContent: 'Собственный значок метки'
+	        }, {
+	            // Опции.
+	            // Необходимо указать данный тип макета.
+	            iconLayout: 'default#image',
+	            // Своё изображение иконки метки.
+	            iconImageHref: 'prod/img/marker.png',
+	            // Размеры метки.
+	            iconImageSize: [20, 27],
+	            // Смещение левого верхнего угла иконки относительно
+	            // её "ножки" (точки привязки).
+	            iconImageOffset: [-3, -42]
+	        });
+
+	    myMap.geoObjects.add(myPlacemark);
+
+		zoomControl = new ymaps.control.ZoomControl({ 
+			options: { 
+				position: {
+					top: 28,
+					left: 17
+				}
+			} 
+		});
+
+		myMap.controls.add(zoomControl);
+
+	};
+
+	//video
+	
 	(function(){
 		if($('video').length){
 			html5Video();
