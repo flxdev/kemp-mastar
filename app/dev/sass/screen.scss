@@ -3812,4 +3812,30 @@ blockquote {
 			}
 		}
 	}
+	&.payment {
+		padding: 0;
+		margin-top: -5px;
+		.marked {
+			li {
+				margin-bottom: 24px;
+			}
+		}
+		strong {
+			margin-bottom: 10px;
+			display: inline-block;
+			width: 100%;
+		}
+		.pay__img {
+			display: inline-block;
+			width: 100%;
+			img {
+				display: inline-block;
+				vertical-align: baseline;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+p.attention {
+	color: #979797;
 }
