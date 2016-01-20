@@ -353,6 +353,14 @@ p {
 		.list-links {
 			font-family: $FuturaNewBook;
 			font-size: 18px;
+			li {
+				& > ul {
+					a {
+						font-family: $FuturaNewBook;
+						font-size: 14px;
+					}
+				}
+			}
 		}
 	}
 }
