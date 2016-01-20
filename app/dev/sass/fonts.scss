@@ -762,3 +762,35 @@ blockquote {
 		font-size: 18px;
 	}
 }
+.figure {
+	.gallery {
+		.gallery__counter {
+			.gallery__counter-current {
+				font-family: $FuturaNewBook;
+				font-size: 28px;
+			}
+			.gallery__counter-all {
+				font-family: $FuturaNewBook;
+				font-size: 18px;
+			}
+		}
+		.gallery__caption {
+			p {
+				font-family: $FuturaNewBook;
+				font-size: 14px;
+			}
+		}
+	}
+	.figure__left {
+		.caption {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+		}
+	}
+}
+.video-holder {
+	.video-caption {
+		font-family: $FuturaNewBook;
+		font-size: 14px;
+	}
+}
