@@ -814,3 +814,27 @@ blockquote {
 		}
 	}
 }
+.list__box {
+	font-family: $FuturaNewBook;
+	font-size: 18px;
+	strong {
+		font-family: $FuturaNewDemi;
+		font-weight: normal;
+	}
+	li {
+		font-family: $FuturaNewBook;
+		font-size: 18px;
+		span {
+			font-family: $FuturaNewMedium;
+		}
+	}
+	.descr {
+		font-family: $FuturaNewBook;
+		font-size: 18px;
+	}
+}
+.pickup.pickup__list {
+	li .name, li .address, li .time {
+		font-size: 18px;
+	}
+}
