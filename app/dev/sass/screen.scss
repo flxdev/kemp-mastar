@@ -2164,6 +2164,7 @@ blockquote {
 			user-select: none;
 			cursor: pointer;
 			letter-spacing: 0.8px;
+			border-radius: 0;
 			&.btn__out {
 				width: 47%;
 				margin-right: -1px;
@@ -2498,6 +2499,28 @@ blockquote {
 				}
 			}
 		}
+		&.offices {
+			tr {
+				td {
+					padding: 10px 0 16px;
+					background-color: $white;
+					border-bottom: 2px solid #d8dee4;
+					&:first-child {
+						padding-left: 0;
+						width: 344px;
+						letter-spacing: 0.65px;
+					}
+					&:nth-child(2) {
+						width: 194px;
+						letter-spacing: 0.6px;
+					}
+					&:nth-child(3) {
+						width: auto;
+						letter-spacing: 0.1px;
+					}
+				}
+			}
+		}
 	}
 	&.border {
 		.sheet__in {
@@ -2689,7 +2712,33 @@ blockquote {
 				}
 			}
 		}
+		.offices__result {
+			margin-bottom: 57px;
+			tr {
+				td {
+					padding: 26px 0 27px;
+					color: #0e2031;
+					border-bottom: 1px solid #d8dee4;
+					vertical-align: top;
+					&:first-child {
+						padding-left: 0;
+						width: 345px;
+						letter-spacing: -0.1px;
+						color: $black;
+					}
+					&:nth-child(2) {
+						width: 194px;
+						letter-spacing: -0.2px;
+					}
+					&:nth-child(3) {
+						width: auto;
+						letter-spacing: 0.1px;
+					}
+				}
+			}
+		}
 	}
+	
 	.spinner {
 		.spinner__minus {
 			width: 26px;
@@ -3735,6 +3784,9 @@ blockquote {
 				}
 			}
 		}
+		.btn {
+			width: 230px;
+		}
 	}
 }
 .data__shops {
@@ -3758,6 +3810,27 @@ blockquote {
 				display: inline-block;
 				width: 100%;
 			}
+			a {
+				border-bottom: 1px solid $blue;
+			}
+		}
+	}
+}
+.data_requisites {
+	margin-bottom: 29px;
+	.requisites {
+		.requisites__name {
+			color: $black;
+			width: 249px;
+			float: left;
+			margin-top: -8px;
+			letter-spacing: -0.1px;
+		}
+		.requisites__val {
+			color: $black;
+			padding-left: 43px;
+			overflow: hidden;
+			line-height: 30px;
 		}
 	}
 }

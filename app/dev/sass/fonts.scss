@@ -551,6 +551,15 @@ blockquote {
 				}
 			}
 		}
+		.offices__result {
+			td {
+				font-family: $FuturaNewBook;
+				font-size: 18px;
+				&:first-child {
+					font-family: $FuturaNewDemi;
+				}
+			}
+		}
 		.accord {
 			.accord__but {
 				font-size: 14px;
@@ -836,5 +845,17 @@ blockquote {
 .pickup.pickup__list {
 	li .name, li .address, li .time {
 		font-size: 18px;
+	}
+}
+.data_requisites {
+	.requisites {
+		.requisites__name {
+			font-family: $FuturaNewMedium;
+			font-size: 28px;
+		}
+		.requisites__val {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
 	}
 }
