@@ -3591,7 +3591,7 @@ blockquote {
 				float: right;
 			}
 			.gallery__counter {
-				overflow: hidden;
+				//overflow: hidden;
 				text-align: center;
 				margin-top: -4px;
 				.gallery__counter-current {
@@ -3911,4 +3911,29 @@ blockquote {
 }
 p.attention {
 	color: #979797;
+}
+.not__found {
+	text-align: center;
+	.main__cont {
+		.tops {
+			margin-top: -19px;
+			span {
+				width: 268px;
+				height: 268px;
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				margin: -54px 2px 0;
+				i {
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background-image: url(../img/wheel.png);
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
 }
