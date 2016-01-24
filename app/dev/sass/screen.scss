@@ -170,12 +170,59 @@ p {
 	}
 	.phone {
 		float: right;
+		position: relative;
 		.phones {
 			color: $white;
 			letter-spacing: 0.75px;
 			line-height: 27px;
 			display: inline-block;
 			border-bottom: 1px dotted #ffffff;
+			z-index: 5;
+			position: relative;
+			transition: color 0.3s ease;
+			z-index: 8;
+		}
+		.phone__list {
+			width: 261px;
+			background-color: #fff;
+			border-radius: 4px;
+			position: absolute;
+			top: -29px;
+			right: -53px;
+			box-shadow:0px 2px 12px 0px rgba(0, 0, 0, 0.29);
+			z-index: 7;
+			padding: 57px 47px 50px;
+			display: none;
+			.btn__call {
+				color: $blue;
+				border-bottom: 1px dotted;
+				line-height: 25px;
+				display: inline-block;
+				letter-spacing: 0.2px;
+				margin-bottom: 18px;
+			}
+			.contacts__case {
+				margin-bottom: 17px;
+				.case__name {
+					color: $grey;
+					letter-spacing: 0.4px;
+				}
+				.case__val {
+					a {
+						color: $blue;
+						border-bottom: 1px solid;
+						letter-spacing: 0.6px;
+					}
+				}
+			}
+			.btn {
+				width: 100%;
+			}
+		}
+		&.active {
+			.phones {
+			color: $black;
+			}
 		}
 	}
 	.nav {
@@ -332,6 +379,7 @@ p {
 	}
 }
 .form {
+	position: relative;
 	&.big-search {
 		position: relative;
 		width: 100%;
@@ -362,6 +410,29 @@ p {
 			cursor: pointer;
 			span {
 				color: $white;
+			}
+		}
+	}
+	.result__list {
+		position: absolute;
+		top: 100%;
+		width: 77.9%;
+		background-color: $white;
+		border-radius: 4px;
+		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.29);
+		margin-top: 10px;
+		padding: 10px 19px 16px;
+		.list__inner {
+			a {
+				color: #515151;
+				text-transform: uppercase;
+				display: inline-block;
+				width: 100%;
+				padding: 4px 0 5px;
+				@include transition(color);
+				&:hover {
+					color: $blue;
+				}
 			}
 		}
 	}
@@ -1446,7 +1517,6 @@ p {
 
 }
 .article__block {
-	margin-top: 16px;
 	h3 {
 		color: $black;
 		margin-bottom: 9px;
@@ -1456,6 +1526,9 @@ p {
 		& + a {
 			color: $blue;
 			margin-bottom: 5px;
+		}
+		&.big {
+			max-height: 135px;
 		}
 	}
 }
@@ -1531,6 +1604,37 @@ p {
 				margin-bottom: 0;
 				padding-bottom: 0;
 				border-bottom: none;
+			}
+		}
+		.row.authorization {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			.col_left {
+				overflow: visible;
+				width: 100%;
+				order: 1;
+			}
+			.col_right {
+				margin-top: 26px;
+				float: none;
+				width: 100%;
+				order: 2;
+				.big_basket {
+					width: 165px;
+					float: left;
+					margin-right: 16px;
+				}
+				.credit {
+					width: 167px;
+					float: left;
+					margin-top: 0;
+					margin-right: 16px;
+				}
+				.one__click {
+					float: left;
+					margin-top: 5px;
+				}
 			}
 		}
 		.col_right {
@@ -2277,6 +2381,11 @@ blockquote {
 			li {
 				color: $grey;
 				margin-bottom: 7px;
+				&:first-child {
+					a {
+						color: $grey;
+					}
+				}
 				a {
 					color: $white;
 					padding: 3px 0 2px;
@@ -2856,6 +2965,9 @@ blockquote {
 			line-height: 28px;
 			display: inline-block;
 			border-radius: 3px;
+			& + .one__click {
+				margin-top: 5px;
+			}
 		}
 		.title {
 			margin: -10px 0 6px;
@@ -3935,5 +4047,89 @@ p.attention {
 				}
 			}
 		}
+	}
+}
+.wheel {
+	z-index: 100;
+	-webkit-animation-name: spin;
+	-webkit-animation-duration: 2600ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: spin;
+	-moz-animation-duration: 2600ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-ms-animation-name: spin;
+	-ms-animation-duration: 2600ms;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-timing-function: linear;
+
+	animation-name: spin;
+	animation-duration: 2600ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+	from { -ms-transform: rotate(0deg); }
+	to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+	from { -moz-transform: rotate(0deg); }
+	to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
+.file__area {
+	@include clearfix;
+	margin-bottom: 20px;
+	.file__item {
+		text-align: left;
+		display: inline-block;
+		width: 33.33%;
+		vertical-align: top;
+		margin-bottom: 25px;
+		.icon {
+			width: 58px;
+			height: 80px;
+			display: inline-block;
+			margin-bottom: 13px;
+		}
+		.name {
+			color: $blue;
+			@include transition(color);
+			margin-bottom: 5px;
+		}
+		.size {
+			color: $grey;
+		}
+		&:hover {
+			.name {
+				color: $red;
+			}
+		}
+	}
+}
+.credit {
+	border: 1px solid #d8dee4;
+	margin-top: 4px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d8dee4+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #d8dee4 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#d8dee4 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#d8dee4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8dee4',GradientType=0 ); /* IE6-9 */
+	line-height: 26px;
+	span {
+		color: $black;
 	}
 }

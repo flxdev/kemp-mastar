@@ -1,5 +1,21 @@
 $(document).ready(function () {
 
+	//show contacts
+	(function(){
+		var phones = $('.phones'),
+			parent = phones.parent(),
+			list = parent.find('.phone__list');
+
+		phones.on('mouseenter', function(){
+			parent.addClass('active');
+			list.fadeIn();
+		});
+		parent.on('mouseleave', function(){
+			parent.removeClass('active');
+			list.fadeOut();
+		})
+	})();
+
 	//video
 	html5Video = function() {
 		function stopall(){
