@@ -134,6 +134,15 @@ p {
 		a {
 			color: $white;
 			letter-spacing: 0.71px;
+			@include transition(color);
+			&:hover {
+				color: $yellow;
+				.icon {
+					path {
+						fill: $yellow;
+					}
+				}
+			}
 		}
 		span {
 			color: $white;
@@ -146,16 +155,25 @@ p {
 			.basket {
 				position: relative;
 				padding-left: 40px;
-				&::before {
+				.icon {
 					content: "";
 					top: -2px;
 					left: 0;
-					background-image: url(../img/basket.png);
-					background-size: cover;
 					width: 26px;
 					height: 21px;
 					display: inline-block;
 					position: absolute;
+					path {
+						fill: $white;
+						@include transition(fill);
+					}
+				}
+				&:hover {
+					.icon {
+						path {
+							fill: $yellow;
+						}
+					}
 				}
 			}
 		}
@@ -235,19 +253,31 @@ p {
 				color: $white;
 				letter-spacing: 0.5px;
 				padding: 0 14px;
+				@include transition(color);
 				&.baloon {
 					padding-left: 36px;
 					position: relative;
-					&::before {
-						content: '';
-						background-image: url(../img/svg/loc.svg);
-						background-size: cover;
+					.icon {
 						width: 16px;
 						height: 21px;
 						position: absolute;
 						left: 12px;
 						top: -1px;
 						display: inline-block;
+						path {
+							fill: $white;
+							@include transition(fill);
+						}
+					}
+				}
+				&:hover {
+					color: $yellow;
+					&.baloon {
+						.icon {
+							path {
+								fill: $yellow;
+							}
+						}
 					}
 				}
 			}
@@ -336,6 +366,11 @@ p {
 					color: #505050;
 					a {
 						color: #0051a2;
+						transition: color 0.3s ease, border-color 0.3s ease;
+						&:hover {
+							color: $black;
+							border-color: transparent;
+						}
 					}
 				}
 			}
@@ -375,6 +410,10 @@ p {
 			display: inline;
 			letter-spacing: 0.55px;
 			line-height: 27px;
+			@include transition(color);
+			&:hover {
+				color: $blue;
+			}
 		}
 	}
 }
@@ -390,6 +429,14 @@ p {
 			border: 2px solid #d8d8d8;
 			border-radius: 4px;
 			padding: 0 210px 0 17px;
+			transition: border-color 0.3s ease, box-shadow 0.3s ease;
+			&:hover {
+				border-color: $blue;
+			}
+			&:focus {
+				border-color: $blue;
+				box-shadow: inset 2px 5px 5px 0px rgba(0, 81, 162, 0.08);
+			}
 		}
 		.input::-webkit-input-placeholder {
 			color: #c0bfbf;
@@ -408,8 +455,15 @@ p {
 			right: 0;
 			top: 0;
 			cursor: pointer;
+			@include transition(background);
 			span {
 				color: $white;
+			}
+			&:hover {
+				background: #117ae3;
+			}
+			&:active {
+				background-color: #013870;
 			}
 		}
 	}
@@ -668,6 +722,11 @@ p {
 			a {
 				letter-spacing: 0.6px;
 				padding: 12px 4px 26px;
+				color: $blue;
+				@include transition(color);
+				&:hover {
+					color: $black;
+				}
 			}
 			&.active {
 				a {
@@ -692,9 +751,9 @@ p {
 			margin: 0 4px;
 		}
 		&.card {
-			margin: 0 -2px;
+			margin: -5px;
 			.item {
-				margin: 0 2px;
+				margin: 5px;
 			}
 		}
 	}
@@ -763,14 +822,18 @@ p {
 	}
 	&.card {
 		padding: 0;
-		margin: 0 -8px;
+		margin: -8px;
 		.item {
 			border: 1px solid #d8dee4;
-			margin: 0 8px;
+			margin: 8px;
 			height: 418px;
 			padding-top: 0;
 			padding-bottom: 46px;
 			position: relative;
+			@include transition(box-shadow);
+			&:hover {
+				box-shadow: 0px 2px 5px 0px rgba(34, 50, 66, 0.29);
+			}
 			.img-box {
 				position: relative;
 				height: 231px;
@@ -789,6 +852,7 @@ p {
 				padding-right: 6px;
 				overflow: hidden;
 				max-height: 70px;
+				@include transition(color);
 			}
 			.price {
 				float: left;
@@ -807,6 +871,13 @@ p {
 				position: absolute;
 				bottom: 16px;
 				left: 14px;
+			}
+			a {
+				&:hover {
+					.title {
+						color: #223242;
+					}
+				}
 			}
 		}
 	}
@@ -842,6 +913,16 @@ p {
 			margin: 0 0 21px -19px;
 			.item {
 				margin: 0 0 19px 19px;
+				@include transition(box-shadow);
+				&:hover {
+					box-shadow: 0px 4px 10px 0px rgba(34, 50, 66, 0.29);
+					.title {
+						color: $black;
+					}
+				}
+				.title {
+					@include transition(color);
+				}
 			}
 		}		
 	}
@@ -946,6 +1027,10 @@ p {
 	display: inline-block;
 	vertical-align: top;
 	border: 1px solid #d8dee4;
+	@include transition(border-color);
+	&:hover {
+		border-color: $blue;
+	}
 	.spinner__minus {
 		display: inline-block;
 		height: 28px;
@@ -955,6 +1040,10 @@ p {
 		width: 30px;
 		color: #b7bcc2;
 		cursor: pointer;
+		@include transition(color);
+		&:hover {
+			color: $blue;
+		}
 	}
 	.spinner__input {
 		display: inline-block;
@@ -975,6 +1064,10 @@ p {
 		width: 30px;
 		color: #b7bcc2;
 		cursor: pointer;
+		@include transition(color);
+		&:hover {
+			color: $blue;
+		}
 	}
 	.btn_basket {
 		display: inline-block;
@@ -999,9 +1092,17 @@ p {
 	height: 30px;
 	line-height: 28px;
 	border-radius: 4px;
+	@include transition(background);
 	span {
 		color: $white;
 	}
+	&:hover {
+		background: #117ae3;
+	}
+	&:active {
+		background-color: #013870;
+	}
+
 }
 .list {
 	margin-left: -12px;
@@ -1027,11 +1128,19 @@ p {
 		height: 30px;
 		border: 1px solid #d8dee4;
 		cursor: pointer;
+		@include transition(background);
+		&:hover {
+			background: #f4f9ff;
+			.svg_arrow {
+				fill: $blue;
+			}
+		}
 		span {
 			width: 7px;
 			height: 13px;
 			display: inline-block;
 			.svg_arrow {
+				@include transition(fill);
 				fill: $black;
 			}
 		}
@@ -1055,12 +1164,20 @@ p {
 	height: 30px;
 	border: 1px solid #d8dee4;
 	cursor: pointer;
+	@include transition(background);
+	&:hover {
+		background: #f4f9ff;
+		.svg_arrow {
+			fill: $blue;
+		}
+	}
 	span {
 		width: 7px;
 		height: 13px;
 		display: inline-block;
 		.svg_arrow {
 			fill: $black;
+			@include transition(background);
 		}
 	}
 	&.slick-prev {
@@ -1178,11 +1295,17 @@ p {
 			border: 1px solid #d8dee4;
 			border-radius: 3px;
 			padding: 0 7px;
+			transition: border-color 0.3s ease, box-shadow 0.3s ease;
+			&:focus {
+				border-color: $blue;
+				box-shadow: inset 2px 5px 5px 0px rgba(0, 81, 162, 0.08);
+			}
 		}
 		&.double {
 			.input {
 				width: 50%;
 				display: inline-block;
+				transition: border-color 0.3s ease, box-shadow 0.3s ease;
 				&:first-of-type {
 					border-top-left-radius: 3px;
 					border-bottom-left-radius: 3px;
@@ -1196,6 +1319,13 @@ p {
 					border-top-right-radius: 3px;
 					border-bottom-right-radius: 3px;
 				}
+				&:hover {
+					border-color: $blue!important;
+				}
+				&:focus {
+					border-color: $blue!important;
+					box-shadow: inset 2px 5px 5px 0px rgba(0, 81, 162, 0.08);
+				}
 			}
 		}
 		.reset__filter {
@@ -1203,6 +1333,10 @@ p {
 			letter-spacing: 0.65px;
 			display: inline-block;
 			padding: 8px 2px;
+			@include transition(color);
+			&:hover {
+				color: $blue;
+			}
 		}
 		.sbm__filter {
 			height: 30px;
@@ -1210,8 +1344,15 @@ p {
 			width: 100%;
 			background-color: #0051a2;
 			margin-top: 3px;
+			@include transition(background);
 			span {
 				color: $white;
+			}
+			&:hover {
+				background: #117ae3;
+			}
+			&:active {
+				background-color: #013870;
 			}
 		}
 		.textarea {
@@ -1222,6 +1363,10 @@ p {
 			height: 80px;
 			padding: 13px;
 			line-height: 15px;
+			@include transition(border-color);
+			&:hover {
+				border-color: $blue;
+			}
 		}
 	}
 }
@@ -1255,6 +1400,14 @@ p {
 		text-decoration: none;
 		white-space: nowrap;
 		width: 100%;
+		transition: border-color 0.3s ease, box-shadow 0.3s ease;
+		&:hover {
+			border-color: $blue;
+		}
+		&.is-active {
+			border-color: $blue;
+			box-shadow: inset 2px 5px 5px 0px rgba(0, 81, 162, 0.08);
+		}
 		& > span {
 			display: block;
 			left: 0;
@@ -1287,7 +1440,7 @@ p {
 		color: #515151;
 		ul {
 			margin: 0;
-			overflow: hidden;
+			overflow: auto;
 			padding: 10px 0;
 			& > li {
 				display: list-item;
@@ -1297,6 +1450,10 @@ p {
 					font-weight: normal;
 					white-space: nowrap;
 					color: #515151;
+					@include transition(color);
+					&:hover {
+						color: $blue;
+					}
 				}
 				&.selected {
 					label {
@@ -1333,6 +1490,7 @@ p {
 		padding: 0 8px;
 		text-align: center;
 		margin-bottom: 22px;
+		@include transition(box-shadow);
 		.img-box {
 			position: relative;
 			height: 231px;
@@ -1350,6 +1508,13 @@ p {
 			padding-left: 4px;
 			letter-spacing: 0.2px;
 			color: $blue;
+			@include transition(color);
+		}
+		&:hover {
+			box-shadow: 0px 4px 10px 0px rgba(34, 50, 66, 0.29);
+			.title {
+				color: $black;
+			}
 		}
 	}
 }
@@ -1443,6 +1608,18 @@ p {
 				vertical-align: top;
 				&:first-child {
 					border-left: none;
+					a {
+						&::before {
+							border-radius: 3px 0 0 3px;
+						}
+					}
+				}
+				&:last-child {
+					a {
+						&::before {
+							border-radius: 0 3px 3px 0;
+						}
+					}
 				}
 			}
 			a {
@@ -1468,6 +1645,10 @@ p {
 						height: 13px;
 						top: 3px;
 						left: 0;
+						path {
+							fill: $black;
+							@inclide transition(fill);
+						}
 					}
 				}
 				&::before {
@@ -1478,19 +1659,31 @@ p {
 					position: absolute;
 					right: -1px;
 					top: -1px;
-					border-left-width: 2px;
-					border-right-width: 2px;
+					border-left-width: 1px;
+					border-right-width: 1px;
+					@include transition(border-color);
 				}
-				&::after {
-					border: 1px solid transparent;
-					bottom: -1px;
-					content: "";
-					left: -1px;
-					position: absolute;
-					right: -1px;
-					top: -1px;
-					border-left-width: 2px;
-					border-right-width: 2px;
+				// &::after {
+				// 	border: 1px solid transparent;
+				// 	bottom: -1px;
+				// 	content: "";
+				// 	left: -1px;
+				// 	position: absolute;
+				// 	right: -1px;
+				// 	top: -1px;
+				// 	border-left-width: 1px;
+				// 	border-right-width: 1px;
+				// 	@include transition(border-color);
+				// }
+				&:hover {
+					&::before {
+						border-color: $blue;
+					}
+					svg {
+						path {
+							fill: $blue;
+						}
+					}
 				}
 			}
 			span {
@@ -1526,6 +1719,10 @@ p {
 		& + a {
 			color: $blue;
 			margin-bottom: 5px;
+			@include transition(color);
+			&:hover {
+				color: $red;
+			}
 		}
 		&.big {
 			max-height: 135px;
@@ -1566,13 +1763,15 @@ p {
 	.slider-nav__slide {
 		margin: 0 4px;
 		width: 91px;
-		//max-width: 92px;
-		//min-width: 92px;
 		height: 88px;
 		border: 1px solid #e2e2e2;
 		position: relative;
 		cursor: pointer;
 		overflow: hidden;
+		@include transition(border-color);
+		&:hover {
+			border-color: $blue;
+		}
 		&.slick-current {
 			border-color: $blue;
 		}
@@ -1684,6 +1883,10 @@ p {
 				letter-spacing: -0.25px;
 				padding: 5px 8px 6px 12px;
 				display: inline-block;
+				@include transition(border-color);
+				&:hover {
+					border-color: $blue;
+				}
 			}
 		}
 		p {
@@ -1696,6 +1899,10 @@ p {
 }
 .link__more {
 	color: $blue;
+	@include transition(color);
+	&:hover {
+		color: $red;
+	}
 }
 .big_basket {
 	width: 100%;
@@ -1708,6 +1915,11 @@ p {
 	border-bottom: 1px dotted $red;
 	line-height: 20px;
 	display: inline-block;
+	transition: color 0.3s ease, border-color 0.3s ease;
+	&:hover {
+		color: $black;
+		border-color: $black;
+	}
 }
 .spinner__box {
 	display: inline-block;
@@ -1833,11 +2045,15 @@ p {
 	color: #000000;
 	position: absolute;
 	bottom: 11px;
+	@include transition(border-color);
 	.icon {
 		display: inline-block;
 		height: 13px;
 		width: 7px;
 		margin-right: 5px;
+	}
+	&:hover {
+		border-color: $blue;
 	}
 }
 .left__sidebar {
@@ -1964,6 +2180,10 @@ blockquote {
 			a {
 				color: $blue;
 				padding: 3px 5px;
+				@include transition(color);
+				&:hover {
+					color: $red;
+				}
 			}
 		}
 	}
@@ -2161,12 +2381,63 @@ blockquote {
 }
 .geolocation {
 	margin-bottom: 34px;
+	.table {
+		display: table;
+		width: 100%;
+		border-collapse: collapse;
+		.thead {
+			display: table-header-group;
+		}
+		.tbody {
+			display: table-header-group;
+		}
+		.tr {
+			display: table-row;
+			text-align: left;
+			&:hover {
+				.td {
+					&:first-child {
+						color: $red;
+					}
+				}
+			}
+		}
+		.th {
+			display: table-cell;
+			color: #949494;
+			border-bottom: 2px solid #d8dee4;
+			letter-spacing: 0.6px;
+			padding: 17px 0;
+			&:first-child {
+				width: 24.6%;
+			}
+			&:nth-child(2) {
+				width: 35.3%;
+			}
+			&:nth-child(3) {
+				width: 22.7%;
+			}
+		}
+		.td {
+			display: table-cell;
+			color: #0e2031;
+			vertical-align: top;
+			padding: 25px 0;
+			border-bottom: 1px solid #d8dee4;
+			&:first-child {
+				color: $blue;
+				padding-right: 5px;
+				@include transition(color);
+			}
+			span {
+				width: 100%;
+				display: inline-block;
+			}
+		}
+	}
 	table {
 		width: 100%;
 		border-collapse: collapse;
-		tr {
-			text-align: left;
-		}
 		th {
 			color: #949494;
 			border-bottom: 2px solid #d8dee4;
@@ -2190,6 +2461,7 @@ blockquote {
 			&:first-child {
 				color: $blue;
 				padding-right: 5px;
+				@include transition(color);
 			}
 			span {
 				width: 100%;
@@ -2242,11 +2514,33 @@ blockquote {
 					color: $white;
 					margin-bottom: 3px;
 					padding-right: 15px;
-					 a {
-					 	color: #a8aeb4;
-					 	display: inline-block;
-					 	padding: 6px 0 5px;
-					 }
+					a {
+						color: #a8aeb4;
+						display: inline-block;
+						padding: 6px 0 5px;
+						@include transition(color);
+						&:hover {
+							color: $yellow;
+						}
+					}
+				}
+				ul {
+					width: 100%;
+					padding-left: 0!important;
+					li {
+						color: $white;
+						margin-bottom: 3px;
+						padding-right: 15px;
+						a {
+							color: #a8aeb4;
+							display: inline-block;
+							padding: 6px 0 5px;
+							@include transition(color);
+							&:hover {
+								color: $yellow;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -2269,6 +2563,7 @@ blockquote {
 			cursor: pointer;
 			letter-spacing: 0.8px;
 			border-radius: 0;
+			transition: border-color 0.3s ease, color 0.3s ease;
 			&.btn__out {
 				width: 47%;
 				margin-right: -1px;
@@ -2283,6 +2578,15 @@ blockquote {
 			&.active {
 				background-color: $white;
 				color: $darkgrey;
+				&:hover {
+					background-color: $white;
+					color: $darkgrey;
+					border-color: $white;
+				}
+			}
+			&:hover {
+				border-color: $yellow;
+				color: $yellow;
 			}
 		}
 	}
@@ -2296,6 +2600,10 @@ blockquote {
 					color: $yellow;
 					display: inline-block;
 					padding: 2px 12px;
+					@include transition(color);
+					&:hover {
+						color: $red;
+					}
 				}
 			}
 		}
@@ -2362,6 +2670,10 @@ blockquote {
 				color: $white;
 				display: inline-block;
 				padding: 2px 12px;
+				@include transition(color);
+				&:hover {
+					color: $yellow;
+				}
 			}
 		}
 	}
@@ -2370,7 +2682,7 @@ blockquote {
 		&:nth-child(2) {
 			padding-left: 10px;
 		}
-		ul {
+		& > ul {
 			width: 50%;
 			display: inline-block;
 			vertical-align: top;
@@ -2378,7 +2690,7 @@ blockquote {
 			&:nth-child(2) {
 				padding-left: 8px;
 			}
-			li {
+			& > li {
 				color: $grey;
 				margin-bottom: 7px;
 				&:first-child {
@@ -2387,9 +2699,28 @@ blockquote {
 					}
 				}
 				a {
-					color: $white;
+					color: $grey;
 					padding: 3px 0 2px;
 					display: inline-block;
+					@include transition(color);
+					&:hover {
+						color: $yellow;
+					}
+				}
+			}
+			ul {
+				width: 100%; 
+				li {
+					margin-bottom: 7px;
+					a {
+						color: $white;
+						padding: 3px 0 2px;
+						display: inline-block;
+						@include transition(color);
+						&:hover {
+							color: $yellow;
+						}
+					}
 				}
 			}
 		}
@@ -2651,6 +2982,13 @@ blockquote {
 					text-align: right;
 					padding-right: 16px;
 				}
+				a {
+					transition: color 0.3s ease, border-color 0.3s ease;
+					&:hover {
+						color: $black;
+						border-color: transparent;
+					}
+				}
 			}
 		}
 		.basket__result {
@@ -2661,6 +2999,13 @@ blockquote {
 				&:last-child {
 					td {
 						border-width: 2px;
+					}
+				}
+				a {
+					transition: color 0.3s ease, border-color 0.3s ease;
+					&:hover {
+						color: $black;
+						border-color: transparent;
 					}
 				}
 			}
@@ -2708,12 +3053,22 @@ blockquote {
 		}
 		.history__result {
 			tr {
+				@include transition(background-color);
+				&:hover {
+					background-color: #f9f9f9;
+					a {
+						color: $red;
+					}
+				}
 				td {
 					padding: 16px 0;
 					&:first-child {
 						padding-left: 42px;
 						width: 158px;
 						letter-spacing: -0.1px;
+						a {
+							@include transition(color);
+						}
 					}
 					&:nth-child(2) {
 						width: 139px;
@@ -2789,6 +3144,9 @@ blockquote {
 			}
 			&.history__result-inner {
 				tr {
+					&:hover {
+						background-color: transparent;
+					}
 					&:first-child {
 						td {
 							border-top: 1px solid #eef3f8;
@@ -3025,6 +3383,11 @@ blockquote {
 		letter-spacing: -0.1px;
 		a {
 			border-bottom: 1px solid $blue;
+			transition: color 0.3s ease, border-color 0.3s ease;
+			&:hover {
+				color: $black;
+				border-color: transparent;
+			}
 		}
 	}
 	.btn {
@@ -3051,6 +3414,10 @@ blockquote {
 		margin-bottom: 12px;
 		.input {
 			padding: 0 13px;
+			@include transition(border-color);
+			&:hover {
+				border-color: $blue;
+			}
 		}
 	}
 	.btn {
@@ -3095,6 +3462,10 @@ blockquote {
 	&.has-error {
 		.input {
 			border-color: $red;
+			color: $red;
+			&:hover {
+				border-color: $red;
+			}
 		}
 	}
 }
@@ -3318,6 +3689,9 @@ blockquote {
 				top: 8px;
 				width: 5px;
 			}
+			&:hover {
+				border-color: $blue;
+			}
 		}
 		.menu__list {
 			position: absolute;
@@ -3356,7 +3730,12 @@ blockquote {
 					display: inline-block;
 					padding: 5px 0;
 					color: #515151;
+					width: 100%;
 					cursor: pointer;
+					@include transition(color);
+					&:hover {
+						color: $blue;
+					}
 				}
 			}
 		}
@@ -3924,6 +4303,11 @@ blockquote {
 			}
 			a {
 				border-bottom: 1px solid $blue;
+				transition: color 0.3s ease, border-color 0.3s ease;
+				&:hover {
+					color: $black;
+					border-color: transparent;
+				}
 			}
 		}
 	}
@@ -4044,6 +4428,7 @@ p.attention {
 					background-image: url(../img/wheel.png);
 					width: 100%;
 					height: 100%;
+					z-index: 1;
 				}
 			}
 		}

@@ -197,6 +197,7 @@ h3 {
 		font-size: 0;
 	}
 }
+
 .tab__sliders {
 	.tab__nav {
 		font-size: 0;
@@ -456,6 +457,20 @@ blockquote {
 	}
 }
 .geolocation {
+	.table {
+		.th {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
+			font-weight: normal;
+		}
+		.td {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+			&:first-child {
+				font-family: $FuturaNewDemi;
+			}
+		}
+	}
 	table {
 		th {
 			font-family: $FuturaNewBook;
