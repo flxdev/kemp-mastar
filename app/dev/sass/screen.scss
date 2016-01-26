@@ -540,6 +540,10 @@ p {
 					display: inline-block;
 					line-height: 48px;
 					border-bottom: 2px solid #e8e8e8;
+					@include transition(color);
+					&:hover {
+						color: $red;
+					}
 				}			
 			}
 		}
@@ -809,6 +813,7 @@ p {
 			color: $blue;
 			padding: 0 7px;
 			margin-bottom: 5px;
+			@include transition(color);
 		}
 		.data, .card__info {
 			color: #a9a9a9;
@@ -818,6 +823,11 @@ p {
 		}
 		.card__info {
 			margin-bottom: 10px;			
+		}
+		&:hover {
+			.title {
+				color: $red;
+			}
 		}
 	}
 	&.card {
@@ -872,8 +882,8 @@ p {
 				bottom: 16px;
 				left: 14px;
 			}
-			a {
-				&:hover {
+			&:hover {
+				a {
 					.title {
 						color: #223242;
 					}
