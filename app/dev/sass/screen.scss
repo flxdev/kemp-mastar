@@ -126,6 +126,16 @@ p {
 		position: absolute;
 		left: 50px;
 		top: 36px;
+		z-index: 5;
+		span {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			color: $white;
+			letter-spacing: 0.65px;
+			bottom: -24px;
+			left: 12px;
+		}
 	}
 	.auth-bar {
 		top: 17px;
@@ -377,7 +387,7 @@ p {
 		}
 	}
 }
-.cont {
+.cont, .cont__row {
 	@include clearfix;
 }
 .breadcrumbs {
@@ -1289,7 +1299,35 @@ p {
 .form {
 	@include clearfix;
 	position: relative;
+	.cont__row {
+		.field {
+			margin-bottom: 16px;
+			&:last-of-type {
+				margin-bottom: 16px;
+			}
+			&.separator {
+				.col50 {
+					padding-right: 24px;
+					position: relative;
+					&:last-child {
+						padding-right: 9px;
+						padding-left: 17px;
+						&::after {
+							content: '';
+							position: absolute;
+							width: 10px;
+							height: 9px;
+							background-image: url(../img/icons/separator.png);
+							left: -9px;
+							top: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
 	.field {
+		@include clearfix;
 		margin-bottom: 16px;
 		&:last-of-type {
 			margin-bottom: 20px;
@@ -2520,14 +2558,15 @@ blockquote {
 				&:nth-child(4) {
 					padding-left: 12px;
 				}
-				li {
+				& > li {
 					color: $white;
 					margin-bottom: 3px;
 					padding-right: 15px;
 					a {
-						color: #a8aeb4;
 						display: inline-block;
-						padding: 6px 0 5px;
+						color: $white;
+						margin-bottom: 3px;
+						padding-right: 15px;
 						@include transition(color);
 						&:hover {
 							color: $yellow;

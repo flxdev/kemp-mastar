@@ -16,7 +16,7 @@
 <body id="indexpage">
 	<header class="header main">
 		<div class="header__top">
-			<a href="" class="logo"></a>
+			<a href="" class="logo"><span>Интернет-магазин</span></a>
 			<div class="auth-bar">
 				<div class="auth-top">
 					<a href="#">Войти</a>
@@ -124,18 +124,12 @@
 											<form action="">
 												<div class="cont">
 													<div class="col50">
-														<div class="field double">
-															<div class="label__field">Стоимость, руб</div>
-															<input type="text" class="input" placeholder="от">
-															<input type="text" class="input" placeholder="до">
-														</div>
 														<div class="field">
-															<div class="label__field">Диаметр, мм</div>
+															<div class="label__field">Ширина, мм</div>
 															<select class="multi">
 																<option value="Все">Все</option>
-																<option value="R13">R13</option>
-																<option value="R14">R14</option>
-																<option value="R15">R15</option>
+																<option value="195">195</option>
+																<option value="205">205</option>
 															</select>
 														</div>
 														<div class="field">
@@ -148,56 +142,19 @@
 															</select>
 														</div>
 														<div class="field">
+															<div class="label__field">Диаметр, мм</div>
+															<select class="multi">
+																<option value="Все">Все</option>
+																<option value="R13">R13</option>
+																<option value="R14">R14</option>
+																<option value="R15">R15</option>
+															</select>
+														</div>													
+														<div class="field">
 															<a href='#' class="reset__filter">Сбросить фильтр</a>
 														</div>
 													</div>
 													<div class="col50">
-														<div class="field">
-															<div class="label__field">Производитель</div>
-															<select class="multi">
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-																<option value="Все">Все</option>
-																<option value="Goodyear">Goodyear</option>
-																<option value="Pirelli">Pirelli</option>
-															</select>
-														</div>
-														<div class="field">
-															<div class="label__field">Ширина, мм</div>
-															<select class="multi">
-																<option value="Все">Все</option>
-																<option value="195">195</option>
-																<option value="205">205</option>
-															</select>
-														</div>
 														<div class="field">
 															<div class="label__field">Сезонность</div>
 															<select class="multi">
@@ -206,6 +163,19 @@
 																<option value="Летние">Летние</option>
 															</select>
 														</div>
+														<div class="field">
+															<div class="label__field">Производитель</div>
+															<select class="multi">
+																<option value="Все производители">Все производители</option>
+																<option value="Goodyear">Goodyear</option>
+																<option value="Pirelli">Pirelli</option>
+															</select>
+														</div>
+														<div class="field double">
+															<div class="label__field">Стоимость, руб</div>
+															<input type="text" class="input" placeholder="от">
+															<input type="text" class="input" placeholder="до">
+														</div>	
 														<div class="field">
 															<button class="sbm__filter">
 																<span>Показать шины</span>
@@ -219,43 +189,47 @@
 											<h2 class="title">Диски</h2>
 											<form action="">
 												<div class="cont">
-													<div class="col50">
-														<div class="field double">
-															<div class="label__field">Стоимость, руб</div>
-															<input type="text" class="input" placeholder="от">
-															<input type="text" class="input" placeholder="до">
+													<div class="cont__row">
+														<div class="field separator">
+															<div class="label__field">Диаметр × ширина диска</div>
+															<div class="col50">
+																<select class="multi">
+																	<option value="Диаметры">Диаметры</option>
+																	<option value="10">10</option>
+																	<option value="20">20</option>
+																	<option value="30">30</option>
+																</select>
+															</div>
+															<div class="col50">
+																<select class="multi">
+																	<option value="Ширина">Ширина</option>
+																	<option value="10">10</option>
+																	<option value="20">20</option>
+																	<option value="30">30</option>
+																</select>
+															</div>
 														</div>
-														<div class="field">
-															<div class="label__field">Ширина диска, мм</div>
-															<select class="multi">
-																<option value="Все">Все</option>
-																<option value="195">195</option>
-																<option value="205">205</option>
-															</select>
-														</div>
-														<div class="field">
-															<div class="label__field">Крепёжные отверстия, шт</div>
-															<select class="multi">
-																<option value="Все">Все</option>
-																<option value="3">3</option>
-																<option value="4">4</option>
-																<option value="5">5</option>
-															</select>
-														</div>
-														<div class="field">
-															<a href="" class="reset__filter">Сбросить фильтр</a>
+														<div class="field separator">
+															<div class="label__field">Крепежные отверстия (PCD)</div>
+															<div class="col50">
+																<select class="multi">
+																	<option value="Все">Все</option>
+																	<option value="10">10</option>
+																	<option value="20">20</option>
+																	<option value="30">30</option>
+																</select>
+															</div>
+															<div class="col50">
+																<select class="multi">
+																	<option value="Все">Все</option>
+																	<option value="10">10</option>
+																	<option value="20">20</option>
+																	<option value="30">30</option>
+																</select>
+															</div>
 														</div>
 													</div>
 													<div class="col50">
-														<div class="field">
-															<div class="label__field">Диаметр, мм</div>
-															<select class="multi">
-																<option value="Все">Все</option>
-																<option value="R13">R13</option>
-																<option value="R14">R14</option>
-																<option value="R15">R15</option>
-															</select>
-														</div>
 														<div class="field">
 															<div class="label__field">Центральное отверстие, мм</div>
 															<select class="multi">
@@ -266,12 +240,14 @@
 															</select>
 														</div>
 														<div class="field">
-															<div class="label__field">Крепёжные отверстия, мм</div>
-															<select class="multi">
-																<option value="Все">Все</option>
-																<option value="25">25</option>
-																<option value="45">45</option>
-															</select>
+															<a href="" class="reset__filter">Сбросить фильтр</a>
+														</div>
+													</div>
+													<div class="col50">
+														<div class="field double">
+															<div class="label__field">Стоимость, руб</div>
+															<input type="text" class="input" placeholder="от">
+															<input type="text" class="input" placeholder="до">
 														</div>
 														<div class="field">
 															<button class="sbm__filter">
@@ -937,7 +913,7 @@
 			<div class="row slide__box">
 				<div class="row">
 					<ul>
-						<li>Авто-Аксессуары</li>
+						<li><a href="">Авто-Аксессуары</a></li>
 						<ul>
 							<li><a href="">Автокресла детские</a></li>
 							<li><a href="">Наружные аксессуары</a></li>
@@ -947,7 +923,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>АКБ</li>
+						<li><a href="">АКБ</a></li>
 						<ul>
 							<li><a href="">АКБ для Авто</a></li>
 							<li><a href="">АКБ для Мото</a></li>
@@ -956,7 +932,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>Авто-Звук</li>
+						<li><a href="">Авто-Звук</a></li>
 						<ul>
 							<li><a href="">Авто-Колонки</a></li>
 							<li><a href="">Авто-Магнитолы</a></li>
@@ -965,7 +941,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>Авто-Химия</li>
+						<li><a href="">Авто-Химия</a></li>
 						<ul>
 							<li><a href="">Антикоррозийная обработка</a></li>
 							<li><a href="">Жидкости для системы охлаждения</a></li>
@@ -977,7 +953,7 @@
 				</div>
 				<div class="row">
 					<ul>
-						<li>Авто-Краска</li>
+						<li><a href="">Авто-Краска</a></li>
 						<ul>
 							<li><a href="">Грунты автомобильные</a></li>
 							<li><a href="">Добавки в краски, лаки, грунты</a></li>
@@ -987,7 +963,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>Грузоперевозка</li>
+						<li><a href="">Грузоперевозка</a></li>
 						<ul>
 							<li><a href="">Аксессуары по грузоперевозке</a></li>
 							<li><a href="">Багажники</a></li>
@@ -996,7 +972,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>Диски</li>
+						<li><a href="">Диски</a></li>
 						<ul>
 							<li><a href="">Колпаки декоративные</a></li>
 							<li><a href="">Крепеж дисков</a></li>
@@ -1005,7 +981,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>Коврики</li>
+						<li><a href="">Коврики</a></li>
 						<ul>
 							<li><a href="">Коврики багажника</a></li>
 							<li><a href="">Коврики багажника помодельные</a></li>
@@ -1015,7 +991,7 @@
 				</div>
 				<div class="row">
 					<ul>
-						<li>Навигация</li>
+						<li><a href="">Навигация</a></li>
 						<ul>
 							<li><a href="">Авторадары</a></li>
 							<li><a href="">Авто-Сигнализация</a></li>
@@ -1024,7 +1000,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>Масла</li>
+						<li><a href="">Масла</a></li>
 						<ul>
 							<li><a href="">Гидравлические масла для автомобилей</a></li>
 							<li><a href="">Гидравлические масла общего назначения</a></li>
@@ -1034,7 +1010,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>Чехлы</li>
+						<li><a href="">Чехлы</a></li>
 						<ul>
 							<li><a href="">Накидки, майки, обогревы сиденьев</a></li>
 							<li><a href="">Оплетки руля</a></li>
@@ -1043,7 +1019,7 @@
 						</ul>
 					</ul>
 					<ul>
-						<li>Шины</li>
+						<li><a href="">Шины</a></li>
 						<ul>
 							<li><a href="">Домкраты</a></li>
 							<li><a href="">Камеры</a></li>

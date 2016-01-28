@@ -123,8 +123,14 @@ h3 {
 		li {
 			a {
 				font-family: $FuturaNewBook;
-				font-size: 14px;
+				font-size: 16px;
 			}
+		}
+	}
+	.logo {
+		span {
+			font-family: $FuturaNewBook;
+			font-size: 14px;
 		}
 	}
 	h1 {
@@ -495,6 +501,15 @@ blockquote {
 	.row {
 		&.slide__box {
 			font-size: 0;
+			.row > ul {
+				& > li {
+					font-family: $FuturaNewDemi;
+					font-size: 18px;
+					a {
+						font-family: $FuturaNewDemi;
+					}
+				}
+			}
 			ul {
 				li {
 					font-family: $FuturaNewDemi;

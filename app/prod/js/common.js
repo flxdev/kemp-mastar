@@ -190,7 +190,7 @@ $(document).ready(function () {
 			slider.each(function(){
 				var slider = $(this);
 
-				if(slider.hasClass('slider')) {
+				if(slider.parent().hasClass('tab__item')) {
 					slider.slick({
 						arrows: true,
 						slidesToShow: 4,
@@ -202,7 +202,7 @@ $(document).ready(function () {
 					});
 				}
 
-				if(slider.hasClass('card')) {
+				if(slider.parent().hasClass('tab__content')) {
 					slider.slick({
 						arrows: false,
 						slidesToShow: 4,
