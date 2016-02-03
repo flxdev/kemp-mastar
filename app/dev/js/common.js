@@ -810,7 +810,10 @@ $(document).ready(function () {
 
 	function initMap() {
 		var longer = $('.coord').data('long'),
-			lat = $('.coord').data('lat');
+			lat = $('.coord').data('lat'),
+			locate = $('.coord').find('.coord__address').text(),
+			phone = $('.coord').find('.coord__phones').html(),
+			schedule = $('.coord').find('.coord__schedule').html();
 		var myMap = new ymaps.Map('map-inner', {
 				center: [longer, lat],
 				zoom: 16,
@@ -818,22 +821,84 @@ $(document).ready(function () {
 			}, {
 				searchControlProvider: 'yandex#search'
 			}),
-	        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-	            balloonContent: ''
-	        }, {
-	            // Опции.
-	            // Необходимо указать данный тип макета.
-	            iconLayout: 'default#image',
-	            // Своё изображение иконки метки.
-	            iconImageHref: 'prod/img/marker.png',
-	            // Размеры метки.
-	            iconImageSize: [20, 27],
-	            // Смещение левого верхнего угла иконки относительно
-	            // её "ножки" (точки привязки).
-	            iconImageOffset: [-3, -42]
-	        });
+
+			MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
+				'<div class="popover top">' +
+					'<a class="close" href="#">&times;</a>' +
+					'<div class="arrow"></div>' +
+					'<div class="balloon">' +
+						'$[[options.contentLayout observeSize minWidth=246 maxWidth=246]]' +
+					'</div>' +
+				'</div>', {
+				build: function () {
+					this.constructor.superclass.build.call(this);
+					this._$element = $('.popover', this.getParentElement());
+					this.applyElementOffset();
+					this._$element.find('.close')
+					    .on('click', $.proxy(this.onCloseClick, this));
+				},
+				clear: function () {
+				    this._$element.find('.close')
+				        .off('click');
+				    this.constructor.superclass.clear.call(this);
+				},
+				onSublayoutSizeChange: function () {
+					MyBalloonLayout.superclass.onSublayoutSizeChange.apply(this, arguments);
+					if(!this._isElement(this._$element)) {
+					    return;
+					}
+					this.applyElementOffset();
+					this.events.fire('shapechange');
+				},
+				applyElementOffset: function () {
+					this._$element.css({
+						left: -((this._$element[0].offsetWidth + 18) / 2),
+						top: -(this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight + 10)
+					});
+				},
+				onCloseClick: function (e) {
+					e.preventDefault();
+					this.events.fire('userclose');
+				},
+				getShape: function () {
+					if(!this._isElement(this._$element)) {
+					    return MyBalloonLayout.superclass.getShape.call(this);
+					}
+					var position = this._$element.position();
+					return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
+						[position.left, position.top], [
+							position.left + this._$element[0].offsetWidth,
+							position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
+						]
+					]));
+				},
+				_isElement: function (element) {
+					return element && element[0] && element.find('.arrow')[0];
+				}
+			}),
+
+			MyBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+				'<div class="balloon__content">$[properties.balloonContent]</div>'
+			);
+			myPlacemark = window.myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				balloonHeader: '',
+				balloonContent: ''
+			}, {
+				balloonShadow: false,
+				balloonLayout: MyBalloonLayout,
+				balloonContentLayout: MyBalloonContentLayout,
+				balloonPanelMaxMapArea: 0,
+				iconLayout: 'default#image',
+				iconImageHref: 'prod/img/marker.png',
+				iconImageSize: [20, 27],
+				iconImageOffset: [-3, -42] 	
+			});
 
 	    myMap.geoObjects.add(myPlacemark);
+
+        window.myPlacemark.properties.set(
+            'balloonContent', "<div class='balloon__address'>" + locate + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + phone + "</div>" + "<div class='balloon__col'>" + schedule +	"</div>" + "</div>" 
+        );
 
 		zoomControl = new ymaps.control.ZoomControl({ 
 			options: { 
