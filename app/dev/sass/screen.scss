@@ -2412,11 +2412,12 @@ blockquote {
 				&:first-child {
 					width: 134px;
 				}
-				p {
+				span {
 					margin: 0;
 					color: $white;
 					font-size: 12px;
 					line-height: 18px;
+					display: inline-block;
 					sup {
 						line-height: 2.5;
 						vertical-align: top;

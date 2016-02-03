@@ -654,8 +654,8 @@ $(document).ready(function () {
 				searchControlProvider: 'yandex#search'
 			}),
 			objectManager = new ymaps.ObjectManager({
-				clusterize: false
-			}),
+				clusterize: true
+			}),currentId = 0;
 			MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
 				'<div class="popover top">' +
 					'<a class="close" href="#">&times;</a>' +
@@ -763,113 +763,44 @@ $(document).ready(function () {
 
 		myMap.controls.add(zoomControl);
 
-		myMap.geoObjects.add(objectManager);
-		var data = {
-			"type": "FeatureCollection",
-			"features": [
-				{
-					"type": "Feature", 
-					"id": 0, 
-					"geometry": {
-						"type": "Point", 
-						"coordinates": [55.606878, 37.524767]
-					}, 
-					"properties": {
-						"balloonHeader": "Сервис КЭМП Ясенево",
-						"balloonContent": 
-							"<div class='balloon__address'>Москва, ул. Вильнюсская 1" +
-							"<div class='balloon__row'>" +
-								"<div class='balloon__col'>" +
-									"<p>(495)422-29-92<p>" +
-								"</div>" +
-								"<div class='balloon__col'>" +
-									"<p>с 9:00 до 22:00,<p>" +
-									"<p>Ежедневно<p>" +
-								"</div>" +
-							"</div>" 
-						, 
-						"clusterCaption": "Еще одна метка"
+		var myObjects = [],
+			location = [];
+
+			$('.coord').each(function(index){
+				var cur_coords = [];
+				cur_coords[0] = $(this).data('long');
+				cur_coords[1] = $(this).data('lat');
+				cur_coords[2] = $(this).find('.names').text();
+				cur_coords[3] = $(this).find('.coord__address').text();
+				cur_coords[4] = $(this).find('.coord__phones').html();
+				cur_coords[5] = $(this).find('.coord__schedule').html();
+				location[index] = cur_coords;
+
+			});
+			var coordinates = location;
+
+
+			for (var i = 0, l = coordinates.length; i < l; i++) {
+				var coord = coordinates[i];
+				console.log(coord[3])
+			    myObjects.push({
+			        type: "Feature",
+			        id: currentId++,
+			        geometry: {
+			            type: 'Point',
+			            coordinates: [coord[0],coord[1]]
+			        },
+			        properties: {
+						balloonHeader: coord[2],
+						balloonContent: "<div class='balloon__address'>" + coord[3] + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + coord[4] + "</div>" + "<div class='balloon__col'>" + coord[5] +	"</div>" + "</div>" 
+						 , 
+						// "clusterCaption": "Еще одна метка"
 					}
-				},
-				{
-					"type": "Feature", 
-					"id": 1, 
-					"geometry": {
-						"type": "Point", 
-						"coordinates": [54.920635, 37.404222]
-					}, 
-					"properties": {
-						"balloonHeader": "Сервис КЭМП Серпухов",
-						"balloonContent": 
-							"<div class='balloon__address'>142211, Московская область, г. Серпухов, ул. Урицкого, д. 1.</div>" +
-							"<div class='balloon__row'>" +
-								"<div class='balloon__col'>" +
-									"<p>(495)556-65-76,<p>" +
-									"<p>(495)556-63-34,<p>" +
-									"<p>(495)926-32-08</p>" +
-								"</div>" +
-								"<div class='balloon__col'>" +
-									"<p>с 9:00 до 21:00,<p>" +
-									"<p>Ежедневно<p>" +
-								"</div>" +
-							"</div>" 
-						, 
-						"clusterCaption": "Еще одна метка"
-					}
-				},
-				{
-					"type": "Feature", 
-					"id": 2, 
-					"geometry": {
-						"type": "Point", 
-						"coordinates": [55.372774, 37.783078]
-					}, 
-					"properties": {
-						"balloonHeader": "Сервис КЭМП Домодедово",
-						"balloonContent": 
-							"<div class='balloon__address'>Московская область, <br>г. Домодедово, <br>мкр-н Востряково, <br>ул. Заборье, д.1Д <br>(46-й км Каширского шоссе)</div>" +
-							"<div class='balloon__row'>" +
-								"<div class='balloon__col'>" +
-									"<p>(49679)66-700,<p>" +
-									"<p>(49679)66-491,<p>" +
-									"<p>(495)926-3208</p>" +
-								"</div>" +
-								"<div class='balloon__col'>" +
-									"<p>с 8:00 до 21:00,<p>" +
-									"<p>Ежедневно<p>" +
-								"</div>" +
-							"</div>" 
-						, 
-						"clusterCaption": "Еще одна метка"
-					}
-				},
-				{
-					"type": "Feature", 
-					"id": 3, 
-					"geometry": {
-						"type": "Point", 
-						"coordinates": [55.599591, 38.098045]
-					}, 
-					"properties": {
-						"balloonHeader": "Сервис КЭМП Жуковский",
-						"balloonContent": 
-							"<div class='balloon__address'>Московская область, город Жуковский, ул. Мясищева, д. 16а</div>" +
-							"<div class='balloon__row'>" +
-								"<div class='balloon__col'>" +
-									"<p>(495)422-29-92<p>" +
-								"</div>" +
-								"<div class='balloon__col'>" +
-									"<p>с 9:00 до 21:00<p>" +
-									"<p>Ежедневно<p>" +
-								"</div>" +
-							"</div>" 
-						, 
-						"clusterCaption": "Еще одна метка"
-					}
-				}
-			]
-		}
-		objectManager.add(data);
+			    });
+			}
+
+			objectManager.add(myObjects);
+			myMap.geoObjects.add(objectManager)
 	};
 
 
@@ -878,15 +809,17 @@ $(document).ready(function () {
 	};
 
 	function initMap() {
+		var longer = $('.coord').data('long'),
+			lat = $('.coord').data('lat');
 		var myMap = new ymaps.Map('map-inner', {
-				center: [55.606878, 37.524767],
+				center: [longer, lat],
 				zoom: 16,
 				controls: []
 			}, {
 				searchControlProvider: 'yandex#search'
 			}),
 	        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-	            hintContent: 'Собственный значок метки'
+	            balloonContent: ''
 	        }, {
 	            // Опции.
 	            // Необходимо указать данный тип макета.

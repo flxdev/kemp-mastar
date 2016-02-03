@@ -142,7 +142,7 @@ h3 {
 .breadcrumbs {
 	font-size: 0;
 	li {
-		a {
+		a, span {
 			font-family: $FuturaNewBook;
 			font-size: 14px;
 		}
@@ -452,8 +452,9 @@ blockquote {
 		}
 		.balloon__row {
 			.balloon__col {
-				p {
+				span {
 					font-size: 12px;
+					font-family: $FuturaNewBook;
 					sup {
 						font-size: 7px;
 					}
