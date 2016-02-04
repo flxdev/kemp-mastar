@@ -517,6 +517,8 @@ $(document).ready(function () {
 					borderColorOnError : false,
 					scrollToTopOnError : false,
 					onSuccess : function() {
+						$('.popup').removeClass('is-open');
+						$('.success').addClass('is-open');
 						return false;
 					}
 				});
@@ -623,6 +625,7 @@ $(document).ready(function () {
 		});
 
 		$(".popup__close-link, .popup__close, .popup__wrap").on("click", function(){
+
 				
 			if(!popupSelector.hasClass('is-visible')) return;
 
@@ -633,6 +636,8 @@ $(document).ready(function () {
 					duration: duration,
 					complete: function(){
 						frame.find('body').removeAttr('style');
+						$('.success').removeClass('is-open');
+						$('.popup:first-child').addClass('is-open');
 					}
 				});
 			return false;
