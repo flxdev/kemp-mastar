@@ -519,6 +519,7 @@ $(document).ready(function () {
 					onSuccess : function() {
 						$('.popup').removeClass('is-open');
 						$('.success').addClass('is-open');
+						$('.popup').find('form').trigger('reset');
 						return false;
 					}
 				});
