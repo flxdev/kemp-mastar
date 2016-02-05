@@ -778,7 +778,7 @@ $(document).ready(function () {
 				cur_coords[1] = $(this).data('lat');
 				cur_coords[2] = $(this).find('.names').text();
 				cur_coords[3] = $(this).find('.coord__address').text();
-				cur_coords[4] = $(this).find('.coord__phones').html();
+				cur_coords[4] = $(this).find('.coord__phones').html() || '';
 				cur_coords[5] = $(this).find('.coord__schedule').html();
 				location[index] = cur_coords;
 
