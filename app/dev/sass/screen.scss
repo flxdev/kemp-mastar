@@ -1348,6 +1348,9 @@ p {
 				border-color: $blue;
 				box-shadow: inset 2px 5px 5px 0px rgba(0, 81, 162, 0.08);
 			}
+			&[type='password']{
+				letter-spacing: -6.9px;
+			}
 		}
 		&.double {
 			.input {
@@ -3984,8 +3987,11 @@ blockquote {
 	}
 	&.is-visible {
 		.popup {
-			opacity: 1;
-			transform: translate3d(0px, 0px, 0px) scale(1);
+			&.is-open {
+				opacity: 1;
+				transform: translate3d(0px, 0px, 0px) scale(1);
+				visibility: visible;
+			}
 		}
 	}
 	.popup {
@@ -4001,6 +4007,16 @@ blockquote {
 		opacity: 0;
 		transform: translate3d(0px, 20%, 0px) scale(0.5);
 		transition: all 0.3s linear 0s;
+		visibility: hidden;
+		z-index: 2;
+		&.success {
+			position: absolute;
+			left: 50%;
+			margin-left: -202px;
+			text-align: center;
+			z-index: 1;
+			max-width: 404px;
+		}
 	}
 	.popup__title {
 		margin-bottom: 17px;
@@ -4021,7 +4037,7 @@ blockquote {
 		cursor: pointer;
 	}
 	&.enter {
-		.popup {
+		.popup, .success {
 			max-width: 404px;
 		}
 		.btn {
@@ -4033,6 +4049,9 @@ blockquote {
 	&.reg {
 		.popup {
 			max-width: 684px;
+			&.success {
+				max-width: 404px;
+			}
 			.col50 {
 				padding-right: 15px;
 				&:last-child{
@@ -4050,7 +4069,7 @@ blockquote {
 		}
 	}
 	&.feedback {
-		.popup {
+		.popup, .success {
 			max-width: 404px;
 		}
 		.btn {
@@ -4064,7 +4083,7 @@ blockquote {
 		}
 	}
 	&.callback {
-		.popup {
+		.popup, .success {
 			max-width: 404px;
 		}
 		.btn {
