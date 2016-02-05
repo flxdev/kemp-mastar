@@ -599,19 +599,15 @@ $(document).ready(function () {
 					//validateOnBlur : true,
 					borderColorOnError : false,
 					scrollToTopOnError : false,
-<<<<<<< HEAD
 					onSuccess : function($form) {
 						if($form.hasClass('answer')){
 							ajaxSubmit1($form);
 						}else{
 							ajaxSubmit($form);
 						}
-=======
-					onSuccess : function() {
 						$('.popup').removeClass('is-open');
 						$('.success').addClass('is-open');
 						$('.popup').find('form').trigger('reset');
->>>>>>> origin/master
 						return false;
 					}
 				});
@@ -721,10 +717,6 @@ $(document).ready(function () {
 
 		$(".popup__close-link, .popup__close, .popup__wrap").on("click", function(){
 
-<<<<<<< HEAD
-=======
-				
->>>>>>> origin/master
 			if(!popupSelector.hasClass('is-visible')) return;
 
 			popupSelector
