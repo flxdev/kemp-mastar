@@ -533,7 +533,7 @@ $(document).ready(function () {
 
 
 	//mask input
-	(function(){
+	function mask_input(){
 		if($('.mask').length){
 			$('.mask').inputmask({
 				mask: '+9 (999) 999 99 99',
@@ -542,7 +542,8 @@ $(document).ready(function () {
 				placeholder: ''
 			});
 		}
-	})();
+	}
+	mask_input();
 
 	//scroll pane
 	(function(){
@@ -574,8 +575,12 @@ $(document).ready(function () {
 			data: datares,
 			dataType: "html",
 			success: function(fillter){
+				if(!urlres){
+					fillter= $(fillter).find('.form.personal').html();
+				}
 				$(wherecontent).html(fillter);
 				validate();
+				mask_input();
 			}
 		});
 	}
