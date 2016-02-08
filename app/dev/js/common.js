@@ -104,6 +104,7 @@ $(document).ready(function () {
 							dataType: "html",
 							success: function(fillter){
 								$('.tab__content.ajax').html(fillter);
+								$('.tab__content.ajax').find('.tab__item').css("display","block");
 							}
 						});
 					}
