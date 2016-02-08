@@ -96,6 +96,17 @@ $(document).ready(function () {
 				this_.parent().addClass('active').siblings().removeClass('active');
 				tab_item.fadeOut(0).removeClass('visible');
 				if(parent.hasClass('tab__slider')){
+					if(parent.hasClass('ajax_slider')){
+						$.ajax({
+							type: "POST",
+							url: "/bitrix/templates/main/includes/ru/template.main.news.php",
+							data: "ID="+index,
+							dataType: "html",
+							success: function(fillter){
+								$('.tab__content.ajax').html(fillter);
+							}
+						});
+					}
 					parent.find("."+index).fadeIn(0).find('.sliders').slick('setPosition');
 				} else {
 					parent.find("."+index).fadeIn(0);
