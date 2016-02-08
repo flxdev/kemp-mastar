@@ -50,7 +50,7 @@ $(document).ready(function () {
 			});
 		}
 	};
-	
+
 	//document click
 	$(document).click(function() {
 		$('.js-accordions-mod .js-accord').removeClass('is-active');
@@ -94,7 +94,7 @@ $(document).ready(function () {
 					index = this_.data('href');
 
 				this_.parent().addClass('active').siblings().removeClass('active');
-				tab_item.fadeOut(0).removeClass('visible');				
+				tab_item.fadeOut(0).removeClass('visible');
 				if(parent.hasClass('tab__slider')){
 					parent.find("."+index).fadeIn(0).find('.sliders').slick('setPosition');
 				} else {
@@ -105,14 +105,14 @@ $(document).ready(function () {
 				},10);
 				return false;
 			});
-			
+
 			if(parent.hasClass('active')){
 				linkItem.first().addClass('active');
 				parent.find("."+index).show().addClass('visible');
 			} else if(parent.hasClass('tab__slider')){
 				linkItem.first().addClass('active');
 				parent.find("."+index).show().addClass('visible');
-			};	
+			};
 
 			link_cont.on('click', function(){
 				var this_ = $(this),
@@ -220,7 +220,7 @@ $(document).ready(function () {
 							btnNext.on('click', function(){
 								slider.slick('slickNext');
 							});
-					});					
+					});
 				};
 
 				if(slider.hasClass('gallery__pictures')) {
@@ -248,13 +248,30 @@ $(document).ready(function () {
 						asNavFor: '.gallery__pictures'
 					});
 
-				}				
+				}
 			});
 		}
 	})();
 
+	function isHistoryApiAvailable() {
+		return !!(window.history && history.pushState);
+	}
+
+
+	function parseUrlQuery() {
+		var data = {};
+		if(location.search) {
+			var pair = (location.search.substr(1)).split('&');
+			for(var i = 0; i < pair.length; i ++) {
+				var param = pair[i].split('=');
+				data[param[0]] = param[1];
+			}
+		}
+		return data;
+	}
+
 	//multipla select
-	(function(){
+	function mselect(){
 		$(".cont").each(function(){
 			var multi = $(this).find('.multi'),
 				drop = $(this).find('.ms-drop'),
@@ -264,7 +281,36 @@ $(document).ready(function () {
 			multi.multipleSelect({
 				single: true,
 				onClose: function(){
-					$('.ms-choice').removeClass('is-active');	
+					$('.ms-choice').removeClass('is-active');
+				},
+				onClick: function(view){
+					if(view.instance.$el.hasClass("ajax-page-count")){
+						var cnt = view.value;
+						$.ajax({
+							type: "POST",
+							data: 'cnt=' + cnt,
+							dataType: "html",
+							success: function(fillter){
+								replace = $(fillter).find('.ajax-catalog__area').html();
+								$('.ajax-catalog__area').html(replace);
+								mselect();
+							}
+						});
+						return false;
+					}
+					if(view.instance.$el.hasClass("ajax-sort")){
+						var sort = view.value;
+						$.ajax({
+							data: 'sort=' + sort,
+							//dataType: "html",
+							success: function(fillter){
+								replace = $(fillter).find('.ajax-catalog__area').html();
+								$('.ajax-catalog__area').html(replace);
+								mselect();
+							}
+						});
+						return false;
+					}
 				}
 			});
 
@@ -296,7 +342,8 @@ $(document).ready(function () {
 
 		}
 		activeSel();
-	})();
+	};
+	mselect();
 
 	// spiner
 	(function() {
@@ -434,7 +481,7 @@ $(document).ready(function () {
 		if($('.equalheight').length){
 			$('.equalheight').find('.item').matchHeight({
 				property: 'min-height'
-			});			
+			});
 		};
 	})();
 
@@ -447,7 +494,7 @@ $(document).ready(function () {
 					blockThis 	= parent.find('.js-accord-block'),
 					accord 		= $('.js-accord'),
 					block 		= accord.find('.js-accord-block');
-				
+
 				if (!parent.hasClass('is-active')) {
 					accord.stop(true, true).removeClass('is-active');
 					block.stop(true, true).slideUp(500);
@@ -486,7 +533,7 @@ $(document).ready(function () {
 
 
 	//mask input
-	(function(){
+	function mask_input(){
 		if($('.mask').length){
 			$('.mask').inputmask({
 				mask: '+9 (999) 999 99 99',
@@ -495,7 +542,8 @@ $(document).ready(function () {
 				placeholder: ''
 			});
 		}
-	})();
+	}
+	mask_input();
 
 	//scroll pane
 	(function(){
@@ -505,7 +553,47 @@ $(document).ready(function () {
 	})();
 
 	//validation
-	(function(){
+	function ajaxpostshow(urlres, datares){
+		$.ajax({
+			type: "POST",
+			url: urlres,
+			data: datares,
+			dataType: "html"
+		});
+	}
+	function ajaxSubmit(form){
+		var formsubscrube = $(form).serialize(),
+			target_php = $(form).data('php'),
+			formsubscrube = formsubscrube + '&action=ajax';
+		ajaxpostshow(target_php, formsubscrube);
+		return false;
+	}
+	function ajaxpostshow1(urlres, datares, wherecontent){
+		$.ajax({
+			type: "POST",
+			url: urlres,
+			data: datares,
+			dataType: "html",
+			success: function(fillter){
+				if(!urlres){
+					fillter= $(fillter).find('.form.personal').html();
+				}
+				$(wherecontent).html(fillter);
+				validate();
+				mask_input();
+			}
+		});
+	}
+	function ajaxSubmit1(form){
+		var formsubscrube = $(form).serialize(),
+			target_block = $(form).data('block'),
+			target_php = $(form).data('php'),
+			formsubscrube = formsubscrube + '&action=ajax';
+		ajaxpostshow1(target_php, formsubscrube, target_block);
+		return false;
+	}
+
+	function validate(){
 		var form_validate = $('.js-validate');
 		if (form_validate.length) {
 			form_validate.each(function () {
@@ -516,7 +604,12 @@ $(document).ready(function () {
 					//validateOnBlur : true,
 					borderColorOnError : false,
 					scrollToTopOnError : false,
-					onSuccess : function() {
+					onSuccess : function($form) {
+						if($form.hasClass('answer')){
+							ajaxSubmit1($form);
+						}else{
+							ajaxSubmit($form);
+						}
 						$('.popup').removeClass('is-open');
 						$('.success').addClass('is-open');
 						$('.popup').find('form').trigger('reset');
@@ -525,7 +618,8 @@ $(document).ready(function () {
 				});
 			});
 		}
-	})();
+	}
+	validate();
 
 	//custom selects
 	(function(){
@@ -563,7 +657,7 @@ $(document).ready(function () {
 					text = checkIs.parent().find('span').text();
 				item.text(text);
 				this_.parents('.delivery__selects').find('.not_availability').removeClass('not_availability');
-			}		
+			}
 
 			item.on('click', function(event){
 				if(this_.is('.not_availability')){
@@ -591,7 +685,7 @@ $(document).ready(function () {
 	})();
 
 	//popup
-	
+
 	(function(){
 		var duration = 500,
 			popupSelector = $('.popup__wrap'),
@@ -610,7 +704,7 @@ $(document).ready(function () {
 					});
 			};
 
-			
+
 			$('.'+popup).fadeIn({
 				duration: duration,
 				complete: function(){
@@ -619,6 +713,7 @@ $(document).ready(function () {
 				}
 			});
 			event.stopPropagation();
+			event.preventDefault();
 		});
 
 		$(".popup").on("click", function(event){
@@ -627,7 +722,6 @@ $(document).ready(function () {
 
 		$(".popup__close-link, .popup__close, .popup__wrap").on("click", function(){
 
-				
 			if(!popupSelector.hasClass('is-visible')) return;
 
 			popupSelector
@@ -662,6 +756,7 @@ $(document).ready(function () {
 			objectManager = new ymaps.ObjectManager({
 				clusterize: true
 			}),currentId = 0;
+
 			MyBalloonLayout = ymaps.templateLayoutFactory.createClass(
 				'<div class="popover top">' +
 					'<a class="close" href="#">&times;</a>' +
@@ -758,13 +853,13 @@ $(document).ready(function () {
 			}
 			objectManager.objects.events.add(['mouseenter', 'mouseleave', 'click'], onObjectEvent);
 
-		zoomControl = new ymaps.control.ZoomControl({ 
-			options: { 
+		zoomControl = new ymaps.control.ZoomControl({
+			options: {
 				position: {
 					top: 28,
 					left: 17
 				}
-			} 
+			}
 		});
 
 		myMap.controls.add(zoomControl);
@@ -778,7 +873,7 @@ $(document).ready(function () {
 				cur_coords[1] = $(this).data('lat');
 				cur_coords[2] = $(this).find('.names').text();
 				cur_coords[3] = $(this).find('.coord__address').text();
-				cur_coords[4] = $(this).find('.coord__phones').html();
+				cur_coords[4] = $(this).find('.coord__phones').html() || '';
 				cur_coords[5] = $(this).find('.coord__schedule').html();
 				location[index] = cur_coords;
 
@@ -798,8 +893,8 @@ $(document).ready(function () {
 			        },
 			        properties: {
 						balloonHeader: coord[2],
-						balloonContent: "<div class='balloon__address'>" + coord[3] + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + coord[4] + "</div>" + "<div class='balloon__col'>" + coord[5] +	"</div>" + "</div>" 
-						 , 
+						balloonContent: "<div class='balloon__address'>" + coord[3] + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + coord[4] + "</div>" + "<div class='balloon__col'>" + coord[5] +	"</div>" + "</div>"
+						 ,
 						// "clusterCaption": "Еще одна метка"
 					}
 			    });
@@ -897,22 +992,22 @@ $(document).ready(function () {
 				iconLayout: 'default#image',
 				iconImageHref: 'prod/img/marker.png',
 				iconImageSize: [20, 27],
-				iconImageOffset: [-3, -42] 	
+				iconImageOffset: [-3, -42]
 			});
 
 	    myMap.geoObjects.add(myPlacemark);
 
         window.myPlacemark.properties.set(
-            'balloonContent', "<div class='balloon__address'>" + locate + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + phone + "</div>" + "<div class='balloon__col'>" + schedule +	"</div>" + "</div>" 
+            'balloonContent', "<div class='balloon__address'>" + locate + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + phone + "</div>" + "<div class='balloon__col'>" + schedule +	"</div>" + "</div>"
         );
 
-		zoomControl = new ymaps.control.ZoomControl({ 
-			options: { 
+		zoomControl = new ymaps.control.ZoomControl({
+			options: {
 				position: {
 					top: 28,
 					left: 17
 				}
-			} 
+			}
 		});
 
 		myMap.controls.add(zoomControl);
@@ -920,10 +1015,10 @@ $(document).ready(function () {
 	};
 
 	//video
-	
+
 	(function(){
 		if($('video').length){
 			html5Video();
-		}			
+		}
 	})();
 });
