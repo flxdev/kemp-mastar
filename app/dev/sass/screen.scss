@@ -3254,6 +3254,14 @@ blockquote {
 						width: auto;
 						letter-spacing: 0.1px;
 					}
+					span {
+						display: inline-block;
+						width: 100%;
+						margin-bottom: 3px;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
 				}
 			}
 		}
@@ -4292,7 +4300,6 @@ blockquote {
 	@include clearfix;
 	&.slider__box {
 		margin-bottom: 20px;
-		text-align: center;
 		.figure__left {
 			width: 373px;
 			float: left;

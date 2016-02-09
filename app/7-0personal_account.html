@@ -311,7 +311,7 @@
 										</div>
 										<div class="field">
 											<div class="label__field">Телефон<sup>*</sup></div>
-											<input type="phone" class="input mask" data-validation-regexp="^[-0-9()+ ]+$" data-validation="custom" >
+											<input type="text" class="input mask" data-validation="length" data-validation-length="min18">
 										</div>
 										<div class="field">
 											<div class="label__field">Марка вашего авто</div>
@@ -362,14 +362,14 @@
 									<div class="col50">
 										<div class="field">
 											<div class="label__field new__pass">Новый пароль<sup>*</sup></div>
-											<input type="text" class="input">
+											<input type="text" class="input" data-validation="length" data-validation-length="min7">
 										</div>
 										<button class="btn" type='submit'><span>Сохранить изменения</span></button>
 									</div>
 									<div class="col50">
 										<div class="field">
 											<div class="label__field repeat__pass">Повторите пароль<sup>*</sup></div>
-											<input type="text" class="input">
+											<input type="text" class="input" data-validation="length" data-validation-length="min7">
 										</div>
 									</div>
 								</div>

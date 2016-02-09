@@ -78,6 +78,18 @@ $(document).ready(function () {
 		});
 	})();
 
+	function getSliderSettings(){
+		return {
+			arrows: true,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			speed: 500,
+			infinite: true,
+			prevArrow: '<button type="button" class="slick-prev"><span><svg viewBox="0 0 15 24.5" xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></button>',
+			nextArrow: '<button type="button" class="slick-next"><span><svg viewBox="0 0 15 24.5" xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span></button>'
+		}
+	}
+
 	//tabs
 	(function(){
 		$('.tab__nav').each(function(){
@@ -104,7 +116,12 @@ $(document).ready(function () {
 							dataType: "html",
 							success: function(fillter){
 								$('.tab__content.ajax').html(fillter);
-								$('.tab__content.ajax').find('.tab__item').css("display","block");
+								$('.tab__content.ajax').find('.tab__item').fadeIn(0);
+								$('.sliders').slick(getSliderSettings());
+								
+								setTimeout(function(){
+									$('.tab__content.ajax').find('.tab__item').addClass('visible');
+								},100)
 							}
 						});
 					}
@@ -759,7 +776,7 @@ $(document).ready(function () {
 
 	function init () {
 		var myMap = new ymaps.Map('map', {
-				center: [55.3172, 37.523285],
+				center: [53.3172, 37.523285],
 				zoom: 9,
 				controls: []
 			}, {
@@ -877,7 +894,7 @@ $(document).ready(function () {
 		myMap.controls.add(zoomControl);
 
 		var myObjects = [],
-			location = [];
+			l = [];
 
 			$('.coord').each(function(index){
 				var cur_coords = [];
@@ -887,10 +904,10 @@ $(document).ready(function () {
 				cur_coords[3] = $(this).find('.coord__address').text();
 				cur_coords[4] = $(this).find('.coord__phones').html() || '';
 				cur_coords[5] = $(this).find('.coord__schedule').html();
-				location[index] = cur_coords;
+				l[index] = cur_coords;
 
 			});
-			var coordinates = location;
+			var coordinates = l;
 
 
 			for (var i = 0, l = coordinates.length; i < l; i++) {
@@ -900,7 +917,7 @@ $(document).ready(function () {
 			        id: currentId++,
 			        geometry: {
 			            type: 'Point',
-			            coordinates: [coord[0],coord[1]]
+			            coordinates: [Number(coord[0]),Number(coord[1])]
 			        },
 			        properties: {
 						balloonHeader: coord[2],
@@ -912,9 +929,8 @@ $(document).ready(function () {
 			}
 
 			objectManager.add(myObjects);
-			
 			myMap.geoObjects.add(objectManager);
-			console.log(myMap.geoObjects.getBounds());
+			myMap.setBounds(objectManager.getBounds())
 	};
 
 
