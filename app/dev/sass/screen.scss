@@ -4292,14 +4292,16 @@ blockquote {
 	@include clearfix;
 	&.slider__box {
 		margin-bottom: 20px;
+		text-align: center;
 		.figure__left {
 			width: 373px;
 			float: left;
 		}
 		.figure__right {
 			overflow: hidden;
+			float: right;
 			.slider-for {
-				width: 100%;
+				width: 355px;
 				height: 212px;
 				border: none;
 				.slider-for__slide {
@@ -4313,12 +4315,16 @@ blockquote {
 				}
 			}
 			.slider-nav {
+				width: 355px;
+				margin: 0;
 				.slider-nav__slide {
 					width: 84px;
 					height: 81px;
+					margin: 0 2px;
 					img {
 						max-width: inherit;
 						max-height: inherit;
+						display: block;
 					}
 					.player {
 						position: absolute;

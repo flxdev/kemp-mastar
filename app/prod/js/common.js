@@ -895,7 +895,6 @@ $(document).ready(function () {
 
 			for (var i = 0, l = coordinates.length; i < l; i++) {
 				var coord = coordinates[i];
-				console.log(coord[3])
 			    myObjects.push({
 			        type: "Feature",
 			        id: currentId++,
@@ -913,7 +912,9 @@ $(document).ready(function () {
 			}
 
 			objectManager.add(myObjects);
-			myMap.geoObjects.add(objectManager)
+			
+			myMap.geoObjects.add(objectManager);
+			console.log(myMap.geoObjects.getBounds());
 	};
 
 
