@@ -77,7 +77,6 @@ $(document).ready(function () {
 			});
 		});
 	})();
-
 	function getSliderSettings(){
 		return {
 			arrows: true,
@@ -610,6 +609,7 @@ $(document).ready(function () {
 				$(wherecontent).html(fillter);
 				validate();
 				mask_input();
+				popup_init();
 			}
 		});
 	}
@@ -638,10 +638,10 @@ $(document).ready(function () {
 							ajaxSubmit1($form);
 						}else{
 							ajaxSubmit($form);
-						}
-						$('.popup').removeClass('is-open');
-						$('.success').addClass('is-open');
-						$('.popup').find('form').trigger('reset');
+							$('.popup').removeClass('is-open');
+							$('.success').addClass('is-open');
+							$('.popup').find('form').trigger('reset');
+						}						
 						return false;
 					}
 				});
@@ -715,7 +715,7 @@ $(document).ready(function () {
 
 	//popup
 
-	(function(){
+	function popup_init(){
 		var duration = 500,
 			popupSelector = $('.popup__wrap'),
 			innerSelector = $('.popup'),
@@ -768,7 +768,8 @@ $(document).ready(function () {
 	    });
 
 
-	})();
+	};
+	popup_init();
 
 	if ($('#map').length) {
 		ymaps.ready(init);
@@ -776,7 +777,7 @@ $(document).ready(function () {
 
 	function init () {
 		var myMap = new ymaps.Map('map', {
-				center: [53.3172, 37.523285],
+				center: [55.3172, 37.523285],
 				zoom: 9,
 				controls: []
 			}, {
@@ -894,7 +895,7 @@ $(document).ready(function () {
 		myMap.controls.add(zoomControl);
 
 		var myObjects = [],
-			l = [];
+			location = [];
 
 			$('.coord').each(function(index){
 				var cur_coords = [];
@@ -904,20 +905,21 @@ $(document).ready(function () {
 				cur_coords[3] = $(this).find('.coord__address').text();
 				cur_coords[4] = $(this).find('.coord__phones').html() || '';
 				cur_coords[5] = $(this).find('.coord__schedule').html();
-				l[index] = cur_coords;
+				location[index] = cur_coords;
 
 			});
-			var coordinates = l;
+			var coordinates = location;
 
 
 			for (var i = 0, l = coordinates.length; i < l; i++) {
 				var coord = coordinates[i];
+				console.log(coord[3])
 			    myObjects.push({
 			        type: "Feature",
 			        id: currentId++,
 			        geometry: {
 			            type: 'Point',
-			            coordinates: [Number(coord[0]),Number(coord[1])]
+			            coordinates: [coord[0],coord[1]]
 			        },
 			        properties: {
 						balloonHeader: coord[2],
@@ -930,7 +932,7 @@ $(document).ready(function () {
 
 			objectManager.add(myObjects);
 			myMap.geoObjects.add(objectManager);
-			myMap.setBounds(objectManager.getBounds())
+			myMap.setBounds(objectManager.getBounds());
 	};
 
 
