@@ -117,9 +117,26 @@ $(document).ready(function () {
 								$('.tab__content.ajax').html(fillter);
 								$('.tab__content.ajax').find('.tab__item').fadeIn(0);
 								$('.sliders').slick(getSliderSettings());
-								
+
 								setTimeout(function(){
 									$('.tab__content.ajax').find('.tab__item').addClass('visible');
+								},100)
+							}
+						});
+					}
+					if(parent.hasClass('ajax_slider_block')){
+						$.ajax({
+							type: "POST",
+							url: "/bitrix/templates/main/includes/ru/template.main.special_offers.php",
+							data: "BLOCK_ID="+index,
+							dataType: "html",
+							success: function(fillter){
+								$('.tab__content.ajax_block').html(fillter);
+								$('.tab__content.ajax_block').find('.tab__item').fadeIn(0);
+								$('.sliders').slick(getSliderSettings());
+
+								setTimeout(function(){
+									$('.tab__content.ajax_block').find('.tab__item').addClass('visible');
 								},100)
 							}
 						});
@@ -641,7 +658,7 @@ $(document).ready(function () {
 							$('.popup').removeClass('is-open');
 							$('.success').addClass('is-open');
 							$('.popup').find('form').trigger('reset');
-						}						
+						}
 						return false;
 					}
 				});
