@@ -826,7 +826,7 @@ $(document).ready(function () {
 					this.events.fire('userclose');
 					objectManager.objects.options.set({
 					    iconLayout: 'default#image',
-						iconImageHref: 'prod/img/marker.png'
+						iconImageHref: '/bitrix/templates/main/prod/img/marker.png'
 					});
 				},
 				getShape: function () {
@@ -853,7 +853,7 @@ $(document).ready(function () {
 
 			objectManager.objects.options.set({
 			    iconLayout: 'default#image',
-				iconImageHref: 'prod/img/marker.png',
+				iconImageHref: '/bitrix/templates/main/prod/img/marker.png',
 				iconImageSize: [20, 27],
 				balloonShadow: false,
 				balloonLayout: MyBalloonLayout,
@@ -865,19 +865,19 @@ $(document).ready(function () {
 				if (e.get('type') == 'mouseenter') {
 				    objectManager.objects.setObjectOptions(objectId, {
 				        iconLayout: 'default#image',
-						iconImageHref: 'prod/img/pin.png'
+						iconImageHref: '/bitrix/templates/main/prod/img/pin.png'
 				    });
 				}
 				if (e.get('type') == 'mouseleave') {
 				    objectManager.objects.setObjectOptions(objectId, {
 				    	iconLayout: 'default#image',
-				    	iconImageHref: 'prod/img/marker.png'
+				    	iconImageHref: '/bitrix/templates/main/prod/img/marker.png'
 				    });
 				}
 				if (e.get('type') == 'click') {
 					    objectManager.objects.setObjectOptions(objectId, {
 				    	iconLayout: 'default#image',
-				    	iconImageHref: 'prod/img/marker.png'
+				    	iconImageHref: '/bitrix/templates/main/prod/img/marker.png'
 				    });
 				}
 			}
@@ -1021,7 +1021,7 @@ $(document).ready(function () {
 				balloonContentLayout: MyBalloonContentLayout,
 				balloonPanelMaxMapArea: 0,
 				iconLayout: 'default#image',
-				iconImageHref: 'prod/img/marker.png',
+				iconImageHref: '/bitrix/templates/main/prod/img/marker.png',
 				iconImageSize: [20, 27],
 				iconImageOffset: [-3, -42]
 			});
@@ -1052,4 +1052,21 @@ $(document).ready(function () {
 			html5Video();
 		}
 	})();
+
+	$('.ajax-add2cart').on('click', function(e){
+		e.preventDefault();
+		var ajaxaddid = $(this).data('id'),
+			count = $(this).parents('.ajax-add2cart-container').find('.spinner__input').val(),
+			file = $('.ajax-smallbasket').data('dir');
+		$.ajax({
+			type: "POST",
+			data: "ajaxaddid=" + ajaxaddid + "&count=" + count + "&ajaxaction=add",
+			url: file,
+			dataType: "html",
+			success: function(fillter){
+				$('.ajax-smallbasket').html(fillter);
+			}
+		});
+		return false;
+	});
 });
