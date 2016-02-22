@@ -460,10 +460,15 @@ $(document).ready(function () {
 						ajaxpost("/bitrix/templates/main/includes/ru/ajax.basket.php", ajaxcount, ".ajax-cart__area", function () {spiner(); deleteProducts();});
 					}, 500);
 				}
+				if(input.parents('.ajax-cart__area').length) {
+					input.parents('.basket__result').addClass('is-load');
+				}
 			});
 		});
 	}
 	spiner();
+
+
 
 	function deleteProducts(){
 		var del_link = $('a.remove');
@@ -574,6 +579,11 @@ $(document).ready(function () {
 	(function(){
 		if($('.equalheight').length){
 			$('.equalheight').find('.item').matchHeight({
+				property: 'min-height'
+			});
+		};
+		if($('.catalog').length){
+			$('.catalog').find('.item').matchHeight({
 				property: 'min-height'
 			});
 		};
@@ -757,6 +767,7 @@ $(document).ready(function () {
 			item.on('click', function(event){
 				if(this_.is('.not_availability')){
 					event.preventDefault();
+					return;
 				};
 				this_.toggleClass('active');
 				list.fadeToggle(300);
@@ -790,6 +801,8 @@ $(document).ready(function () {
 		$('.btn__popup').on('click', function(event){
 			var popup = $(this).data('href');
 
+
+
 			if(popup === 'reg' || popup === 'enter' ) {
 				popupSelector
 					.removeClass("is-visible")
@@ -798,6 +811,19 @@ $(document).ready(function () {
 						duration: duration
 					});
 			};
+
+			if(popup === 'locations') {
+				var items = $(this).data('items');
+				$('.' + popup).find('.'+items).show();
+				innerSelector.addClass('is-open');
+				setTimeout(function(){
+					if($('.' + popup).find('.'+items).find('.map_popup').hasClass('init')){
+						return;
+					}
+					initMap($('.' + popup).find('.'+items).find('.map_popup').attr('id'))
+				}, duration)
+				
+			}
 
 
 			$('.'+popup).fadeIn({
@@ -828,6 +854,9 @@ $(document).ready(function () {
 						frame.find('body').removeAttr('style');
 						$('.success').removeClass('is-open');
 						$('.popup:first-child').addClass('is-open');
+						if($(this).hasClass('locations')) {
+							$(this).find('.location__item').hide();
+						}
 					}
 				});
 			return false;
@@ -1006,13 +1035,28 @@ $(document).ready(function () {
 		ymaps.ready(initMap);
 	};
 
-	function initMap() {
-		var longer = $('.coord').data('long'),
-			lat = $('.coord').data('lat'),
-			locate = $('.coord').find('.coord__address').text(),
-			phone = $('.coord').find('.coord__phones').html(),
-			schedule = $('.coord').find('.coord__schedule').html();
-		var myMap = new ymaps.Map('map-inner', {
+	function initMap(map) {
+		if (!$('.map_popup').length) {
+			var map = 'map-inner';
+			var longer = $('.coord').data('long'),
+				lat = $('.coord').data('lat'),
+				locate = $('.coord').find('.coord__address').text(),
+				phone = $('.coord').find('.coord__phones').html(),
+				schedule = $('.coord').find('.coord__schedule').html();
+
+		} else {
+			var maps = map,
+				parents = $('#' + map).parents('.location__item'),
+				longer = parents.find('.coord').data('long'),
+				lat = parents.find('.coord').data('lat'),
+				locate = parents.find('.coord').find('.coord__address').text(),
+				phone = parents.find('.coord').find('.coord__phones').html(),
+				schedule = parents.find('.coord').find('.coord__schedule').html();
+
+			$('#' + map).addClass('init');
+		}
+			
+		var myMap = new ymaps.Map(map, {
 				center: [longer, lat],
 				zoom: 16,
 				controls: []
@@ -1135,4 +1179,16 @@ $(document).ready(function () {
 		});
 		return false;
 	});
+
+	//redirect
+	(function(){
+		$('.ms-parent.js-redirect').add('.cont .ms-parent').each(function(){
+			var _ = $(this),
+			item = _.find('label input');
+			item.on('click', function(){
+				var lnk = $(this).val();
+				location.href = lnk;
+			});
+		});
+	})();
 });

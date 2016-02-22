@@ -379,10 +379,10 @@
 									<div class="col_item">
 										<h3>Купить в магазинах</h3>
 										<div class="col_btn">
-											<a href="" class="btn__link">Домодедово 20 шт</a>
-											<a href="" class="btn__link">Ясенево 3 шт</a>
-											<a href="" class="btn__link">Серпухов 8 шт</a>
-											<a href="" class="btn__link">Под заказ</a>
+											<a class="btn__link btn__popup" data-href="locations" data-items='locate_1'>Домодедово 20 шт</a>
+											<a class="btn__link btn__popup" data-href="locations" data-items='locate_2'>Ясенево 3 шт</a>
+											<a class="btn__link btn__popup" data-href="locations" data-items='locate_3'>Серпухов 8 шт</a>
+											<a class="btn__link btn__popup" data-href="locations" data-items='locate_4'>Под заказ</a>
 										</div>
 									</div>
 									<div class="col_item">
@@ -771,6 +771,173 @@
 			</div>
 		</div>
 	</footer>
+	<div class="popup__wrap js-popup locations">
+		<div class="popup">
+			<div class="container_location">
+				<div class="location__item locate_1">
+					<div class="popup__title">КЭМП Домодедово</div>
+					<figure class="figure popup_locate">
+						<figcaption class="figure__left">
+							<div class="data__shops coord" data-lat="37.783078" data-long="55.372774">
+								<dl class="shops">
+									<dt class="shops__name">Адрес</dt>
+									<dd class="shops__val coord__address">Московская обл, г. Домодедово, микрорайон Востряково, ул.&nbsp;Заборье, д. 1-Д <br> (46-й км Каширского шоссе)</dd>
+								</dl>
+								<dl class="shops">
+									<dt class="shops__name">Телефон</dt>
+									<dd class="shops__val coord__phones">
+										<span>8(49679)66-700</span>
+										<span>8(49679)66-491</span>
+										<span>8(495)926-3208</span>
+									</dd>
+								</dl>
+								<dl class="shops">
+									<dt class="shops__name">Время работы</dt>
+									<dd class="shops__val coord__schedule">
+										<span>с 9:00 до 21:00</span>
+										<span>Ежедневно</span>
+									</dd>
+								</dl>
+							</div>
+						</figcaption>
+						<div class="figure__right">
+							<div id="map-inner1" class="map_wind map_popup"></div>
+						</div>
+					</figure>
+					<div class="how__drive">
+						<div class="title">Как до нас добраться</div>
+						<ul class="marked">
+							<li>Доехать до метро Домодедовское</li>
+							<li>Пересесть на автобус, маршрутное такси №466 по направлению: <br>- Барыбино; <br>- Белые столбы; <br>- Ильинское; <br>- Вельяминово. </li>
+						</ul>
+						<ul class="marked">
+							<li>Остановка у ТЦ «КЭМП-Домодедово» (после дер. Заборье.) ТЦ находится у дороги и хорошо виден.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="location__item locate_2">
+					<div class="popup__title">КЭМП Ясенево</div>
+					<figure class="figure popup_locate">
+						<figcaption class="figure__left">
+							<div class="data__shops coord" data-lat="37.524767" data-long="55.606878">
+								<dl class="shops">
+									<dt class="shops__name">Адрес</dt>
+									<dd class="shops__val coord__address">Москва, ул. Вильнюсская 1</dd>
+								</dl>
+								<dl class="shops">
+									<dt class="shops__name">Телефон</dt>
+									<dd class="shops__val coord__phones">
+										<span>(495)422-29-92</span>
+									</dd>
+								</dl>
+								<dl class="shops">
+									<dt class="shops__name">Время работы</dt>
+									<dd class="shops__val coord__schedule">
+										<span>с 9:00 до 22:00</span>
+										<span>Ежедневно</span>
+									</dd>
+								</dl>
+							</div>
+						</figcaption>
+						<div class="figure__right">
+							<div id="map-inner2" class="map_wind map_popup"></div>
+						</div>
+					</figure>
+					<div class="how__drive">
+						<div class="title">Как до нас добраться</div>
+						<ul class="marked">
+							<li>Доехать до метро Домодедовское</li>
+							<li>Пересесть на автобус, маршрутное такси №466 по направлению: <br>- Барыбино; <br>- Белые столбы; <br>- Ильинское; <br>- Вельяминово. </li>
+						</ul>
+						<ul class="marked">
+							<li>Остановка у ТЦ «КЭМП-Домодедово» (после дер. Заборье.) ТЦ находится у дороги и хорошо виден.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="location__item locate_3">
+					<div class="popup__title">КЭМП Серпухов</div>
+					<figure class="figure popup_locate">
+						<figcaption class="figure__left">
+							<div class="data__shops coord" data-lat="37.404222" data-long="54.920635">
+								<dl class="shops">
+									<dt class="shops__name">Адрес</dt>
+									<dd class="shops__val coord__address">142211, Московская область, г.Серпухов, <br>ул. Урицкого, д. 1.</dd>
+								</dl>
+								<dl class="shops">
+									<dt class="shops__name">Телефон</dt>
+									<dd class="shops__val coord__phones">
+										<span>(495)556-65-76,</span>
+										<span>(495)556-63-34,</span>
+										<span>495)926-32-08</span>
+									</dd>
+								</dl>
+								<dl class="shops">
+									<dt class="shops__name">Время работы</dt>
+									<dd class="shops__val coord__schedule">
+										<span>с 9:00 до 21:00</span>
+										<span>Ежедневно</span>
+									</dd>
+								</dl>
+							</div>
+						</figcaption>
+						<div class="figure__right">
+							<div id="map-inner3" class="map_wind map_popup"></div>
+						</div>
+					</figure>
+					<div class="how__drive">
+						<div class="title">Как до нас добраться</div>
+						<ul class="marked">
+							<li>Доехать до метро Домодедовское</li>
+							<li>Пересесть на автобус, маршрутное такси №466 по направлению: <br>- Барыбино; <br>- Белые столбы; <br>- Ильинское; <br>- Вельяминово. </li>
+						</ul>
+						<ul class="marked">
+							<li>Остановка у ТЦ «КЭМП-Домодедово» (после дер. Заборье.) ТЦ находится у дороги и хорошо виден.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="location__item locate_4">
+					<div class="popup__title">КЭМП Жуковский</div>
+					<figure class="figure popup_locate">
+						<figcaption class="figure__left">
+							<div class="data__shops coord" data-lat="38.098045" data-long="55.599591">
+								<dl class="shops">
+									<dt class="shops__name">Адрес</dt>
+									<dd class="shops__val coord__address">Московская область, город Жуковский, ул. Мясищева, д. 16а</dd>
+								</dl>
+								<dl class="shops">
+									<dt class="shops__name">Телефон</dt>
+									<dd class="shops__val coord__phones">
+										<span>(495)422-29-92</span>
+									</dd>
+								</dl>
+								<dl class="shops">
+									<dt class="shops__name">Время работы</dt>
+									<dd class="shops__val coord__schedule">
+										<span>с 9:00 до 21:00</span>
+										<span>Ежедневно</span>
+									</dd>
+								</dl>
+							</div>
+						</figcaption>
+						<div class="figure__right">
+							<div id="map-inner4" class="map_wind map_popup"></div>
+						</div>
+					</figure>
+					<div class="how__drive">
+						<div class="title">Как до нас добраться</div>
+						<ul class="marked">
+							<li>Доехать до метро Домодедовское</li>
+							<li>Пересесть на автобус, маршрутное такси №466 по направлению: <br>- Барыбино; <br>- Белые столбы; <br>- Ильинское; <br>- Вельяминово. </li>
+						</ul>
+						<ul class="marked">
+							<li>Остановка у ТЦ «КЭМП-Домодедово» (после дер. Заборье.) ТЦ находится у дороги и хорошо виден.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="popup__close"></div>
+		</div>
+	</div>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="prod/js/lib/jquery-2.1.4.min.js"></script>
 <script src="prod/js/lib/slick.min.js"></script>
