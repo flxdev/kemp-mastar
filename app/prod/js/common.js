@@ -16,6 +16,35 @@ $(document).ready(function () {
 		});
 	}
 
+
+	//big form clear
+	(function(){
+		$('.container .big-search').each(function(){
+			var this_ = $(this),
+				input = this_.find('.input'),
+				reset = this_.find('.resets'),
+				values = input.val();
+
+			if (input.val().length > 0) {
+				reset.fadeIn(150);
+			}
+
+			input.on('input', function(){
+				var value = $(this).val();
+				if(value.length > 0) {
+					reset.fadeIn(150);
+				} else {
+					reset.fadeOut(100);
+				}
+			});			
+			reset.on('click', function(){
+				input.val('');
+				input.attr('value', '')
+				$(this).fadeOut(100);
+			});
+		});
+	})();
+
 	//show contacts
 	(function(){
 		var phones = $('.phones'),

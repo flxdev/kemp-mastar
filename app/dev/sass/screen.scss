@@ -325,6 +325,12 @@ p {
 		}
 	}
 }
+@media screen and (max-width: 1150px) {
+	.header .phone .phone__list {
+		top: -15px;
+		right: -10px;
+	}
+}
 .fixed__case {
 	padding-top: 11px;
 	background-color: #0e2031;
@@ -446,7 +452,7 @@ p {
 			height: 40px;
 			border: 2px solid #d8d8d8;
 			border-radius: 4px;
-			padding: 0 210px 0 17px;
+			padding: 0 235px 0 17px;
 			transition: border-color 0.3s ease, box-shadow 0.3s ease;
 			&:hover {
 				border-color: $blue;
@@ -483,6 +489,19 @@ p {
 			&:active {
 				background-color: #013870;
 			}
+		}
+		.resets {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			background-image: url(../img/icons/close-popup.png);
+			background-size: 15px 15px;
+			background-position: center;
+			background-repeat: no-repeat;
+			top: 0;
+			right: 195px;
+			cursor: pointer;
+			display: none;
 		}
 	}
 	.result__list {
@@ -1797,6 +1816,9 @@ p {
 		float: left;
 		width: 388px;
 		margin-right: 26px;
+		.social {
+			margin-bottom: 52px;
+		}
 	}
 }
 .slider-for {
@@ -2105,14 +2127,17 @@ p {
 	display: inline-block;
 	text-align: center;
 	color: #000000;
-	position: absolute;
-	bottom: 11px;
+	position: relative;
+	top: -62px;
 	@include transition(border-color);
+	@include clearfix;
 	.icon {
 		display: inline-block;
 		height: 13px;
 		width: 7px;
-		margin-right: 5px;
+		margin-right: 12px;
+		position: relative;
+		top: 2px;
 	}
 	&:hover {
 		border-color: $blue;
@@ -4671,6 +4696,80 @@ p.attention {
 		vertical-align: top;
 		li {
 			font-size: 18px;
+		}
+	}
+}
+.result_conteiner {
+	.content {
+		padding-left: 0;
+		width: 100%;
+		.tab__content.lists {
+			.lists__item.card {
+				margin: 0 0 21px -17px;
+				.item {
+					margin: 0 0 19px 18px;
+				}
+			}
+		}
+	}
+	.title {
+		color: #000;
+		margin-bottom: 15px;
+	}
+	.no-results {		
+		p {
+			color: $grey;
+			margin-bottom: 50px;
+		}
+	}
+	.btn__back {
+		top: 0;
+	}
+	.results {
+		display: inline-block;
+		width: 100%;
+		margin-top: 25px;
+		.result__item {
+			padding: 0 0 0 20px;
+			position: relative;
+			margin-bottom: 25px;
+			.number {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.result_content {
+				a {
+					color: $blue;
+					display: inline-block;
+					width: 100%;
+					@include transition(color);
+					span {
+						color: $red;
+					}
+					margin-bottom: 5px;
+					&:hover {
+						color: $black;
+					}
+				}
+				.descr {
+					color: $black;
+					display: inline-block;
+					width: 100%;
+					margin-bottom: 10px;
+				}
+				.articles {
+					color: $grey;
+					display: inline-block;
+				}
+			}
+		}
+		& + .pagin__row {
+			border-top: 2px solid #d8dee4;
+			padding-top: 23px;
+			border-bottom-color: transparent;
+			padding-bottom: 0;
+			margin-top: 15px;
 		}
 	}
 }

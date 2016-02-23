@@ -948,3 +948,24 @@ blockquote {
 		}
 	}
 }
+.result_conteiner {
+	.title {
+		font-family: $FuturaNewMedium;
+		font-size: 18px;
+	}
+	.no-results {		
+		p {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
+	}
+	.results {
+		.result__item {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+			.articles {
+				font-size: 14px;
+			}
+		}
+	}
+}

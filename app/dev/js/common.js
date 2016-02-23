@@ -16,6 +16,35 @@ $(document).ready(function () {
 		});
 	}
 
+
+	//big form clear
+	(function(){
+		$('.container .big-search').each(function(){
+			var this_ = $(this),
+				input = this_.find('.input'),
+				reset = this_.find('.resets'),
+				values = input.val();
+
+			if (input.val().length > 0) {
+				reset.fadeIn(150);
+			}
+
+			input.on('input', function(){
+				var value = $(this).val();
+				if(value.length > 0) {
+					reset.fadeIn(150);
+				} else {
+					reset.fadeOut(100);
+				}
+			});			
+			reset.on('click', function(){
+				input.val('');
+				input.attr('value', '')
+				$(this).fadeOut(100);
+			});
+		});
+	})();
+
 	//show contacts
 	(function(){
 		var phones = $('.phones'),
@@ -375,11 +404,11 @@ $(document).ready(function () {
 				}
 			});
 
-			reset.on('click', function(){
+			/*reset.on('click', function(){
 				multi.multipleSelect('uncheckAll');
 				input.val('');
 				return false;
-			});
+			});*/
 		});
 		function activeSel() {
 			var parent = $('.multi'),
@@ -462,13 +491,12 @@ $(document).ready(function () {
 				}
 				if(input.parents('.ajax-cart__area').length) {
 					input.parents('.basket__result').addClass('is-load');
+					//console.log(true)
 				}
 			});
 		});
 	}
 	spiner();
-
-
 
 	function deleteProducts(){
 		var del_link = $('a.remove');
@@ -801,8 +829,6 @@ $(document).ready(function () {
 		$('.btn__popup').on('click', function(event){
 			var popup = $(this).data('href');
 
-
-
 			if(popup === 'reg' || popup === 'enter' ) {
 				popupSelector
 					.removeClass("is-visible")
@@ -863,7 +889,7 @@ $(document).ready(function () {
 	    });
 
 
-	};
+	}
 	popup_init();
 
 	if ($('#map').length) {
@@ -1035,7 +1061,7 @@ $(document).ready(function () {
 		ymaps.ready(initMap);
 	};
 
-	function initMap(map) {
+	function initMap() {
 		if (!$('.map_popup').length) {
 			var map = 'map-inner';
 			var longer = $('.coord').data('long'),
@@ -1054,8 +1080,8 @@ $(document).ready(function () {
 				schedule = parents.find('.coord').find('.coord__schedule').html();
 
 			$('#' + map).addClass('init');
-		}
-			
+		};
+
 		var myMap = new ymaps.Map(map, {
 				center: [longer, lat],
 				zoom: 16,
@@ -1179,7 +1205,7 @@ $(document).ready(function () {
 		});
 		return false;
 	});
-
+	
 	//redirect
 	(function(){
 		$('.ms-parent.js-redirect').add('.cont .ms-parent').each(function(){
