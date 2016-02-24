@@ -583,11 +583,11 @@ $(document).ready(function () {
 				asNavFor: this_,
 				focusOnSelect: true
 			});
-			if(caption.find('video').length) {
-				caption.find('.slider-nav__slide').on('click', function(){
-					html5Video();
-				});
-			}
+			this_.on('beforeChange', function (slick, currentSlide, nextSlide){
+				$.each(videojs.players, function(index, player) {
+				  player.pause();
+				});				
+			})
 		});
 	})();
 
@@ -1216,5 +1216,5 @@ $(document).ready(function () {
 				location.href = lnk;
 			});
 		});
-	})();
+	})();	
 });
