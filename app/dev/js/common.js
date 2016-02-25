@@ -16,7 +16,7 @@ $(document).ready(function () {
 		});
 	}
 
-
+/*
 	//big form clear
 	(function(){
 		$('.container .big-search').each(function(){
@@ -36,15 +36,15 @@ $(document).ready(function () {
 				} else {
 					reset.fadeOut(100);
 				}
-			});			
+			});
 			reset.on('click', function(){
 				input.val('');
-				input.attr('value', '')
+				input.attr('value', '');
 				$(this).fadeOut(100);
 			});
 		});
 	})();
-
+*/
 	//show contacts
 	(function(){
 		var phones = $('.phones'),
@@ -58,7 +58,7 @@ $(document).ready(function () {
 		parent.on('mouseleave', function(){
 			parent.removeClass('active');
 			list.fadeOut();
-		})
+		});
 	})();
 
 	//video
@@ -69,7 +69,7 @@ $(document).ready(function () {
 				$(this)[0].pause();
 				$('.js-play').removeClass('is-paused');
 			});
-		};
+		}
 		$('.js-play').on('click', function(event) {
 			var video = $('.video-holder').find('video')[0];
 			if (video.paused) {
@@ -131,7 +131,7 @@ $(document).ready(function () {
 			infinite: true,
 			prevArrow: '<button type="button" class="slick-prev"><span><svg viewBox="0 0 15 24.5" xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m14.977888,21.40658l-9.169999,-9.169998l9.169999,-9.17l-2.829999,-2.83l-12,12l12,12l2.829999,-2.830002z"/><path stroke="null" id="svg_2" fill="none" d="m0.148682,0.044084l14.689654,0l0,23.974919l-14.689654,0l0,-23.974919z"/></svg></button>',
 			nextArrow: '<button type="button" class="slick-next"><span><svg viewBox="0 0 15 24.5" xmlns="http://www.w3.org/2000/svg"><path class="svg_arrow" d="m0.124967,21.370632l9.17,-9.170002l-9.17,-9.17l2.83,-2.83l12,12l-12,12l-2.83,-2.829998z"/><path stroke="null" id="svg_2" fill="none" d="m7.473229,5.411077l14.913806,0l0,23.846835l-14.913806,0l0,-23.846835z"/></svg></span></button>'
-		}
+		};
 	}
 
 	//tabs
@@ -165,7 +165,7 @@ $(document).ready(function () {
 
 								setTimeout(function(){
 									$('.tab__content.ajax').find('.tab__item').addClass('visible');
-								},100)
+								},100);
 							}
 						});
 					}
@@ -178,11 +178,11 @@ $(document).ready(function () {
 							success: function(fillter){
 								$('.tab__content.ajax_block').html(fillter);
 								$('.tab__content.ajax_block').find('.tab__item').fadeIn(0);
-								parent.find(".tab__item").fadeIn(0).find('.sliders').slick(getSliderSettings())
+								parent.find(".tab__item").fadeIn(0).find('.sliders').slick(getSliderSettings());
 
 								setTimeout(function(){
 									$('.tab__content.ajax_block').find('.tab__item').addClass('visible');
-								},100)
+								},100);
 							}
 						});
 					}
@@ -202,7 +202,7 @@ $(document).ready(function () {
 			} else if(parent.hasClass('tab__slider')){
 				linkItem.first().addClass('active');
 				parent.find("."+index).show().addClass('visible');
-			};
+			}
 
 			link_cont.on('click', function(){
 				var this_ = $(this),
@@ -311,7 +311,7 @@ $(document).ready(function () {
 								slider.slick('slickNext');
 							});
 					});
-				};
+				}
 
 				if(slider.hasClass('gallery__pictures')) {
 					$('.gallery__pictures').on('init', function(slick) {
@@ -432,7 +432,7 @@ $(document).ready(function () {
 
 		}
 		activeSel();
-	};
+	}
 	mselect();
 
 	// spiner
@@ -486,12 +486,8 @@ $(document).ready(function () {
 						BX.showWait();
 						var countbasketcount = input.val();
 						var ajaxcount = countbasketid + '&ajaxbasketcount=' + countbasketcount;
-						ajaxpost("/bitrix/templates/main/includes/ru/ajax.basket.php", ajaxcount, ".ajax-cart__area", function () {spiner(); deleteProducts();});
+						ajaxpost("/bitrix/templates/main/includes/ru/ajax.basket.php", ajaxcount, ".ajax-cart__area", function () {spiner(); deleteProducts(); small_basket_reload();});
 					}, 500);
-				}
-				if(input.parents('.ajax-cart__area').length) {
-					input.parents('.basket__result').addClass('is-load');
-					//console.log(true)
 				}
 			});
 		});
@@ -500,19 +496,35 @@ $(document).ready(function () {
 
 	function deleteProducts(){
 		var del_link = $('a.remove');
-		del_link.on('click', function(){
+		del_link.on('click', function(e){
+			e.preventDefault();
 			var ajaxcount = $(this).data("link");
-			ajaxpost("/bitrix/templates/main/includes/ru/ajax.basket.php", ajaxcount, ".ajax-cart__area", function () {spiner(); deleteProducts();});
+			ajaxpost("/bitrix/templates/main/includes/ru/ajax.basket.php", ajaxcount, ".ajax-cart__area", function () {spiner(); deleteProducts(); small_basket_reload();});
+			if(del_link.parents('.ajax-cart__area').length) {
+				del_link.parents('.basket__result').addClass('is-load');
+				//console.log(true)
+			}
 		});
 	}
+	deleteProducts();
 
+	function small_basket_reload(){
+		$.ajax({
+			type: "POST",
+			url: "/bitrix/templates/main/includes/ru/ajax.small.basket.php",
+			dataType: "html",
+			success: function(fillter){
+				$('.ajax-smallbasket').html(fillter);
+			}
+		});
+	}
 	//spinner count
 	$('.js-price').each(function() {
 		$('.spinner__input').on('change', function() {
 			$(this).parents('.js-price').find('.result').text($(this).val()*$(this).parents('.js-price').find('.result').data('price'));
 			$('.js-price-text').map(function() {
 				$(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
-			})
+			});
 		});
 	});
 
@@ -528,7 +540,7 @@ $(document).ready(function () {
 				$(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
 			});
 		});
-	};
+	}
 	prices();
 
 	//fixed tab tab
@@ -543,7 +555,7 @@ $(document).ready(function () {
 		}else {
 			fakeBox.removeClass('fixed');
 		}
-	};
+	}
 	fakePrice();
 	$(window).scroll(function(){
 		fakePrice();
@@ -583,11 +595,11 @@ $(document).ready(function () {
 				asNavFor: this_,
 				focusOnSelect: true
 			});
-			this_.on('beforeChange', function (slick, currentSlide, nextSlide){
-				$.each(videojs.players, function(index, player) {
-				  player.pause();
-				});				
-			})
+			if(caption.find('video').length) {
+				caption.find('.slider-nav__slide').on('click', function(){
+					html5Video();
+				});
+			}
 		});
 	})();
 
@@ -609,12 +621,12 @@ $(document).ready(function () {
 			$('.equalheight').find('.item').matchHeight({
 				property: 'min-height'
 			});
-		};
+		}
 		if($('.catalog').length){
 			$('.catalog').find('.item').matchHeight({
 				property: 'min-height'
 			});
-		};
+		}
 	})();
 
 	//accordion
@@ -796,7 +808,7 @@ $(document).ready(function () {
 				if(this_.is('.not_availability')){
 					event.preventDefault();
 					return;
-				};
+				}
 				this_.toggleClass('active');
 				list.fadeToggle(300);
 				event.stopPropagation();
@@ -836,7 +848,7 @@ $(document).ready(function () {
 					.fadeOut({
 						duration: duration
 					});
-			};
+			}
 
 			if(popup === 'locations') {
 				var items = $(this).data('items');
@@ -846,9 +858,9 @@ $(document).ready(function () {
 					if($('.' + popup).find('.'+items).find('.map_popup').hasClass('init')){
 						return;
 					}
-					initMap($('.' + popup).find('.'+items).find('.map_popup').attr('id'))
-				}, duration)
-				
+					initMap($('.' + popup).find('.'+items).find('.map_popup').attr('id'));
+				}, duration);
+
 			}
 
 
@@ -894,7 +906,7 @@ $(document).ready(function () {
 
 	if ($('#map').length) {
 		ymaps.ready(init);
-	};
+	}
 
 	function init () {
 		var myMap = new ymaps.Map('map', {
@@ -1034,7 +1046,7 @@ $(document).ready(function () {
 
 			for (var i = 0, l = coordinates.length; i < l; i++) {
 				var coord = coordinates[i];
-				console.log(coord[3])
+				//console.log(coord[3]);
 			    myObjects.push({
 			        type: "Feature",
 			        id: currentId++,
@@ -1054,12 +1066,12 @@ $(document).ready(function () {
 			objectManager.add(myObjects);
 			myMap.geoObjects.add(objectManager);
 			myMap.setBounds(objectManager.getBounds());
-	};
+	}
 
 
 	if ($('#map-inner').length) {
 		ymaps.ready(initMap);
-	};
+	}
 
 	function initMap() {
 		if (!$('.map_popup').length) {
@@ -1080,7 +1092,7 @@ $(document).ready(function () {
 				schedule = parents.find('.coord').find('.coord__schedule').html();
 
 			$('#' + map).addClass('init');
-		};
+		}
 
 		var myMap = new ymaps.Map(map, {
 				center: [longer, lat],
@@ -1179,7 +1191,7 @@ $(document).ready(function () {
 
 		myMap.controls.add(zoomControl);
 
-	};
+	}
 
 	//video
 
@@ -1205,10 +1217,10 @@ $(document).ready(function () {
 		});
 		return false;
 	});
-	
+
 	//redirect
 	(function(){
-		$('.ms-parent.js-redirect').add('.cont .ms-parent').each(function(){
+		$('.ms-parent.js-redirect').each(function(){
 			var _ = $(this),
 			item = _.find('label input');
 			item.on('click', function(){
@@ -1216,5 +1228,5 @@ $(document).ready(function () {
 				location.href = lnk;
 			});
 		});
-	})();	
+	})();
 });
