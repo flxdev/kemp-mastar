@@ -1073,9 +1073,9 @@ $(document).ready(function () {
 		ymaps.ready(initMap);
 	}
 
-	function initMap() {
+	function initMap(map) {
 		if (!$('.map_popup').length) {
-			var map = 'map-inner';
+			var maps = 'map-inner';
 			var longer = $('.coord').data('long'),
 				lat = $('.coord').data('lat'),
 				locate = $('.coord').find('.coord__address').text(),
@@ -1092,9 +1092,10 @@ $(document).ready(function () {
 				schedule = parents.find('.coord').find('.coord__schedule').html();
 
 			$('#' + map).addClass('init');
+			
 		}
 
-		var myMap = new ymaps.Map(map, {
+		var myMap = new ymaps.Map(maps, {
 				center: [longer, lat],
 				zoom: 16,
 				controls: []
