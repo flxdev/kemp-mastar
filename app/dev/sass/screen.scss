@@ -1823,6 +1823,7 @@ p {
 		float: left;
 		width: 388px;
 		margin-right: 26px;
+		position: relative;
 		.social {
 			margin-bottom: 52px;
 		}
@@ -4805,14 +4806,14 @@ p.attention {
 }
 .badge {
 	position: absolute;
-	top: 3%;
+	top: 2%;
 	right: 3%;
 	background-color: $red;
 	height: 19px;
 	line-height: 19px;
 	padding: 0 10px;
 	border-radius: 3px;
-	z-index: 5;
+	z-index: 3;
 	span {
 		position: relative;
 		color: $white;
