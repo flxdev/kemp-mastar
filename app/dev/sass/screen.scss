@@ -207,19 +207,23 @@ p {
 			border-bottom: 1px dotted #ffffff;
 			z-index: 5;
 			position: relative;
-			transition: color 0.3s ease;
+			transition: color 0.3s ease, border-color 0.3s ease;
 			z-index: 8;
 		}
 		.phone__list {
-			width: 261px;
-			background-color: #fff;
-			border-radius: 4px;
+			.phone__list-container {
+				background-color: #fff;
+				border-radius: 4px;
+				box-shadow:0px 2px 12px 0px rgba(0, 0, 0, 0.29);
+				padding: 20px 32px 30px;
+			}
+			width: 225px;			
 			position: absolute;
-			top: -29px;
-			right: -53px;
-			box-shadow:0px 2px 12px 0px rgba(0, 0, 0, 0.29);
+			top: 0px;
+			right: 0px;
+			
 			z-index: 7;
-			padding: 57px 47px 50px;
+			padding-top: 32px;
 			display: none;
 			.btn__call {
 				color: $blue;
@@ -249,7 +253,8 @@ p {
 		}
 		&.active {
 			.phones {
-			color: $black;
+			color: $yellow;
+			border-color: transparent;
 			}
 		}
 	}
@@ -1620,6 +1625,7 @@ p {
 	float: left;
 }
 .search__bar {
+	margin-bottom: 40px;
 	.title {
 		color: $black;
 		margin-bottom: 22px;
@@ -2175,6 +2181,12 @@ p {
 	}
 	&:hover {
 		border-color: $blue;
+	}
+	&.btn__back-news {
+		top: 0;
+		.icon {
+			margin-right: 6px;
+		}
 	}
 }
 .left__sidebar {
@@ -4229,6 +4241,11 @@ blockquote {
 		line-height: 18px;
 		a {
 			border-bottom: 1px solid $blue;
+			transition: color 0.3s ease, border-color 0.3s ease;
+			&:hover {
+				color: $red;
+				border-color: transparent;
+			}
 		}
 	}
 	.link_close {
