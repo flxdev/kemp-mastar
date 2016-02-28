@@ -4,6 +4,7 @@ html, body {
 }
 * {
 	margin: 0;
+	outline: none;
 }
 *, *::after, *::before {
 	box-sizing: border-box;
@@ -1690,110 +1691,122 @@ p {
 			margin-right: 2px;
 			margin-left: 10px;
 		}
-		.pagin {
-			display: inline-block;
-			vertical-align: top;
-			border: 1px solid #dedede;
-		    border-radius: 3px;
-			font-size: 0;
-			.pagin__item {
-				border-left: 1px solid #dedede;
-				display: inline-block;
-				vertical-align: top;
-				&:first-child {
-					border-left: none;
-					a {
-						&::before {
-							border-radius: 3px 0 0 3px;
-						}
-					}
-				}
-				&:last-child {
-					a {
-						&::before {
-							border-radius: 0 3px 3px 0;
-						}
-					}
-				}
-			}
+		
+	}
+}
+.pagin {
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	font-size: 0;
+	.pagin__item {
+		border-left: 1px solid #dedede;
+		display: inline-block;
+		vertical-align: top;
+		&:first-child {
+			border-left: none;
 			a {
-				color: #000;
-				display: block;
-				height: 28px;
-				line-height: 28px;
-				min-width: 28px;
-				text-align: center;
-				position: relative;
-				&.is-active {
-					background-color: #eef3f8;
-				}
-				i {
-					width: 7px;
-					height: 13px;
-					display: inline-block;
-					position: relative;
-					top: -1px;
-					svg {
-						position: absolute;
-						width: 7px;
-						height: 13px;
-						top: 3px;
-						left: 0;
-						path {
-							fill: $black;
-							@inclide transition(fill);
-						}
-					}
-				}
 				&::before {
-					border: 1px solid transparent;
-					bottom: -1px;
-					content: "";
-					left: -1px;
-					position: absolute;
-					right: -1px;
-					top: -1px;
-					border-left-width: 1px;
-					border-right-width: 1px;
-					@include transition(border-color);
-				}
-				// &::after {
-				// 	border: 1px solid transparent;
-				// 	bottom: -1px;
-				// 	content: "";
-				// 	left: -1px;
-				// 	position: absolute;
-				// 	right: -1px;
-				// 	top: -1px;
-				// 	border-left-width: 1px;
-				// 	border-right-width: 1px;
-				// 	@include transition(border-color);
-				// }
-				&:hover {
-					&::before {
-						border-color: $blue;
-					}
-					svg {
-						path {
-							fill: $blue;
-						}
-					}
+					border-radius: 3px 0 0 3px;
 				}
 			}
-			span {
-				color: #000;
-				display: block;
-				height: 28px;
-				line-height: 28px;
-				padding: 0 9px;
-				position: relative;
-				transition: color 0.3s ease 0s, background 0.3s ease 0s;
-				min-width: 28px;
-				text-align: center;
+		}
+		&:last-child {
+			a {
+				&::before {
+					border-radius: 0 3px 3px 0;
+				}
+			}
+		}
+		&.is-inactive {
+			display: none;
+			& + .pagin__item {
+				border-left: none;
+				a {
+					&::before {
+						border-radius: 3px 0 0 3px;
+					}
+				}
 			}
 		}
 	}
-}
+	a {
+		color: #000;
+		display: block;
+		height: 28px;
+		line-height: 28px;
+		min-width: 28px;
+		text-align: center;
+		position: relative;
+		&.is-active {
+			background-color: #eef3f8;
+		}
+		i {
+			width: 7px;
+			height: 13px;
+			display: inline-block;
+			position: relative;
+			top: -1px;
+			svg {
+				position: absolute;
+				width: 7px;
+				height: 13px;
+				top: 3px;
+				left: 0;
+				path {
+					fill: $black;
+					@inclide transition(fill);
+				}
+			}
+		}
+		&::before {
+			border: 1px solid transparent;
+			bottom: -1px;
+			content: "";
+			left: -1px;
+			position: absolute;
+			right: -1px;
+			top: -1px;
+			border-left-width: 1px;
+			border-right-width: 1px;
+			@include transition(border-color);
+		}
+		// &::after {
+		// 	border: 1px solid transparent;
+		// 	bottom: -1px;
+		// 	content: "";
+		// 	left: -1px;
+		// 	position: absolute;
+		// 	right: -1px;
+		// 	top: -1px;
+		// 	border-left-width: 1px;
+		// 	border-right-width: 1px;
+		// 	@include transition(border-color);
+		// }
+		&:hover {
+			&::before {
+				border-color: $blue;
+			}
+			svg {
+				path {
+					fill: $blue;
+				}
+			}
+		}
+	}
+	span {
+		color: #000;
+		display: block;
+		height: 28px;
+		line-height: 28px;
+		padding: 0 9px;
+		position: relative;
+		transition: color 0.3s ease 0s, background 0.3s ease 0s;
+		min-width: 28px;
+		text-align: center;
+	}
+	}
 .lists {
 	.sliders {
 		margin: 0 0 0 -15px;
@@ -3444,6 +3457,7 @@ blockquote {
 			display: inline-block;
 			vertical-align: top;
 			margin-bottom: 13px;
+			width: 100%;
 			p {
 				line-height: 21px;
 				margin-bottom: 5px;
