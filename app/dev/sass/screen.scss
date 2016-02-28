@@ -1173,6 +1173,10 @@ p {
 			color: #000000;
 			display: inline-block;
 			padding: 2px 12px;
+			@include transition(color);
+			&:hover {
+				color: $red;
+			}
 		}
 	}
 }
@@ -2704,14 +2708,14 @@ blockquote {
 	}
 	.btn-case {
 		float: right;
-		max-width: 192px;
+		max-width: 210px;
 		width: 100%;
 		margin-right: 42px;
 		.btn {
 			//width: 50%;
 			background-color: transparent;
 			text-align: center;
-			line-height: 28px;
+			line-height: 26px;
 			height: 30px;
 			color: $white;
 			display: inline-block;
@@ -2911,6 +2915,7 @@ blockquote {
 		width: 100%;
 		letter-spacing: -0.1px;
 		position: relative;
+		@include transition(color);
 		&::before {
 			content: '';
 			width: 31px;
@@ -2919,6 +2924,32 @@ blockquote {
 			position: absolute;
 			left: 0;
 			top: 2px;
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.3s ease, visibility 0.3s ease;
+		}
+		&::after {
+			content: '';
+			width: 31px;
+			height: 31px;
+			background-image: url(../img/flex-hover.png);
+			position: absolute;
+			left: 0;
+			top: 2px;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.5s ease, visibility 0.5s ease;
+		}
+		&:hover {
+			color: $yellow;
+			&::before {
+				opacity: 0;
+				visibility: hidden;
+			}
+			&::after {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 	.center {
