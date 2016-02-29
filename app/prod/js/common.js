@@ -785,6 +785,7 @@ $(document).ready(function () {
 				item.text(text);
 				menu.parents('.delivery__selects').find('.not_availability').removeClass('not_availability');
 				parent.find('.'+data).fadeIn(150).siblings().hide();
+
 			});
 
 		});
