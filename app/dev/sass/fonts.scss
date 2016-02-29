@@ -87,11 +87,11 @@ h3 {
 	.auth-bar {
 		a {
 			font-family: $FuturaNewBook;
-			font-size: 14px;
+			font-size: 16px;
 		}
 		span {
 			font-family: $FuturaNewBook;
-			font-size: 14px;
+			font-size: 16px;
 		}
 	}
 	.phone {
@@ -210,7 +210,7 @@ h3 {
 		li {
 			a {
 				font-family: $FuturaNewBook;
-				font-size: 14px;
+				font-size: 16px;
 			}
 		}
 	}
@@ -275,11 +275,11 @@ h3 {
 			font-size: 14px;
 		}
 	}
-	.pagin {
-		a, span {
-			font-family: $FuturaNewBook;
-			font-size: 14px;
-		}
+}
+.pagin {
+	a, span {
+		font-family: $FuturaNewBook;
+		font-size: 14px;
 	}
 }
 .btn {
@@ -526,7 +526,7 @@ blockquote {
 		font-size: 0;
 		.btn {
 			font-family: $FuturaNewBook;
-			font-size: 14px;
+			font-size: 16px;
 		}
 	}
 	.nav {
@@ -946,5 +946,32 @@ blockquote {
 		li {
 			font-size: 18px;
 		}
+	}
+}
+.result_conteiner {
+	.title {
+		font-family: $FuturaNewMedium;
+		font-size: 18px;
+	}
+	.no-results {		
+		p {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+		}
+	}
+	.results {
+		.result__item {
+			font-family: $FuturaNewBook;
+			font-size: 18px;
+			.articles {
+				font-size: 14px;
+			}
+		}
+	}
+}
+.badge {
+	span {
+		font-family: $FuturaNewDemi;
+		font-size: 14px;
 	}
 }
