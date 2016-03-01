@@ -103,13 +103,16 @@ p {
 	}
 	.out {
 		padding-top: 0;
+		margin-top: 0;
 	}
 }
 .header {
 	position: relative;
 	&.main {
-		min-height: 135px;
-		background-color: #0e2031;
+		min-height: 196px;
+		background-image: url(../img/header-bg.jpg);
+		background-size: cover;
+		background-position: center center;
 	}
 	.header__top {
 		max-width: 1600px;
@@ -349,15 +352,17 @@ p {
 }
 .fixed__case {
 	padding-top: 11px;
-	background-color: #0e2031;
+	background-color: transparent;
 	position: absolute;
 	left: 0;
 	width: 100%;
 	top: 0;
+	//transition: background-color 0.2s ease;
 	&.fixed {
 		position: fixed;
 		z-index: 5;
 		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.29);
+		background-color: #0e2031;
 	}
 	.tab__content {
 		position: absolute;
@@ -390,9 +395,9 @@ p {
 	}
 }
 .out {
-	background-color: #ffffff;
 	position: relative;
 	padding-top: 61px;
+	margin-top: -61px;
 	.row {
 		@include clearfix;
 		margin-bottom: 32px;
@@ -1640,6 +1645,7 @@ p {
 .container {
 	padding-top: 27px;
 	min-height: 452px;
+	background-color: $white;
 }
 .left__sidebar {
 	width: 231px;
