@@ -92,8 +92,8 @@ p {
 		&.main {
 			min-height: 390px;
 			background-image: url(../img/header-bg.jpg);
-			background-size: cover;
-			background-position: center center;
+			//background-size: cover;
+			background-position: top center;
 		}
 	}
 	.tab__container {
@@ -111,8 +111,8 @@ p {
 	&.main {
 		min-height: 196px;
 		background-image: url(../img/header-bg.jpg);
-		background-size: cover;
-		background-position: center center;
+		//background-size: cover;
+		background-position: top center;
 	}
 	.header__top {
 		max-width: 1600px;
