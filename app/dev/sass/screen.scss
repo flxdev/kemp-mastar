@@ -2862,8 +2862,13 @@ blockquote {
 	}
 	.col50 {
 		font-size: 0;
+		width: 40%;
 		&:nth-child(2) {
+			width: 60%;
 			padding-left: 10px;
+			& > ul {
+				width: 33.33%;
+			}
 		}
 		& > ul {
 			width: 50%;
