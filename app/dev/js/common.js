@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	$.fn.hasAttr = function(name) {
+		 return this.attr(name) !== undefined;
+	};
 	function ajaxpost(urlres, datares, wherecontent, callback){
 		$.ajax({
 			type: "POST",
@@ -209,6 +212,7 @@ $(document).ready(function () {
 					index = this_.data('href');
 
 				this_.parents('.tab__content').find('.' + index).fadeIn(0).siblings().fadeOut(0);
+				this_.parents('.tab__content').find('.' + index).addClass('visible');
 				this_.parents('.tab__container').find('a[data-href=' + index + ']').parent().addClass('active').siblings().removeClass('active');
 			});
 
@@ -495,7 +499,7 @@ $(document).ready(function () {
 	spiner();
 
 	function deleteProducts(){
-		var del_link = $('a.remove');
+		var del_link = $('a.remove.in_cart');
 		del_link.on('click', function(e){
 			e.preventDefault();
 			var ajaxcount = $(this).data("link");
@@ -758,7 +762,9 @@ $(document).ready(function () {
 							$('.success').addClass('is-open');
 							$('.popup').find('form').trigger('reset');
 						}
-						return false;
+						//if(!$form.is('#ORDER_FORM')){
+							return false;
+						//}
 					}
 				});
 			});
@@ -775,7 +781,8 @@ $(document).ready(function () {
 			tab_item = tab_delivery.find('.tab_delivery-item'),
 			box = parent.find('.info__box'),
 			icon = box.find('.icon'),
-			content__box = box.find('.content__box');
+			content__box = box.find('.content__box'),
+			check_list = parent.find('.check__list');
 
 		$(document).on('click', function(){
 			menu.removeClass('active');
@@ -825,10 +832,67 @@ $(document).ready(function () {
 				item.text(text);
 				menu.parents('.delivery__selects').find('.not_availability').removeClass('not_availability');
 				parent.find('.'+data).fadeIn(150).siblings().hide();
+
+				if(item.is(':first-of-type') && this_.data('tab') === 'pickup'){
+					$('#ID_DELIVERY_ID_1').attr('checked', 'checked')
+				}
 			});
 
 		});
+
+		check_list.each(function(){
+			var _ = $(this),
+			    label = _.find("label");
+			label.on('click', function(){
+				var val = $(this).prev('input').attr("value");
+
+				$('#BUYER_STORE').attr("value", val);
+
+				if($(this).hasAttr('data-price')) {
+					var dataP = $(this).data('price');
+					$('.delivery_sum > span').text(dataP + ' ₽');
+					setTimeout(function(){
+						summItem();
+					},10);
+
+				} else {
+					var dataP = 0;
+					$('.delivery_sum > span').text(dataP + ' ₽');
+					setTimeout(function(){
+						summItem();
+					},10);
+				}
+			});
+		});
 	})();
+
+	//summ
+	function summItem() {
+		var box = $('.order__col'),
+		item = box.find('.js-sum > span'),
+		total = box.find('.total > span');
+
+		arr = [];
+
+		item.each(function(){
+			var _ = $(this),
+			val = _.text(),
+			rep = parseFloat(parseFloat(val.replace(/ /g, '')).toFixed(2));
+			//rep = parseFloat(rep);
+			arr.push(rep);
+			console.log(rep)
+		});
+
+		var result = arr.reduce(function(sum, current) {
+			return sum + current;
+		}, 0);
+		total.text(result.toFixed(2) + '  ₽');
+		box.parents('.content').find('.card__basket .item_search-price').map(function(){
+			$(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + ' ₽.');
+		});
+	};
+	summItem();
+
 
 	//popup
 
@@ -909,8 +973,14 @@ $(document).ready(function () {
 	}
 
 	function init () {
+		var cur_coordsMain;
+		if($('.coord') == 1) {
+				cur_coordsMain = [];
+				cur_coordsMain[0] = $('.coord').data('long');
+				cur_coordsMain[1] = $('.coord').data('lat');
+		};
 		var myMap = new ymaps.Map('map', {
-				center: [55.3172, 37.523285],
+				center: [cur_coordsMain[0], cur_coordsMain[1]],
 				zoom: 9,
 				controls: []
 			}, {
@@ -1030,42 +1100,44 @@ $(document).ready(function () {
 		var myObjects = [],
 			location = [];
 
-			$('.coord').each(function(index){
-				var cur_coords = [];
-				cur_coords[0] = $(this).data('long');
-				cur_coords[1] = $(this).data('lat');
-				cur_coords[2] = $(this).find('.names').text();
-				cur_coords[3] = $(this).find('.coord__address').text();
-				cur_coords[4] = $(this).find('.coord__phones').html() || '';
-				cur_coords[5] = $(this).find('.coord__schedule').html();
-				location[index] = cur_coords;
+		$('.coord').each(function(index){
+			var cur_coords = [];
+			cur_coords[0] = $(this).data('long');
+			cur_coords[1] = $(this).data('lat');
+			cur_coords[2] = $(this).find('.names').text();
+			cur_coords[3] = $(this).find('.coord__address').text();
+			cur_coords[4] = $(this).find('.coord__phones').html() || '';
+			cur_coords[5] = $(this).find('.coord__schedule').html();
+			location[index] = cur_coords;
 
-			});
-			var coordinates = location;
+		});
+		var coordinates = location;
 
 
-			for (var i = 0, l = coordinates.length; i < l; i++) {
-				var coord = coordinates[i];
-				//console.log(coord[3]);
-			    myObjects.push({
-			        type: "Feature",
-			        id: currentId++,
-			        geometry: {
-			            type: 'Point',
-			            coordinates: [coord[0],coord[1]]
-			        },
-			        properties: {
-						balloonHeader: coord[2],
-						balloonContent: "<div class='balloon__address'>" + coord[3] + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + coord[4] + "</div>" + "<div class='balloon__col'>" + coord[5] +	"</div>" + "</div>"
-						 ,
-						// "clusterCaption": "Еще одна метка"
-					}
-			    });
-			}
+		for (var i = 0, l = coordinates.length; i < l; i++) {
+			var coord = coordinates[i];
+			//console.log(coord[3]);
+		    myObjects.push({
+		        type: "Feature",
+		        id: currentId++,
+		        geometry: {
+		            type: 'Point',
+		            coordinates: [coord[0],coord[1]]
+		        },
+		        properties: {
+					balloonHeader: coord[2],
+					balloonContent: "<div class='balloon__address'>" + coord[3] + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + coord[4] + "</div>" + "<div class='balloon__col'>" + coord[5] +	"</div>" + "</div>"
+					 ,
+					// "clusterCaption": "Еще одна метка"
+				}
+		    });
+		}
 
-			objectManager.add(myObjects);
-			myMap.geoObjects.add(objectManager);
+		objectManager.add(myObjects);
+		myMap.geoObjects.add(objectManager);
+		if($('.coord').length > 1) {
 			myMap.setBounds(objectManager.getBounds());
+		}		
 	}
 
 
@@ -1092,7 +1164,6 @@ $(document).ready(function () {
 				schedule = parents.find('.coord').find('.coord__schedule').html();
 
 			$('#' + map).addClass('init');
-			
 		}
 
 		var myMap = new ymaps.Map(maps, {
@@ -1206,6 +1277,23 @@ $(document).ready(function () {
 		e.preventDefault();
 		var ajaxaddid = $(this).data('id'),
 			count = $(this).parents('.ajax-add2cart-container').find('.spinner__input').val(),
+			file = $('.ajax-smallbasket').data('dir');
+		$.ajax({
+			type: "POST",
+			data: "ajaxaddid=" + ajaxaddid + "&count=" + count + "&ajaxaction=add",
+			url: file,
+			dataType: "html",
+			success: function(fillter){
+				$('.ajax-smallbasket').html(fillter);
+			}
+		});
+		return false;
+	});
+
+	$('.ajax-add2cart-auto').on('click', function(e){
+		e.preventDefault();
+		var ajaxaddid = $(this).data('id'),
+			count = $(this).parents('tr').find('.spinner__input').val(),
 			file = $('.ajax-smallbasket').data('dir');
 		$.ajax({
 			type: "POST",

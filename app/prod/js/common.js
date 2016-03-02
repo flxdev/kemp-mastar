@@ -973,8 +973,14 @@ $(document).ready(function () {
 	}
 
 	function init () {
+		var cur_coordsMain;
+		if($('.coord') == 1) {
+				cur_coordsMain = [];
+				cur_coordsMain[0] = $('.coord').data('long');
+				cur_coordsMain[1] = $('.coord').data('lat');
+		};
 		var myMap = new ymaps.Map('map', {
-				center: [55.3172, 37.523285],
+				center: [cur_coordsMain[0], cur_coordsMain[1]],
 				zoom: 9,
 				controls: []
 			}, {
@@ -1094,42 +1100,44 @@ $(document).ready(function () {
 		var myObjects = [],
 			location = [];
 
-			$('.coord').each(function(index){
-				var cur_coords = [];
-				cur_coords[0] = $(this).data('long');
-				cur_coords[1] = $(this).data('lat');
-				cur_coords[2] = $(this).find('.names').text();
-				cur_coords[3] = $(this).find('.coord__address').text();
-				cur_coords[4] = $(this).find('.coord__phones').html() || '';
-				cur_coords[5] = $(this).find('.coord__schedule').html();
-				location[index] = cur_coords;
+		$('.coord').each(function(index){
+			var cur_coords = [];
+			cur_coords[0] = $(this).data('long');
+			cur_coords[1] = $(this).data('lat');
+			cur_coords[2] = $(this).find('.names').text();
+			cur_coords[3] = $(this).find('.coord__address').text();
+			cur_coords[4] = $(this).find('.coord__phones').html() || '';
+			cur_coords[5] = $(this).find('.coord__schedule').html();
+			location[index] = cur_coords;
 
-			});
-			var coordinates = location;
+		});
+		var coordinates = location;
 
 
-			for (var i = 0, l = coordinates.length; i < l; i++) {
-				var coord = coordinates[i];
-				//console.log(coord[3]);
-			    myObjects.push({
-			        type: "Feature",
-			        id: currentId++,
-			        geometry: {
-			            type: 'Point',
-			            coordinates: [coord[0],coord[1]]
-			        },
-			        properties: {
-						balloonHeader: coord[2],
-						balloonContent: "<div class='balloon__address'>" + coord[3] + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + coord[4] + "</div>" + "<div class='balloon__col'>" + coord[5] +	"</div>" + "</div>"
-						 ,
-						// "clusterCaption": "Еще одна метка"
-					}
-			    });
-			}
+		for (var i = 0, l = coordinates.length; i < l; i++) {
+			var coord = coordinates[i];
+			//console.log(coord[3]);
+		    myObjects.push({
+		        type: "Feature",
+		        id: currentId++,
+		        geometry: {
+		            type: 'Point',
+		            coordinates: [coord[0],coord[1]]
+		        },
+		        properties: {
+					balloonHeader: coord[2],
+					balloonContent: "<div class='balloon__address'>" + coord[3] + "</div><div class='balloon__row'>" + "<div class='balloon__col'>" + coord[4] + "</div>" + "<div class='balloon__col'>" + coord[5] +	"</div>" + "</div>"
+					 ,
+					// "clusterCaption": "Еще одна метка"
+				}
+		    });
+		}
 
-			objectManager.add(myObjects);
-			myMap.geoObjects.add(objectManager);
+		objectManager.add(myObjects);
+		myMap.geoObjects.add(objectManager);
+		if($('.coord').length > 1) {
 			myMap.setBounds(objectManager.getBounds());
+		}		
 	}
 
 
