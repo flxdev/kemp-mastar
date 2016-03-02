@@ -4930,3 +4930,87 @@ p.attention {
 		}
 	}
 }
+.table_columns {
+	margin-bottom: 40px;
+	.thead, thead {
+		background-color: #f8f8f8;
+		color: #949494;
+		text-align: center;
+		th {
+			padding: 15px;
+		}
+		[rowspan] {
+			width: 138px;
+		}
+		[colspan] {
+			width: 292px;
+			border-bottom: 1px solid #e8edf2;
+		}
+	}
+	tbody {
+		tr {
+			border-bottom: 1px solid #e8edf2;
+			td {
+				text-align: center;
+				padding: 20px;
+			}
+		}
+	}
+	&.columns-2 {
+		thead {
+			tr {
+				th {
+					&:first-child {
+						width: 70%;
+						text-align: left;
+					}
+					width: 30%;
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					&:first-child {
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+	&.columns-5 {
+		thead {
+			tr {
+				th {
+					text-align: left;
+					&:first-child {
+						width: 10%;
+						text-align: center;
+					}
+					&:nth-child(2) {
+						width: 45%;
+					}
+					width: 15%;
+				}
+			}
+		}
+		tbody {
+			tr {
+				td {
+					text-align: center;
+					&:nth-child(2) {
+						width: 45%;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+	.footnote {
+		margin-top: 10px;
+		p {
+			margin-bottom: 5px;
+			color: #949494;
+		}
+	}
+}
