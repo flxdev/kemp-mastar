@@ -905,7 +905,7 @@ $(document).ready(function () {
 		$('.btn__popup').on('click', function(event){
 			var popup = $(this).data('href');
 
-			if(popup === 'reg' || popup === 'enter' ) {
+			if(popup === 'reg' || popup === 'enter' || popup === 'return' ) {
 				popupSelector
 					.removeClass("is-visible")
 					.delay(duration)
