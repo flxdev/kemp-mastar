@@ -2679,19 +2679,23 @@ blockquote {
 		&.slide__box {
 			//padding: 20px 0;
 			display: none;
+			.row {
+				columns: 4;
+			}
 			ul {
 				display: inline-block;
-				width: 25%;
+				width: 100%;
 				vertical-align: top;
-				&:nth-child(2) {
-					padding-left: 6px;
-				}
-				&:nth-child(3) {
-					padding-left: 10px;
-				}
-				&:nth-child(4) {
-					padding-left: 12px;
-				}
+				margin-bottom: 22px;
+				// &:nth-child(2) {
+				// 	padding-left: 6px;
+				// }
+				// &:nth-child(3) {
+				// 	padding-left: 10px;
+				// }
+				// &:nth-child(4) {
+				// 	padding-left: 12px;
+				// }
 				& > li {
 					color: $white;
 					margin-bottom: 3px;
@@ -2701,6 +2705,7 @@ blockquote {
 						color: $white;
 						margin-bottom: 3px;
 						padding-right: 15px;
+						width: 100%;
 						@include transition(color);
 						&:hover {
 							color: $yellow;
@@ -2713,11 +2718,11 @@ blockquote {
 					li {
 						color: $white;
 						margin-bottom: 3px;
-						padding-right: 15px;
 						a {
 							color: #a8aeb4;
 							display: inline-block;
-							padding: 6px 0 5px;
+							padding: 6px 30px 5px 0;
+							width: 100%;
 							@include transition(color);
 							&:hover {
 								color: $yellow;
@@ -5062,10 +5067,10 @@ p.attention {
 				width: 18.3%;
 			}
 			&:nth-child(3) {
-				width: 23.8%;
+				width: 23.3%;
 			}
 			&:nth-child(4) {
-				width: 22.1%;
+				width: 21.1%;
 			}
 			&:nth-child(5) {
 				width: 17.2%;
@@ -5109,8 +5114,9 @@ p.attention {
 		background-color: #f7f7f7;
 		padding: 60px 0 51px;
 		.row {
+			columns: 4;
 			& > ul {
-				width: 25%;
+				width: 100%;
 				margin-bottom: 17px;
 				& > ul {
 					width: 100%;
