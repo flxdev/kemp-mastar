@@ -1024,3 +1024,26 @@ blockquote {
 		}
 	}
 }
+
+
+.map__site {
+	ul {
+		& > li {
+			a {
+				font-size: 18px;
+				font-family: $FuturaNewDemi;
+			}
+		}
+		& > ul {
+			li {
+				a {
+					font-family: $FuturaNewBook;
+				}
+			}
+		}
+	}
+}
+.map__link {
+	font-family: $FuturaNewBook;
+	font-size: 14px;
+}
