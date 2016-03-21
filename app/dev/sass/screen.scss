@@ -5151,3 +5151,27 @@ p.attention {
 		}
 	}
 }
+.captcha {
+	@include clearfix;
+	.captcha__case {
+		width: 213px;
+		height: 41px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.captcha__refresh {
+		width: 21px;
+		height: 23px;
+		background-image: url(../img/svg/refresh.svg);
+		background-size: cover;
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+		margin-left: 15px;
+	}
+}
+.reg {
+	.captcha {
+		padding-top: 15px;
+	}
+}
