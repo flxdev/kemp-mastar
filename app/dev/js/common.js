@@ -537,7 +537,9 @@ $(document).ready(function () {
 		$(window).ready(function() {
 			$('.js-price').each(function() {
 				var val = $('.spinner__input').val();
-				$(this).find('.result').text(val*$(this).find('.result').data('price'));
+				var total = val*$(this).find('.result').data('price');
+				total = total.toFixed(2);
+				$(this).find('.result').text(total);
 			});
 
 			$('.js-price-text').map(function() {
@@ -1318,4 +1320,84 @@ $(document).ready(function () {
 			});
 		});
 	})();
+
+	$('.left__sidebar input').each(function(){
+		keyPress($(this));
+	});
+
+	// keypress inputs
+	function keyPress(item) {
+		item[0].onkeypress = function(e) {
+			e = e || event;
+			if (e.ctrlKey || e.altKey || e.metaKey) return;
+			var chr = getChar(e);
+			if (chr == null) return;
+			if (chr < '0' || chr > '9') {
+				return false;
+			}
+		}
+			item.bind("paste contextmenu", function(){return false});
+	};
+
+	function getChar(event) {
+		if (event.which == null) {
+			if (event.keyCode < 32) return null;
+			return String.fromCharCode(event.keyCode) // IE
+		}
+		if (event.which != 0 && event.charCode != 0) {
+			if (event.which < 32) return null;
+			return String.fromCharCode(event.which) 
+		}
+		return null;
+	};
+
+
+	//progress add basket
+
+	$('.btn_basket, .big_basket').each(function() {
+		gContent($(this));
+	});
+
+	function gContent(item) {
+		item.append('<span class="added">Добавлено</span>');
+		addB(item);
+	};
+
+	function addB(item) {
+		var this_ = item;
+
+		this_.on('click', function() {
+			var _ = $(this);
+
+			if(_.hasClass('is-active')) {
+				window.location.href = '/cart/';
+				return false;
+			};
+
+			_.addClass('is-active');
+			return false
+		});
+	}
+
+	$('.spinner__plus, .spinner__minus').each(function(){
+		$(this).on('click', function(){
+			if ($(this).parents('.item').length){
+				var _ = $(this),
+					parent = _.parents('.item'),
+					btn = parent.find('.btn_basket');
+
+				btn.removeClass('is-active');
+				
+			} else {
+				var _ = $(this),
+					parent = _.parents('.price__box'),
+					btn = parent.find('.big_basket');
+
+				btn.removeClass('is-active');
+
+			}
+		});
+	});
+
+
 });
