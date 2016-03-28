@@ -2966,6 +2966,19 @@ blockquote {
 			letter-spacing: -0.08px;
 			margin-top: 44px;
 			line-height: 17px;
+			margin-bottom: 45px;
+		}
+		p {
+			color: $white;
+			a {
+				color: $yellow;
+				transition: color 0.3s ease, border-color 0.3s ease;
+				border-bottom: 1px solid;
+				&:hover {
+					color: $red;
+					border-color: transparent;
+				}
+			}
 		}
 	}
 }
@@ -5265,5 +5278,14 @@ p.attention {
 .reg {
 	.captcha {
 		padding-top: 15px;
+	}
+}
+.s__payment {
+	@include clearfix;
+	margin-bottom: 10px;
+	img {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 19px;
 	}
 }
