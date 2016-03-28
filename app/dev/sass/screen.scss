@@ -3712,6 +3712,27 @@ blockquote {
 			}
 		}
 	}
+	&.order__success-error {
+		.title {
+			&.is-error {
+				color: #fe4646;
+				position: relative;
+				&::after {
+					content: '';
+					width: 12px;
+					height: 12px;
+					position: absolute;
+					top: 14px;
+					left: -33px;
+					background-image: url(../img/icons/error.png);
+					background-size: cover;
+				}
+			}
+		}
+		p {
+			width: 70%;
+		}
+	}
 }
 .personal {
 	width: 530px;
