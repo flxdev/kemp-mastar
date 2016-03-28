@@ -698,7 +698,19 @@ $(document).ready(function () {
 	//scroll pane
 	(function(){
 		if($('.order__scroll').length){
-			$('.scroll__inner').jScrollPane();
+			//$('.order__scroll').attr('id', 'container');
+			setTimeout(function(){
+				//$('.scroll__inner').jScrollPane();
+				var scrollContainer = document.getElementById('container');
+				Ps.initialize(scrollContainer, {
+					wheelSpeed: 0.3,
+					wheelPropagation: true,
+					minScrollbarLength: 20
+				});
+				$(window).on('resize', function(){
+					Ps.update(scrollContainer);
+				});
+			},100);		
 		}
 	})();
 
@@ -791,13 +803,36 @@ $(document).ready(function () {
 			list.fadeOut(150);
 		});
 
-		icon.on('click', function(event){
-			content__box.fadeToggle(300);
-			event.stopPropagation();
+		$('.info__box').each(function(){
+			var this_ = $(this),
+					icons = this_.find('.icon'),
+					content__box = this_.find('.content__box');
+			var scrollInfobox = document.getElementById('scroll__infobox');
+			icons.on('click', function(event){
+				if(content__box.hasClass('uniteller') && !$('#scroll__infobox').hasClass('.ps-container')) {
+					setTimeout(function(){
+						Ps.initialize(scrollInfobox, {
+							wheelSpeed: 0.3,
+							wheelPropagation: true,
+							minScrollbarLength: 20
+						});
+					}, 10);
+				}
+				content__box.fadeToggle(300);
+				event.stopPropagation();
+			});
+			icons.on('mouseleave', function(){
+				if(content__box.hasClass('uniteller')) {
+					return false;
+				} else {
+					content__box.fadeOut(150);
+				}
+			});
+			content__box.on('mouseleave', function(){
+				content__box.fadeOut(150);
+			});
 		});
-		icon.on('mouseleave', function(){
-			content__box.fadeOut(150);
-		});
+			
 
 		menu.each(function(){
 			var this_ = $(this),
@@ -837,6 +872,12 @@ $(document).ready(function () {
 
 				if(item.is(':first-of-type') && this_.data('tab') === 'pickup'){
 					$('#ID_DELIVERY_ID_1').attr('checked', 'checked')
+				}
+
+				if(this_.attr('for') == 'card') {
+					$('#info__box').show();
+				} else {
+					$('#info__box').hide();
 				}
 			});
 
