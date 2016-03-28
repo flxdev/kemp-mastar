@@ -5324,6 +5324,14 @@ p.attention {
 		p {
 			line-height: 28px;
 			margin-bottom: 20px;
+			a {
+				border-bottom: 1px solid;
+				transition: border-color 0.3s ease, color 0.3s ease;
+				&:hover {
+					color: $red;
+					border-color: transparent;
+				}
+			}
 		}
 	}
 }
