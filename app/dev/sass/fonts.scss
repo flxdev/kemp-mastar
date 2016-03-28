@@ -669,6 +669,19 @@ blockquote {
 		font-family: $FuturaNewMedium;
 		font-size: 28px;
 	}
+	&.order__success-payment {
+		.order {
+			.order__col {
+				.title {
+					font-family: $FuturaNewBook;
+					font-size: 18px;
+					& + div {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
 }
 .form__row {
 	.title {

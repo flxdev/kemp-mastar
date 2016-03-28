@@ -3687,6 +3687,31 @@ blockquote {
 		left: 4px;
 		border-radius: 5px;
 	}
+	&.order__success-payment {
+		.title {
+			&.is-green {
+				&::after {
+					content: none;
+				}
+			}
+		}
+		.order {
+			float: none;
+			margin: 0 auto 26px;
+			width: 391px;
+			.order__col {
+				.title {
+					margin: -10px 0 12px;
+				}
+				vertical-align: top;
+				&:last-child:not(:first-child) {
+					&::after {
+						content: none;
+					}
+				}
+			}
+		}
+	}
 }
 .personal {
 	width: 530px;
