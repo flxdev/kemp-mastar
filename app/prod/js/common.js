@@ -785,6 +785,8 @@ $(document).ready(function () {
 							$('.success').addClass('is-open');
 							$('.popup').find('form').trigger('reset');
 						}
+
+						
 						//if(!$form.is('#ORDER_FORM')){
 							return false;
 						//}						
@@ -794,6 +796,8 @@ $(document).ready(function () {
 		}
 	}
 	validate();
+
+	
 
 	//custom selects
 	(function(){
@@ -858,6 +862,9 @@ $(document).ready(function () {
 					text = checkIs.parent().find('span').text();
 				item.text(text);
 				this_.parents('.delivery__selects').find('.not_availability').removeClass('not_availability');
+				this_.parents('.row__selects').addClass('check');
+				detectedValid(this_.parents('form').attr('id'));
+				this_.parents('form').find('button[type="submit"]').removeAttr('disabled');
 			}
 
 			item.on('click', function(event){
@@ -881,6 +888,8 @@ $(document).ready(function () {
 				item.text(text);
 				menu.parents('.delivery__selects').find('.not_availability').removeClass('not_availability');
 				parent.find('.'+data).fadeIn(150).siblings().hide();
+
+				parent.parents('.row__selects').addClass('check');
 
 				$('.' + data ).find('input').attr('checked', false);
 				setTimeout(function(){
@@ -909,8 +918,10 @@ $(document).ready(function () {
 				} else {
 					$('#info__box').hide();
 				}
-			});
 
+				detectedValid(this_.parents('form').attr('id'));
+
+			});
 		});
 		
 		check_list.each(function(){
@@ -938,6 +949,17 @@ $(document).ready(function () {
 			});
 		});
 	})();
+
+
+	function detectedValid(form) {
+		var this_ = $('#' + form),
+				menu = this_.find('.row__selects.check');	
+
+		if(menu.length > 1) {
+			this_.find('button[type="submit"]').removeAttr('disabled');
+		};
+	};
+
 
 	//summ
 	function summItem() {
