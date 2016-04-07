@@ -146,7 +146,10 @@ $(document).ready(function () {
 				parent = $(this).parents('.tab__container'),
 				tab_item = parent.find('.tab__item'),
 				link_cont = parent.find('.link__cont'),
-				slider = $('.sliders');
+				slider = $('.sliders'),
+				tabC = parent.find('.tab__content');
+
+			tabC.hide();
 
 			link.on('click', function(){
 				var this_ = $(this),
@@ -160,6 +163,7 @@ $(document).ready(function () {
 				*/
 				this_.parent().addClass('active').siblings().removeClass('active');
 				tab_item.fadeOut(0).removeClass('visible');
+				tabC.show();
 				if(parent.hasClass('tab__slider')){
 					if(parent.hasClass('ajax_slider')){
 						$.ajax({
@@ -208,6 +212,7 @@ $(document).ready(function () {
 			if(parent.hasClass('active')){
 				linkItem.first().addClass('active');
 				parent.find("."+index).show().addClass('visible');
+				tabC.show();
 			} else if(parent.hasClass('tab__slider')){
 				linkItem.first().addClass('active');
 				parent.find("."+index).show().addClass('visible');
@@ -217,7 +222,7 @@ $(document).ready(function () {
 				var this_ = $(this),
 					index = this_.data('href');
 
-				this_.parents('.tab__content').find('.' + index).fadeIn(0).siblings().fadeOut(0);
+				this_.parents('.tab__content').find('.' + index).fadeIn(0).siblings(":not(.tab_cover)").fadeOut(0).removeClass('visible');
 				this_.parents('.tab__content').find('.' + index).addClass('visible');
 				this_.parents('.tab__container').find('a[data-href=' + index + ']').parent().addClass('active').siblings().removeClass('active');
 			});
@@ -233,6 +238,7 @@ $(document).ready(function () {
 				} else {
 					linkItem.removeClass('active');
 					tab_item.fadeOut(0).removeClass('visible');
+					tabC.hide();
 				}
 			});
 

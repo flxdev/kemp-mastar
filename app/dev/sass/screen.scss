@@ -5361,3 +5361,39 @@ p.attention {
 #info__box .ps-container > .ps-scrollbar-y-rail {
 	right: 0;
 }
+.tab__container.search .tab__content .tab__item {
+	padding-bottom: 0;
+}
+.tab__content {
+	display: none;
+}
+.tab_cover {
+	display: inline-block;
+	width: 100%;
+	text-align: right;
+	padding: 0 50px 33px;
+	margin-top: -66px;
+	.links {
+		display: inline-block;
+		border: 1px solid #d8dee4;
+		border-radius: 3px;
+		padding: 3px 20px 3px 10px;
+		color: #000;
+		position: relative;
+		transition: border-color 0.3s ease;
+		.icon {
+			width: 6px;
+			height: 14px;
+			display: inline-block;
+			position: absolute;
+			top: 4px;
+			right: 6px;
+			path {
+				fill: #000;
+			}
+		}
+		&:hover {
+			border-color: $blue;
+		}
+	}
+}
