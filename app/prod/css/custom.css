@@ -393,6 +393,11 @@ blockquote {
 .order__box .order__item .title{
 	font-family: FuturaNewDemi,Arial,sans-serif;
 }
+.order__col .card__info{
+	/*padding-right: 5px;*/
+	font-family: FuturaNewBookOblique,Arial,sans-serif;
+	margin-bottom: 0;
+}
 .prepeay-msg{
 	color: #48a200;
 	font-family: FuturaNewDemi,Arial,sans-serif;
