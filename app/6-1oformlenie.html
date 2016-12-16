@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="prod/css/perfect-scrollbar.min.css">
 	<link rel="stylesheet" href="prod/css/fonts.min.css">
 	<link rel="stylesheet" href="prod/css/screen.min.css">
-
+	<link rel="stylesheet" href="prod/css/custom.css">
 </head>
 <body>
 	<header class="header main">
@@ -334,7 +334,13 @@
 						<div class="order__col">
 							<div class="result_sum">Сумма за заказ: <span>70 000 954 ₽</span></div>
 							<div class="delivery_sum">Доставка: <span>0₽</span></div>
-							<div class="total">Итого к оплате: <span>70 000 954 ₽</span></div>
+							<div class="total">Итого к оплате: 
+								<span>70 000 954 ₽
+								</span>
+								<span class="card__info">
+									Срок поставки: 5 дн.
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -570,12 +576,20 @@
 																<span>Оплата банковсской картой на сайте</span>
 															</label>
 														</li>
+														<li>
+															<input type="radio" name='option-pay' id='kemp'>
+															<label for='kemp'>
+																<span>Наличными или банковской картой в магазине КЭМП</span>
+															</label>
+														</li>
 													</ul>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+								<!-- полагаю сообщение будет выплевываться средсвами битрикса -->
+								<span class="prepeay-msg">Заказ будет принят в обработку только после 100% предоплаты</span>
 							<button class="btn checkout" type='submit' disabled=""><span>Сохранить изменения</span></button>
 							</form>
 						</div>

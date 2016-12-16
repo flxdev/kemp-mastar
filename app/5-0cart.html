@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="prod/css/jquery.fancybox.css">
 	<link rel="stylesheet" href="prod/css/fonts.min.css">
 	<link rel="stylesheet" href="prod/css/screen.min.css">
-
+	<link rel="stylesheet" href="prod/css/custom.css">
 </head>
 <body>
 	<header class="header main">
@@ -298,6 +298,7 @@
 											<td><button class="sorting__item" type='button'>Бренд</button></td>
 											<td><button class="sorting__item" type='button'>Код детали</button></td>
 											<td><button class="sorting__item" type='button'>Описание</button></td>
+											<td><button class="sorting__item" type='button'>Срок поставки</button></td>
 											<td><button class="sorting__item" type='button'>Цена</button></td>
 											<td><button class="sorting__item" type='button'>Количество</button></td>
 											<td><button class="sorting__item" type='button'>Стоимость</button></td>
@@ -310,10 +311,15 @@
 							<div class="sheet__wrap">
 								<table class="basket__result">
 									<tbody>
-										<tr>
+										<tr class='border-kemp'>
 											<td>Federal Mogul</td>
 											<td><a href="">560365005267</a></td>
 											<td>Прокладка клап.крышки ком/кт клап.крышки ком/кт</td>
+											<td>
+												<span class="presence is-green">
+													<i class="icon"></i>В наличии
+												</span>
+											</td>
 											<td><div class="price"><span>12 954 ₽</span><span class="old">15 954 ₽</span></div></td>
 											<td>
 												<div class="spinner" data-max-number="100">
@@ -333,6 +339,9 @@
 											<td>Elring</td>
 											<td><a href="">560365005</a></td>
 											<td>Прокладка клап.крышки ком/кт</td>
+											<td>
+												3дн.
+											</td>
 											<td><div class="price"><span>12 954 ₽</span></div></td>
 											<td>
 												<div class="spinner" data-max-number="10">
@@ -352,6 +361,9 @@
 											<td>Elring</td>
 											<td><a href="">560365005</a></td>
 											<td>Прокладка клап.крышки ком/кт</td>
+											<td>
+												3дн.
+											</td>
 											<td><div class="price"><span>12 954 ₽</span></div></td>
 											<td>
 												<div class="spinner" data-max-number="10">
@@ -363,6 +375,7 @@
 											<td>
 												<div class="addition">
 													<span>12 954 000 ₽</span>
+													<p style='color: red;'>100% предоплата</p>
 													<a href="" class="remove"></a>
 												</div>
 											</td>
