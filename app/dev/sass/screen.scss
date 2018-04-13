@@ -5397,3 +5397,176 @@ p.attention {
 		}
 	}
 }
+//@todo for #1 new styles
+.capcha{
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	max-width: 200px;
+	margin: auto;
+	margin-top: 20px;
+	.sub{
+		font-family: 'FuturaNewBook', 'Arial', sans-serif;
+		color: #bbb;
+		font-size: 14px;
+	};
+	&__exemple{
+		width: 100%;
+		margin-top: 14px;
+	};
+	&__img{
+		width: 170px;
+		height: 39px;
+		display: inline-block;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		-webkit-background-size: contain;
+		background-size: contain;
+		background-color: #eee;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		overflow: hidden;
+		&-wrapper{
+			display: inline-block;
+			width: 170px;
+			vertical-align: middle;
+		}
+	}
+	&__reload{
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		vertical-align: middle;
+		background: url('../img/capcha_reload.png') 50% 50% no-repeat;
+		-webkit-background-size: contain;
+		background-size: contain;
+		&-wrapper{
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+			padding: 3px 0px 5px 6px;
+		}
+	}
+	&__input{
+		margin-top: 5px;
+		form{
+			display: inline-block;
+			width: 100%;
+		}
+		input{
+			display: inline-block;
+			border: 1px solid #d8dee4;
+			width: 100%;
+			height: 30px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		};
+		button{
+			margin-top: 20px;
+			display: block;
+			width: 100%!important;
+			color: #fff;
+			max-width: 100%;
+		};
+		&-wrapper{
+			display: inline-block;
+			margin-top: 12px;
+		}
+	}
+}
+
+//@todo for #2 new styles for search
+.found-block{
+	margin-bottom: 50px;
+	&__title{
+		font-family: 'FuturaNewBook', 'Arial', sans-serif;
+		font-size: 28px;
+		font-weight: 600;
+		&-wrapper{
+			display: block;
+			border-bottom: 1px solid #d8dee4;
+			margin-bottom: 18px;
+			padding-bottom: 10px;
+		}
+	}
+	&__item{
+		display: inline-block;
+		padding: 4px 0px;
+		margin-bottom: 8px;
+		font-family: 'FuturaNewBook', 'Arial', sans-serif;
+		color: #000!important;
+		&:hover{
+			color: #0051a2!important;
+		}
+	}
+}
+
+//@todo #3 new style for button
+.l{
+	position: relative;
+}
+.btn--header{
+	position: absolute;
+	right: 0;
+	top: 10px;
+	color: #fff;
+	display: inline-block;
+	font-family: 'FuturaNewBook', 'Arial', sans-serif;
+	padding: 6px 25px;
+	width: auto!important;
+	max-width: auto!important;
+	height: auto!important;
+	max-height: auto!important;
+}
+
+
+//@todo for #4 new captcha
+.protect-capcha-popup {
+	width: 30em;
+	padding: 2.55em 2.308em 2.55em 2.692em;
+	box-shadow: inset 0 -3px 0 0 #c1c1c1;
+}
+.popup-css {
+	position: relative;
+	padding: 1.25em 1em 1em;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: #fff;
+	text-align: left;
+	box-shadow: 3px 3px 7px 0 rgba(200,200,200,.5),inset 0 -5px 0 0 #c1c1c1;
+}
+.protect-capcha-text {
+	font-size: 1.5rem;
+	line-height: 1.75rem;
+	font-family: 'FuturaNewBook', 'Arial', sans-serif;
+}
+.protect-capcha-b {
+	padding: 28px 0 28px 89px;
+}
+.sprite, .sprite-both, .sprite-side {
+	position: relative;
+}
+.protect-capcha-b::before {
+	background-position: 50% 50%;
+	width: 37px;
+	height: 47px;
+	top: 10px;
+	left: 34px;
+}
+.sprite-both::after, .sprite-both::before, .sprite-side::before {
+	content: '';
+	position: absolute;
+}
+.sprite, .sprite-both::after, .sprite-both::before, .sprite-side::before {
+	background-image: url(../img/svg/arr.svg);
+	background-repeat: no-repeat;
+}
+.blured{
+	overflow: hidden;
+}
+.blured .out, .blured .header,  .blured .footer, .blured .goods, .blured .map{
+	-webkit-filter: blur(7px);
+	filter: blur(7px);
+}

@@ -1440,5 +1440,33 @@ $(document).ready(function () {
 		});
 	});
 
+	//@todo for #6 reCaptcha
+	function onSuccessValidation(){
+		$('body').removeClass('blured');
+		$('#captcha-wrapper').fadeOut('blured');
+		$('.protect-capcha-popup-overlay').fadeOut('blured');
+	}
+
+	function validateCaptcha(){
+		var form_validate = $('#captchaForm');
+		if (form_validate.length) {
+			form_validate.each(function () {
+				var form_this = $(this);
+				$.validate({
+					form : form_this,
+					modules: 'security',
+					reCaptchaSiteKey: '...',
+					reCaptchaSize: 'normal',
+					reCaptchaTheme: 'light',
+					borderColorOnError : false,
+					scrollToTopOnError : false,
+					onSuccess : function() {
+						return false;
+					}
+				});
+			});
+		}
+	}
+	validateCaptcha();
 
 });

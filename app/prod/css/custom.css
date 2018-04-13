@@ -169,7 +169,25 @@ blockquote {
 	margin-top: 3px;
 }
 
-
+.col100{
+	width: 100%;
+	float: left;
+	padding-right: 9px;
+	margin-bottom: 10px;
+}
+.col25{
+	width: 25%;
+	float: left;
+	padding-right: 9px;
+}
+.col12{
+	width: 12.5%;
+	float: left;
+	padding-right: 9px;
+}
+.col100 .col25 .sbm__filter{
+	margin-top: 24px;
+}
 /*=====================================================================================================
       product custom styles
 ========================================================================*/
@@ -405,4 +423,39 @@ blockquote {
 	margin-top: -15px;
 	margin-bottom: 40px;
 	font-size: 14px;
+}
+.result_conteiner.half-result{
+	font-size: 0;
+	margin-right: -60px;
+}
+.result_conteiner.half-result .found-block{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 60px;
+
+}
+.result_conteiner.half-result .found-block .sub_title{
+	margin-top: 40px;
+}
+.result_conteiner.half-result .found-block .sizes-wrapper p {
+	line-height: 1.3;
+	font-weight: 500;
+}
+.result_conteiner.half-result .found-block .found-block__item{
+	padding-left: 20px;
+	position: relative;
+	font-size: 16px;
+	text-decoration: underline;
+}
+.result_conteiner.half-result .found-block .found-block__item:before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	border-radius: 100%;
+	background-color: #ffdc00;
+	width: 6px;
+	height: 6px;
 }

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1d2547c5-ab65-40af-9188-2f47d0c2805c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/10-0delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/10-0delivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/11-0oplata.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/11-0oplata.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/12-0inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/12-0inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/13-0-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/13-0-404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/14-0search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/14-0search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/14-1search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/14-1search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/14-2search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/14-2search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/15-0map-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/15-0map-site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/16-0mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/16-0mail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/16-1mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/16-1mail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/2-0catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/2-0catalog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/2-1catalog-razdel.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/2-1catalog-razdel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/2-2catalog-razdel-tovar-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/2-2catalog-razdel-tovar-credit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/2-2catalog-razdel-tovar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/2-2catalog-razdel-tovar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-0inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-0inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-10inners-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-10inners-credit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-10inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-10inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-1inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-1inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-2inner.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-2inner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-3inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-3inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-4inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-4inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-5inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-5inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-6inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-6inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-7inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-7inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-8inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-8inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-9inners-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-9inners-credit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/3-9inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-9inners.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/4-0search-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/4-0search-new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/4-0search_by_brand_cars-credir.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/4-0search_by_brand_cars-credir.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/4-0search_by_brand_cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/4-0search_by_brand_cars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/5-0cart-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/5-0cart-credit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/5-0cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/5-0cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/6-0oformlenie.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-0oformlenie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/6-1oformlenie.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-1oformlenie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/6-7oformlenie-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-7oformlenie-success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/6-8oformlenie-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-8oformlenie-success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/6-9oformlenie-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-9oformlenie-success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/7-0personal_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/7-0personal_account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/7-1personal_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/7-1personal_account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/7-2personal_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/7-2personal_account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/8-0contents.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/8-0contents.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/9-0contacts_shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/9-0contacts_shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/9-1contacts_shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/9-1contacts_shop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dev/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dev/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dev/sass/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/dev/sass/fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dev/sass/screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/dev/sass/screen.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/popups.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/popups.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/fonts.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/fonts.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/jquery.fancybox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/jquery.fancybox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/jscrollpane.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/jscrollpane.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/lib.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/lib.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/multiple-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/multiple-select.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/perfect-scrollbar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/perfect-scrollbar.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/screen.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/screen.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/slick.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/css/video-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/video-js.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/fonts/VideoJS.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/fonts/VideoJS.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/img/icons/arrow_d.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/img/icons/arrow_d.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/img/svg.min.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/img/svg.min.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/img/svg/select.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/img/svg/select.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/head.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/head.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/inputmask.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/inputmask.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery-2.1.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery-2.1.4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.fancybox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.fancybox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.jscrollpane.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.jscrollpane.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.matchHeight.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.matchHeight.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.mousewheel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.mousewheel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.validator.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.validator.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/media.youtube.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/media.youtube.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/multiple-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/multiple-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/perfect-scrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/perfect-scrollbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/readmore.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/readmore.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/security.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/security.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/slick.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/video.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="inter.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/inter.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="407" column="26" selection-start-line="407" selection-start-column="26" selection-end-line="407" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/prod/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="599">
+              <caret line="442" column="18" selection-start-line="442" selection-start-column="18" selection-end-line="442" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/prod/js/common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="376" column="38" selection-start-line="376" selection-start-column="38" selection-end-line="376" selection-end-column="38" />
+              <folding>
+                <element signature="e#51#58#1" expanded="true" />
+                <element signature="e#51#58#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inter-promejut.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/inter-promejut.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="54" lean-forward="true" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>поиск</find>
+      <find>tab</find>
+      <find>form-v</find>
+      <find>парам</find>
+      <find>магазин</find>
+      <find>магази</find>
+      <find>Подвеска</find>
+      <find>multi</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/prod/js/common.js" />
+        <option value="$PROJECT_DIR$/app/2-1catalog-razdel.html" />
+        <option value="$PROJECT_DIR$/app/inter-promejut.html" />
+        <option value="$PROJECT_DIR$/app/prod/css/custom.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="kemp-mastar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kemp-mastar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kemp-mastar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kemp-mastar" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kemp-mastar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kemp-mastar" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="prod" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kemp-mastar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kemp-mastar" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="prod" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kemp-mastar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kemp-mastar" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="prod" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d2547c5-ab65-40af-9188-2f47d0c2805c" name="Default" comment="" />
+      <created>1523607384789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523607384789</updated>
+      <workItem from="1523607386297" duration="7899000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7899000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.06815642" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="npm" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info id="Gulp" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Gulp" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info id="npm" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.24973656" />
+      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="TODO" order="10" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/prod/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="372" column="34" selection-start-line="372" selection-start-column="26" selection-end-line="372" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/inter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="407" column="26" selection-start-line="407" selection-start-column="26" selection-end-line="407" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/2-1catalog-razdel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-516">
+          <caret line="296" column="47" selection-start-line="296" selection-start-column="47" selection-end-line="296" selection-end-column="47" />
+          <folding>
+            <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/7-1personal_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="307" column="42" selection-start-line="307" selection-start-column="42" selection-end-line="307" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/9-0contacts_shop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="287" column="22" selection-start-line="287" selection-start-column="22" selection-end-line="287" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/inter-promejut.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="54" lean-forward="true" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/prod/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="376" column="38" selection-start-line="376" selection-start-column="38" selection-end-line="376" selection-end-column="38" />
+          <folding>
+            <element signature="e#51#58#1" expanded="true" />
+            <element signature="e#51#58#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/prod/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="442" column="18" selection-start-line="442" selection-start-column="18" selection-end-line="442" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
