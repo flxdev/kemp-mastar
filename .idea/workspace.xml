@@ -1,88 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d2547c5-ab65-40af-9188-2f47d0c2805c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/10-0delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/10-0delivery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/11-0oplata.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/11-0oplata.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/12-0inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/12-0inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/13-0-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/13-0-404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/14-0search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/14-0search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/14-1search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/14-1search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/14-2search.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/14-2search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/15-0map-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/15-0map-site.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/16-0mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/16-0mail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/16-1mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/16-1mail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/2-0catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/2-0catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/2-1catalog-razdel.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/2-1catalog-razdel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/2-2catalog-razdel-tovar-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/2-2catalog-razdel-tovar-credit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/2-2catalog-razdel-tovar.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/2-2catalog-razdel-tovar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-0inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-0inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-10inners-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-10inners-credit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-10inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-10inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-1inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-1inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-2inner.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-2inner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-3inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-3inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-4inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-4inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-5inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-5inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-6inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-6inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-7inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-7inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-8inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-8inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-9inners-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-9inners-credit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/3-9inners.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/3-9inners.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/4-0search-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/4-0search-new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/4-0search_by_brand_cars-credir.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/4-0search_by_brand_cars-credir.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/4-0search_by_brand_cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/4-0search_by_brand_cars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/5-0cart-credit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/5-0cart-credit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/5-0cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/5-0cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/6-0oformlenie.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-0oformlenie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/6-1oformlenie.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-1oformlenie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/6-7oformlenie-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-7oformlenie-success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/6-8oformlenie-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-8oformlenie-success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/6-9oformlenie-success.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/6-9oformlenie-success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/7-0personal_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/7-0personal_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/7-1personal_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/7-1personal_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/7-2personal_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/7-2personal_account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/8-0contents.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/8-0contents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/9-0contacts_shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/9-0contacts_shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/9-1contacts_shop.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/9-1contacts_shop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dev/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/dev/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dev/sass/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/dev/sass/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dev/sass/screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/dev/sass/screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/popups.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/popups.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/fonts.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/fonts.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/jquery.fancybox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/jquery.fancybox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/jscrollpane.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/jscrollpane.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/lib.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/lib.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/multiple-select.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/multiple-select.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/perfect-scrollbar.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/perfect-scrollbar.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/screen.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/screen.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/slick.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/slick.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/css/video-js.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/css/video-js.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/fonts/VideoJS.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/fonts/VideoJS.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/img/icons/arrow_d.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/img/icons/arrow_d.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/img/svg.min.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/img/svg.min.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/img/svg/select.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/img/svg/select.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/head.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/head.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/inputmask.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/inputmask.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery-2.1.4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery-2.1.4.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.fancybox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.fancybox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.jscrollpane.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.jscrollpane.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.matchHeight.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.matchHeight.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.mousewheel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.mousewheel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/jquery.validator.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/jquery.validator.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/media.youtube.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/media.youtube.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/multiple-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/multiple-select.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/perfect-scrollbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/perfect-scrollbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/readmore.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/readmore.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/security.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/security.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/slick.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/slick.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/prod/js/lib/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/prod/js/lib/video.js" afterDir="false" />
-    </list>
+    <list default="true" id="1d2547c5-ab65-40af-9188-2f47d0c2805c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -95,20 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="inter.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="inter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/inter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="476">
               <caret line="407" column="26" selection-start-line="407" selection-start-column="26" selection-end-line="407" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/prod/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="599">
-              <caret line="442" column="18" selection-start-line="442" selection-start-column="18" selection-end-line="442" selection-end-column="18" />
+            <state relative-caret-position="225">
+              <caret line="171" selection-start-line="171" selection-end-line="189" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -259,12 +178,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523607384789</updated>
-      <workItem from="1523607386297" duration="7899000" />
+      <workItem from="1523607386297" duration="8947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7899000" />
+    <option name="totallyTimeSpent" value="8947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -277,16 +196,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.06815642" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.06815642" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="npm" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Gulp" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -338,13 +256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/inter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="407" column="26" selection-start-line="407" selection-start-column="26" selection-end-line="407" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/2-1catalog-razdel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-516">
@@ -376,6 +287,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/prod/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="171" selection-start-line="171" selection-end-line="189" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/prod/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -387,10 +305,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/prod/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/app/inter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="442" column="18" selection-start-line="442" selection-start-column="18" selection-end-line="442" selection-end-column="18" />
+        <state relative-caret-position="476">
+          <caret line="407" column="26" selection-start-line="407" selection-start-column="26" selection-end-line="407" selection-end-column="26" />
         </state>
       </provider>
     </entry>

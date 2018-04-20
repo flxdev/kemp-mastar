@@ -459,3 +459,6 @@ blockquote {
 	width: 6px;
 	height: 6px;
 }
+.back-reset-auto{
+	bottom: initial;
+}
