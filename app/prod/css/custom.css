@@ -499,3 +499,44 @@ blockquote {
 .back-reset-auto{
 	bottom: initial;
 }
+
+/*TODO #1 23.04.2018*/
+.checkbox{
+	display: none;
+}
+.checkbox-wrap{
+	margin-bottom: 10px;
+}
+.checkbox-label{
+	white-space: nowrap;
+	cursor: pointer;
+}
+.checkbox-box{
+	width: 20px;
+	height: 20px;
+	border: 1px solid #d8dee4;
+	display: inline-block;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	vertical-align: top;
+	transition: border-color .2s ease-out;
+}
+.checkbox-text{
+	display: inline-block;
+	font-size: 18px;
+	color: #444;
+	font-family: FuturaNewBook,Arial,sans-serif;
+	white-space: normal;
+	padding-left: 10px;
+	vertical-align: top;
+	margin-top: -1px;
+}
+.checkbox-label:hover .checkbox-box{
+	border: 1px solid #444;
+}
+.checkbox:checked + label .checkbox-box{
+	background: url("../img/icons/success.png") 50% 50% no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
