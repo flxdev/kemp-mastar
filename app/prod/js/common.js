@@ -1,3 +1,60 @@
+function filterProducts() {
+	var trigger = $('.js-select-trigger');
+
+	trigger.each(function(){
+		var _ = $(this),
+				button = _.find('.selects'),
+				textCont = button.find('.btn-text'),
+				container = _.find('.select-target'),
+				placeholder = button.data('placeholder'),
+				inp = container.find('input'),
+				valuename = button.data('valuename'),
+				value = button.data('value');
+
+
+		button.on('click', function(event){
+			event.preventDefault();;
+			_.toggleClass('active');
+
+		});
+		inp.on('change', function(event){
+			_.trigger('reinit')
+		});
+			//реинит реинит смотри как умею ахуеть да?)
+		_.on('reinit', function(){
+
+			var tta = $(this),
+				innerCont = tta.find('.select-content'),
+				inputs = innerCont.find('input:checked'),
+				textmoded = '';
+				modText(inputs)
+				if(inputs.length) {
+					tta.addClass('is-checked');
+					textCont.text(textmoded)
+				}
+				else {
+					tta.removeClass('is-checked');
+					textCont.text(placeholder);
+				}
+				function modText(inp){
+					inp.each(function(){
+						var text = $(this).parent().find('.checkbox-text').text(),
+							textMod = text + ', ';
+							textmoded += textMod;
+					})
+				}
+		});
+		_.trigger('reinit')
+	});
+
+	$(document).on('mouseup', function (e){
+
+			if (!trigger.is(e.target)
+					&& trigger.has(e.target).length === 0) {
+					trigger.removeClass('active');
+			}
+	});
+}
 $(document).ready(function () {
 	$.fn.hasAttr = function(name) {
 		 return this.attr(name) !== undefined;
@@ -19,35 +76,8 @@ $(document).ready(function () {
 		});
 	}
 
-/*
-	//big form clear
-	(function(){
-		$('.container .big-search').each(function(){
-			var this_ = $(this),
-				input = this_.find('.input'),
-				reset = this_.find('.resets'),
-				values = input.val();
+filterProducts();
 
-			if (input.val().length > 0) {
-				reset.fadeIn(150);
-			}
-
-			input.on('input', function(){
-				var value = $(this).val();
-				if(value.length > 0) {
-					reset.fadeIn(150);
-				} else {
-					reset.fadeOut(100);
-				}
-			});
-			reset.on('click', function(){
-				input.val('');
-				input.attr('value', '');
-				$(this).fadeOut(100);
-			});
-		});
-	})();
-*/
 	//show contacts
 	(function(){
 		var phones = $('.phones'),
